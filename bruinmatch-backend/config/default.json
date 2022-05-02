@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+      "mongodb+srv://sreyamuppalla:a1b2c3d42003SM@cluster0.4b5wd.mongodb.net/BruinMatch?retryWrites=true&w=majority"
+  }
