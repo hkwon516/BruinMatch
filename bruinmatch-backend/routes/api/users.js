@@ -30,4 +30,14 @@ router.get('/login', (req, res) => {
       .catch(err => res.status(404).json({ nobooksfound: 'No Users found' }));
 });
 
+// @route GET api/users
+// @description Get all users
+// @access Public
+router.get('/rec', (req, res) => {
+  console.log("hello")
+  User.find()
+    .then(users => res.json(users))
+    .catch(err => res.status(404).json({ nobooksfound: 'No Users found' }));
+});
+
 module.exports = router;
