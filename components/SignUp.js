@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './SignUp.module.css';
 import axios from 'axios';
 import { Button } from 'react-native'
+import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 
@@ -61,8 +62,13 @@ class SignUp extends Component {
 
   render() {
     return (
+    
       <div className="SignUp">
+        
         <div className="container">
+        <div className= {styles.FullFrame}>
+        
+        </div>
         <div className={styles.TopBanner}>
               <div className= {styles.topBannerText} >
                 BruinMatch
@@ -80,30 +86,59 @@ class SignUp extends Component {
               
 
               <form noValidate onSubmit={this.onSubmit}>
-              <div className= {styles.Frame2}>
+              
+              <div className= "Profile section">
+                <div className= {styles.SetProfileButton}>
+                  </div>
+                  <div className= {styles.ProfilePhoto}>
+                  </div>
+                  <div className= {styles.PhotoButtonText}>
+                    Set Profile Photo
+                  </div>
+             
+                </div>
+
+                <div className = {styles.Frame4}>
+                <div className= {styles.SignUpText}>
+                  Sign Up
+                </div>
+
+              <div className= {styles.UserNameText}>
+                  Username*
+                </div>
+              
 
               <div className='form-group'>
                   <input
                     type='text'
-                    placeholder='Username'
+                    
                     name='username'
-                    className='form-control'
+                    className={styles.username}
                     value={this.state.username}
                     onChange={this.onChange}
                   />
                 </div>
                 <br />
+                <div className= {styles.PasswordText}>
+                  Password*
+                </div>
 
                 <div className='form-group'>
                   <input
                     type='text'
-                    placeholder='Password'
+                    
                     name='password'
-                    className='form-control'
+                    className={styles.password}
                     value={this.state.password}
                     onChange={this.onChange}
                   />
                 </div>
+                </div>
+             
+               
+              <div className= {styles.Frame2}>
+
+              
                 <div className={"name"}>
                   <div className={styles.Name}>
                     Name*
@@ -280,21 +315,29 @@ class SignUp extends Component {
                     />
                   </div>
                 </div>
-
-                
-
+               
                 <input
                     type="submit"
-                    className="btn btn-outline-warning btn-block mt-4"
+                    text= 'hi'
+                    className={styles.SubmitButton}
                 />
+                 <div className= {styles.SubmitText}>
+                   Create
+                </div>
+               </div>
                </div>
 
-               </div>
+               
+              
 
 
                <div className={styles.Frame3}>
+
                 <div className={styles.Preferences}>
                  </div>
+                 <div className= {styles.PreferencesText}>
+                    Preferences
+                   </div>
                  <div className={styles.Option1}>
                    Preference1
                  </div>
@@ -310,6 +353,44 @@ class SignUp extends Component {
                  <div className={styles.Option5}>
                    Preference5
                  </div>
+
+                 <div className= "switches">
+
+                 
+                   <div className= {styles.Switch1}>
+                     
+                   </div>
+                   <div className= {styles.Switch1No}>
+                     </div>
+                  
+                   <div className= {styles.Switch2}>
+                     
+                   </div>
+                   <div className= {styles.Switch2No}>
+                     
+                     </div>
+                     <div className= {styles.Switch3}>
+                     
+                     </div>
+                     <div className= {styles.Switch3No}>
+                       
+                       </div>
+                       <div className= {styles.Switch4}>
+                     
+                     </div>
+                     <div className= {styles.Switch4No}>
+                       
+                       </div>
+                       <div className= {styles.Switch5}>
+                     
+                     </div>
+                     <div className= {styles.Switch5No}>
+                       
+                       </div>
+
+                 </div>
+
+                 
 
                </div>
 
