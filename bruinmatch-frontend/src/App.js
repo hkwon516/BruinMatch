@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './App.css';
-import LogIn from './components/LogIn';
-import SignUp from './components/SignUp';
-import Rec from './components/Rec';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./App.css";
+import LogIn from "./components/LogIn";
+import SignUp from "./components/SignUp";
+import Rec from "./components/Rec";
+import Saved from "./components/Saved";
 
 class App extends Component {
   render() {
