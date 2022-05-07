@@ -10,10 +10,11 @@ class App extends Component {
     return (
       <Router>
         <div>
-            <Route path='/signup' component={SignUp} />
-            <Route path='/login' component={LogIn} />
-            <Route path='/rec' component={Rec} />
-            {/*<Route path='/profile' component={Rec} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/login" component={LogIn} />
+          <Route path="/rec" component={Rec} />
+          <Route path="/saved" component={Saved} />
+          {/*<Route path='/profile' component={Rec} />
             <Route path='/edit' component={Rec} />
             <Route path='/save' component={Rec} /> */}
         </div>
