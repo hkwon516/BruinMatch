@@ -47,7 +47,7 @@ class Rec extends Component {
           <div className="row">
             <div className="col-md-12">
               <br />
-              <h2 className="display-4 text-center">Reccomondations</h2>
+              <h2 className="display-4 text-center">Recommendations</h2>
             </div>
 
           </div>
