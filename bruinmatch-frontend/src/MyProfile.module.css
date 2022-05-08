@@ -1,0 +1,794 @@
+html {
+  zoom: 0.75;
+  /* Old IE only */
+  /*-moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);*/
+}
+
+.FullFrame {
+  background-color: #efefef;
+  min-height: 100vh;
+
+  top: 0px;
+  height: 3300px;
+}
+
+.TopBanner {
+  position: absolute;
+  width: 1920px;
+  height: 94px;
+  left: 0px;
+  top: 0px;
+  background: #2774ae;
+}
+.topBannerText {
+  position: absolute;
+  width: 295px;
+  height: 56px;
+  left: 24px;
+  top: 19px;
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 55px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+
+.Frame2 {
+  position: absolute;
+  width: 1303px;
+  height: 1019px;
+  left: 310px;
+  top: 1203px;
+  background-color: #efefef;
+}
+
+/* Name* */
+
+.Name {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 23px;
+  top: 155px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showName {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 210px;
+  top: 155px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Email* */
+
+.Email {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 15px;
+  top: 684px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showEmail {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 300px;
+  top: 684px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Bio */
+
+.Bio {
+  position: absolute;
+  width: 211px;
+  height: 62px;
+  left: 43px;
+  top: 811px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showBio {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 265px;
+  top: 811px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Major* */
+
+.Major {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 15px;
+  top: 364px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showMajor {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 180px;
+  top: 364px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Year* */
+
+.Year {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 15px;
+  top: 470px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showYear {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 185px;
+  top: 470px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Phone* */
+
+.Phone {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 24px;
+  top: 584px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showPhone {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 250px;
+  top: 584px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Gender {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 24px;
+  top: 257px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showGender {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 195px;
+  top: 257px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/*My Profile */
+
+.MyProfile {
+  position: absolute;
+  width: 334px;
+  height: 54px;
+  left: 87px;
+  top: 43px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 68px;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Frame 3 */
+
+.Frame3 {
+  position: absolute;
+  width: 1330px;
+  height: 817px;
+  left: 295px;
+  top: 2238px;
+}
+
+/* Rectangle 29*/
+
+.Preferences {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 1294px;
+  height: 768px;
+  left: 22px;
+  top: 20px;
+
+  background: rgba(152, 152, 152, 0.3);
+  border: 4px solid #ffffff;
+  border-radius: 30px;
+}
+
+.Option1 {
+  position: absolute;
+  width: 156px;
+  height: 46px;
+  left: 104px;
+
+  top: 140px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* uwu */
+
+.Option2 {
+  position: absolute;
+  width: 156px;
+  height: 46px;
+  left: 104px;
+  top: 224px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Pref2 */
+
+.Option3 {
+  position: absolute;
+  width: 156px;
+  height: 46px;
+  left: 104px;
+  top: 314px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Pref3 */
+.Option4 {
+  position: absolute;
+  width: 156px;
+  height: 46px;
+  left: 104px;
+  top: 403px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+/* Pref4 */
+.Option5 {
+  position: absolute;
+  width: 156px;
+  height: 46px;
+  left: 104px;
+  top: 493px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.PreferencesText {
+  position: absolute;
+  width: 334px;
+  height: 54px;
+  left: 40px;
+  top: 42px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 68px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #2774ae;
+}
+
+/*Rectangle 31 */
+
+.Switch1 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 324px;
+  height: 63px;
+  left: 325px;
+  top: 140px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+/* Rectangle 32 */
+
+.Switch1No {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 162px;
+  height: 63px;
+  left: 487px;
+  top: 140px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+/* Rectangle 33 */
+
+.Switch2 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 324px;
+  height: 63px;
+  left: 325px;
+  top: 140px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+/* Rectangle 34 */
+.Switch2No {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 162px;
+  height: 63px;
+  left: 487px;
+  top: 140px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+.Switch2 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 324px;
+  height: 63px;
+  left: 325px;
+  top: 217px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+/* Rectangle 36 */
+.Switch2No {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 162px;
+  height: 63px;
+  left: 487px;
+  top: 217px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+
+.Switch3 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 324px;
+  height: 63px;
+  left: 324px;
+  top: 304px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+/* Rectangle 38 */
+
+.Switch3No {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 162px;
+  height: 63px;
+  left: 486px;
+  top: 304px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+
+.Switch4 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 324px;
+  height: 63px;
+  left: 324px;
+  top: 393px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+/* Rectangle 40 */
+
+.Switch4No {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 162px;
+  height: 63px;
+  left: 486px;
+  top: 393px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+
+.Switch5 {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 324px;
+  height: 63px;
+  left: 325px;
+  top: 489px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+/* Rectangle 42 */
+
+.Switch5No {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 162px;
+  height: 63px;
+  left: 487px;
+  top: 489px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #989898;
+  border-radius: 20px;
+}
+
+/* Frame 4 */
+
+.Frame4 {
+  position: absolute;
+  width: 1303px;
+  height: 1321px;
+  left: 310px;
+  top: 852px;
+  background-color: #efefef;
+}
+
+.Group2 {
+  position: absolute;
+  width: 293px;
+  height: 90px;
+  left: 1597px;
+  top: 2810px;
+}
+
+/* Rectangle 4 */
+
+.EditButton {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 293px;
+  height: 90px;
+  left: 1197px;
+  top: 1910px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 4px solid #7b7b7b;
+  border-radius: 40px;
+}
+
+/* Create */
+
+.EditText {
+  position: absolute;
+  width: 262.04px;
+  height: 61.97px;
+  left: 1213.41px;
+  top: 1920.11px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 76px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #7b7b7b;
+}
+
+.Group1 {
+  position: absolute;
+  width: 265px;
+  height: 61px;
+  left: 875px;
+  top: 708px;
+}
+
+/* Rectangle 4 */
+
+.SetProfileButton {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 265px;
+  height: 61px;
+  left: 875px;
+  top: 708px;
+
+  background: rgba(255, 255, 255, 0.75);
+  border: 4px solid #2774ae;
+  border-radius: 40px;
+}
+
+/* Choose Profile Photo */
+
+.PhotoButtonText {
+  position: absolute;
+  width: 237px;
+  height: 42px;
+  left: 892px;
+  top: 720px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #2774ae;
+}
+
+.ProfilePhoto {
+  position: absolute;
+  width: 531px;
+  height: 531px;
+  border-radius: 50%;
+  left: 720px;
+  top: 137px;
+  background: url(https://samueli.ucla.edu/wp-content/uploads/samueli/Paul-Eggert_time_zone.png);
+}
+
+/*resize it later*/
+.Instagram {
+  position: absolute;
+  width: 245px;
+  height: 230px;
+  left: 650px;
+  top: 875px;
+}
+
+.Twitter {
+  position: absolute;
+  width: 245px;
+  height: 230px;
+  left: 938px;
+  top: 893px;
+}
+
+.Facebook {
+  position: absolute;
+  width: 224px;
+  height: 225px;
+  left: 1204px;
+  top: 893px;
+}
