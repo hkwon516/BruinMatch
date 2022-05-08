@@ -4,9 +4,13 @@ module.exports = {
     extend: {
       colors: {
         main: "#2774AE",
+        headingBox: "#2774AE",
+        yellow: "#FFD100",
+        filter: "#D4E6F3",
       },
       fontFamily: {
-        title: ["menlo"],
+        main: ["Unbutu"],
+        navbar: ["Prompt"],
       },
     },
   },

@@ -40,14 +40,21 @@ class Saved extends Component {
     }
 
     return (
-      <div className="ShowBookList">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <br />
-
-              <h2 className="display-4 text-center">Saved</h2>
-              <div className="PersonalCards">Hello</div>
+      <div>
+        <div className="w-full">
+          <div className="h-16 bg-headingBox">
+            <div className="px-8 ">
+              <div className="py-3 text-white text-3xl font-main font-bold tracking-wider ">
+                <a href="./SignUp">BruinMatch</a>
+              </div>
+              <div className="flex w-full items-center justify-end text-xl font-navbar text-white text-bold">
+                <div className="-mt-12 mx-6 hover:text-yellow">
+                  <a href="./Saved">Saved</a>
+                </div>
+                <div className="-mt-12 hover:text-yellow">
+                  <a href="./UserProfile">My Profile</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
