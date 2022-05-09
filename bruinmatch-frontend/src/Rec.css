@@ -1,0 +1,275 @@
+.frame1 {
+  display: flex;
+  position: absolute;
+  width: 620px;
+  height: 400px;
+  border-radius: 10%;
+  left: 400px;
+  top: 120px;
+  border: 3px solid #2774ae;
+  background: #e7e7e7;
+}
+
+.ProfilePhoto1 {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  left: 430px;
+  top: 140px;
+  background: url(https://samueli.ucla.edu/wp-content/uploads/samueli/Paul-Eggert_time_zone.png);
+}
+
+.Name1 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 645px;
+  top: 130px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Gender1 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 520px;
+  top: 170px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Major1 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 520px;
+  top: 200px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Year1 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 520px;
+  top: 230px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Phone1 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 520px;
+  top: 260px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Email1 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 520px;
+  top: 290px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Comments1 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 600px;
+  top: 320px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Pref1 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 320px;
+  top: 330px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Pref2 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 320px;
+  top: 360px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Pref3 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 320px;
+  top: 390px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Pref4 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 320px;
+  top: 420px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Pref5 {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 320px;
+  top: 450px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.rectangle2 {
+  display: flex;
+  position: absolute;
+  width: 620px;
+  height: 400px;
+  border-radius: 10%;
+  left: 1100px;
+  top: 120px;
+  border: 3px solid #2774ae;
+  background: #e7e7e7;
+}
+
+.rectangle3 {
+  display: flex;
+  position: absolute;
+  width: 620px;
+  height: 400px;
+  border-radius: 10%;
+  left: 400px;
+  top: 580px;
+  border: 3px solid #2774ae;
+  background: #e7e7e7;
+}
+
+.rectangle4 {
+  display: flex;
+  position: absolute;
+  width: 620px;
+  height: 400px;
+  border-radius: 10%;
+  left: 1100px;
+  top: 580px;
+  border: 3px solid #2774ae;
+  background: #e7e7e7;
+}
+
+
