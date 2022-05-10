@@ -315,15 +315,61 @@ class SignUp extends Component {
                     />
                   </div>
                 </div>
+
+                <div className={"instagram"}>
+                  <div className={styles.Instagram}>
+                    Instagram
+                  </div>
+                  <div className={"instagraminput"}>
+                   <input
+                      type="text"
+                      //placeholder='Email'
+                      name='Instagram'
+                     className={styles.InstagramInput}
+                     value={this.state.bio}
+                      onChange={this.onChange}
+                    />
+                  </div>
+                </div>
+
+                <div className={"discord"}>
+                  <div className={styles.Discord}>
+                    Discord
+                  </div>
+                  <div className={"discordinput"}>
+                   <input
+                      type="text"
+                      //placeholder='Email'
+                      name='Discord'
+                     className={styles.DiscordInput}
+                     value={this.state.bio}
+                      onChange={this.onChange}
+                    />
+                  </div>
+                </div>
+
+                <div className={"facebook"}>
+                  <div className={styles.Facebook}>
+                    Facebook
+                  </div>
+                  <div className={"faceookinput"}>
+                   <input
+                      type="text"
+                      //placeholder='Email'
+                      name='Discord'
+                     className={styles.FacebookInput}
+                     value={this.state.bio}
+                      onChange={this.onChange}
+                    />
+                  </div>
+                </div>
                
                 <input
                     type="submit"
                     
                     className={styles.SubmitButton}
                 />
-                 <div className= {styles.SubmitText}>
-                   Create
-                </div>
+                
                </div>
                </div>
 
@@ -339,53 +385,74 @@ class SignUp extends Component {
                     Preferences
                    </div>
                  <div className={styles.Option1}>
-                   Preference1
+                   Same Gender?
                  </div>
                  <div className={styles.Option2}>
-                   Preference2
+                   On the Hill?
                  </div>
                  <div className={styles.Option3}>
-                   Preference3
+                   Alcohol?
                  </div>
                  <div className={styles.Option4}>
-                   Preference4
+                   Pets?
                  </div>
                  <div className={styles.Option5}>
-                   Preference5
+                   Sleep Preferences?
                  </div>
 
                  <div className= "switches">
 
                  
                    <div className= {styles.Switch1}>
-                     
+                     <div className={ styles.Switchtext}>
+                       Yes
+                     </div>
                    </div>
                    <div className= {styles.Switch1No}>
+                   <div className={ styles.Switchtextno}>
+                     No
+                     </div>
                      </div>
                   
                    <div className= {styles.Switch2}>
-                     
+                   <div className={ styles.Switchtext}>
+                       Yes
+                     </div>
                    </div>
                    <div className= {styles.Switch2No}>
-                     
+                   <div className={ styles.Switchtextno}>
+                     No
+                     </div>
                      </div>
                      <div className= {styles.Switch3}>
-                     
+                     <div className={ styles.Switchtext}>
+                       Yes
+                     </div>
                      </div>
                      <div className= {styles.Switch3No}>
-                       
+                     <div className={ styles.Switchtextno}>
+                     No
+                     </div>
                        </div>
                        <div className= {styles.Switch4}>
-                     
+                       <div className={ styles.Switchtext}>
+                       Yes
+                     </div>
                      </div>
                      <div className= {styles.Switch4No}>
-                       
+                     <div className={ styles.Switchtextno}>
+                     No
+                     </div>
                        </div>
                        <div className= {styles.Switch5}>
-                     
+                       <div className={ styles.Switchtext}>
+                       Early-bird
+                     </div>
                      </div>
                      <div className= {styles.Switch5No}>
-                       
+                     <div className={ styles.Switchtextno}>
+                     Night-Owl
+                     </div>
                        </div>
 
                  </div>

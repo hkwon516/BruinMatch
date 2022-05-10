@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import '../App.css';
+import styles from './login.module.css';
 import axios from 'axios';
-
+import image from './bannerPic.png'
+import image2 from './dormPic.png'
 
 class LogIn extends Component {
   constructor() {
@@ -51,50 +52,86 @@ class LogIn extends Component {
   render() {
     return (
       <div className="LogIn">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
+        <div className={styles.container}>
+          <div className={styles.topRectangle}>
+            <div className={styles.middleRectangle}>
+              <div className={styles.middleText}>
               <br />
               {/* <Link to="/" className="btn btn-outline-warning float-left">
                   Show BooK List
               </Link> */}
+              BruinMatch
+            
+            </div> 
             </div>
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
 
+            <div className={styles.imageBanner}>
+            <img src={image} alt = "UCLA Housing Building"/>
+            <div className={styles.imageText}>
+              Welcome
+            </div>
+            </div>
+            <div className={styles.points}>
+              {/* <div className={styles.circlePoint}> */}
+             </div> 
+            {/* </div> */}
+            <div className={styles.points}>
+              {/* <div className={styles.circlePointTwo}> */}
+              Best Roomate Finder! &emsp; Meet Students around UCLA!
+            {/* </div> */}
+            </div>
+
+            
+
+            
+
+            <div className={"col-md-8 m-auto"}>
+              <h1 className={styles.loginText}>
+                <div className={styles.image2}>
+              <img src={image2} alt = "UCLA Housing Dorm Room"/>
+              </div>
+              {/* Log In */}
+              </h1>
+              <div className={styles.loginLast}>
               <form noValidate onSubmit={this.onSubmit}>
                 <div className='form-group'>
+                <h1>Username</h1>
                   <input
                     type='text'
-                    placeholder='Username'
+                    // placeholder='Username'
                     name='username'
-                    className='form-control'
+                    className={styles.box}
                     value={this.state.username}
                     onChange={this.onChange}
                   />
                 </div>
-                <br />
+                {/* <br /> */}
 
                 <div className='form-group'>
+                <h1>Password</h1>
                   <input
                     type='text'
-                    placeholder='Password'
+                    // placeholder='Password'
                     name='password'
-                    className='form-control'
+                    className={styles.box}
                     value={this.state.password}
                     onChange={this.onChange}
                   />
                 </div>
-
+                <br />
+                
                 <input
                     type="submit"
-                    className="btn btn-outline-warning btn-block mt-4"
+                    className={styles.button}
+                    value="Login"
                 />
               </form>
+              </div>
           </div>
           </div>
         </div>
-      </div>
+        </div>
+      
     );
   }
 }
