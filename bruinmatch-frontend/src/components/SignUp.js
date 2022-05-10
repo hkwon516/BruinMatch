@@ -66,7 +66,7 @@ class SignUp extends Component {
       <div className="SignUp">
         
         <div className="container">
-        <div className= {"frame}>
+        <div className= {"frame"}>
         
         </div>
         <div className={styles.TopBanner}>
