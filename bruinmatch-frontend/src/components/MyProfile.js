@@ -36,7 +36,7 @@ class MyProfile extends Component {
 
   render() {
     return (
-      <div className="SignUp">
+      <div className="MyProfile">
         <div className="container">
           <div className={styles.FullFrame}></div>
           <div className={styles.TopBanner}>
