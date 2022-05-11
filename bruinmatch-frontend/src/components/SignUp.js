@@ -397,65 +397,55 @@ class SignUp extends Component {
                    Pets?
                  </div>
                  <div className={styles.Option5}>
-                   Sleep Preferences?
+                   Night Owl?
                  </div>
 
-                 <div className= "switches">
+                 <div className={styles.Switchtext}>
+                   Yes
+                 </div>
+                 <div className={styles.Switchtextno}>
+                   No
+                 </div>
 
+                 <form>
+                    
+                    <div>
+                      <input className= {styles.Switch1} type="radio" name= "switch1"/>
+                      
+
+                      <input className= {styles.Switch2} type="radio" name= "switch2" />
+                     
+
+                      <input className= {styles.Switch3} type="radio" name= "switch3" />
+
+                      
+                      <input className= {styles.Switch4} type="radio" name= "switch4" />
+                      
+
+                      <input className= {styles.Switch5} type="radio" name= "switch5" />
+
+                      
+                      <input className= {styles.Switch1No} type="radio"  name= "switch1"/>
+                      
+
+                      <input className= {styles.Switch2No} type="radio"  name= "switch2" />
+                     
+
+                      <input className= {styles.Switch3No} type="radio" name= "switch3"/>
+
+                      
+                      <input className= {styles.Switch4No} type="radio" name= "switch4"/>
+                      
+
+                      <input className= {styles.Switch5No} type="radio" name= "switch5" />
+                     
+
+                    
+                    </div>
                  
-                   <div className= {styles.Switch1}>
-                     <div className={ styles.Switchtext}>
-                       Yes
-                     </div>
-                   </div>
-                   <div className= {styles.Switch1No}>
-                   <div className={ styles.Switchtextno}>
-                     No
-                     </div>
-                     </div>
-                  
-                   <div className= {styles.Switch2}>
-                   <div className={ styles.Switchtext}>
-                       Yes
-                     </div>
-                   </div>
-                   <div className= {styles.Switch2No}>
-                   <div className={ styles.Switchtextno}>
-                     No
-                     </div>
-                     </div>
-                     <div className= {styles.Switch3}>
-                     <div className={ styles.Switchtext}>
-                       Yes
-                     </div>
-                     </div>
-                     <div className= {styles.Switch3No}>
-                     <div className={ styles.Switchtextno}>
-                     No
-                     </div>
-                       </div>
-                       <div className= {styles.Switch4}>
-                       <div className={ styles.Switchtext}>
-                       Yes
-                     </div>
-                     </div>
-                     <div className= {styles.Switch4No}>
-                     <div className={ styles.Switchtextno}>
-                     No
-                     </div>
-                       </div>
-                       <div className= {styles.Switch5}>
-                       <div className={ styles.Switchtext}>
-                       Early-bird
-                     </div>
-                     </div>
-                     <div className= {styles.Switch5No}>
-                     <div className={ styles.Switchtextno}>
-                     Night-Owl
-                     </div>
-                       </div>
+                  </form>
 
-                 </div>
+                
 
                  
 
