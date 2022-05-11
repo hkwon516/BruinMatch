@@ -1355,25 +1355,29 @@ color: #525252;
 
 .Switchtextno
 {
-    position: aboslute;
+    position: absolute;
     font-family: 'Prompt';
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
     line-height: 68px;
     text-align: center;
+    left: 557px;
+    top: 90px;
+    
     letter-spacing: 0.05em;
 
-    color: #989898;
+    color: #2774AE;
 
 }
 .Switchtext
 {
-    
+    position: absolute;
     width: 150px;
-    left: -20px;
+   
     text-align: center;
-
+    left: 425px;
+    top: 90px;
     font-family: 'Prompt';
     font-style: normal;
     font-weight: 600;
@@ -1383,7 +1387,7 @@ color: #525252;
     
     letter-spacing: 0.05em;
 
-    color: #989898;
+    color: #2774AE;
 
 }
 
@@ -1421,7 +1425,7 @@ color: #525252;
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     
 }
 
@@ -1722,7 +1726,7 @@ color: rgba(82, 82, 82, 0.62);
 position: absolute;
 width: 324px;
 height: 63px;
-left: 324px;
+left: 325px;
 top: 304px;
 
 background: rgba(255, 255, 255, 0.75);
@@ -1739,7 +1743,7 @@ border-radius: 20px;
 position: absolute;
 width: 162px;
 height: 63px;
-left: 486px;
+left: 487px;
 top: 304px;
 
 background: rgba(255, 255, 255, 0.75);
@@ -1796,7 +1800,7 @@ color: rgba(82, 82, 82, 0.62);
 position: absolute;
 width: 324px;
 height: 63px;
-left: 324px;
+left: 325px;
 top: 393px;
 
 background: rgba(255, 255, 255, 0.75);
@@ -1813,7 +1817,7 @@ border-radius: 20px;
 position: absolute;
 width: 162px;
 height: 63px;
-left: 486px;
+left: 487px;
 top: 393px;
 
 background: rgba(255, 255, 255, 0.75);
