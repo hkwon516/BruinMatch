@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from "./MyProfile.module.css";
-import "./MyProfile.module.css";
 import axios from "axios";
-//import { Button } from "react-native";
-//import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import { Button } from "react-native";
+import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 class MyProfile extends Component {
   constructor(props) {
@@ -21,7 +20,9 @@ class MyProfile extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:8082/api/users/myprofile').then((res) => {
+    axios
+      .get('http://localhost:8082/api/users/myprofile')
+      .then((res) => {
       this.setState({
         name: res.name,
         gender: res.gender,
@@ -31,7 +32,10 @@ class MyProfile extends Component {
         phone: res.phone,
         bio: res.bio
       });
+      this.props.history.push('/myprofile');
     });
+    .catch((err) => {
+        console.log("Error from My Profile");
   }
 
   render() {
