@@ -14,6 +14,7 @@ html {
 }
 .FullFrame {
     background-color: #EFEFEF;
+    position: absolute;
     /*min-height: 100vh;*/
    
     top: 0px;
