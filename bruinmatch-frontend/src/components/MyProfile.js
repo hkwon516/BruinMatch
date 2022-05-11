@@ -21,7 +21,7 @@ class MyProfile extends Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:8082/usersdata/:id").then((res) => {
+    axios.get("http://localhost:8082/users/myprofile").then((res) => {
       this.setState({
         name: res.name,
         gender: res.gender,
