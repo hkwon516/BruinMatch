@@ -61,7 +61,7 @@ class LogIn extends Component {
               {/* <Link to="/" className="btn btn-outline-warning float-left">
                   Show BooK List
               </Link> */}
-              BruinMatch
+              <a href='/login'>BruinMatch</a>
             
             </div> 
             </div>
@@ -132,7 +132,9 @@ class LogIn extends Component {
                 value="Create Account"
                 /> */}
               </form>
-              <a href='/SignUp'>Sign Up</a>
+              <div className={styles.createAccount}>
+             <a href='/SignUp'>Create Account</a>
+             </div>
               </div>
           </div>
           </div>
