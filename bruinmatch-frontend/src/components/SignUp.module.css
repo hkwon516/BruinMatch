@@ -1,5 +1,6 @@
 html {
     zoom: 0.75;
+    background-color: #EFEFEF;
      /* Old IE only */
     /*-moz-transform: scale(0.8);
     -webkit-transform: scale(0.8);*/
@@ -17,18 +18,12 @@ html {
     position: absolute;
     /*min-height: 100vh;*/
    
-    top: 0px;
+    top: -1000px;
     height: 3600px;
 }
 
-.test {
-    background-color: #EFEFEF;
-    position: absolute;
-    /*min-height: 100vh;*/
-   
-    top: 0px;
-    height: 3600px;
-}
+
+
 
     /* my pf */
 
@@ -279,6 +274,7 @@ color: rgba(39, 116, 174, 0.53);*/
     left: 310px;
     top: 1203px;
     background-color: #EFEFEF;
+   
     
 }
   
@@ -1037,6 +1033,7 @@ width: 1330px;
 height: 817px;
 left: 295px;
 top: 2600px;
+
 }
 
 
