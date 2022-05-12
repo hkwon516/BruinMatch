@@ -31,7 +31,10 @@ html {
     background: rgba(196, 196, 196, 0.27);
     border: 1px solid #000000;*/
 
-
+.test
+{
+    background-color: white;
+}
 .TopBanner {
         position: absolute;
         width: 1920px;
