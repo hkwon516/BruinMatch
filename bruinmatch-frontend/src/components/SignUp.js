@@ -12,36 +12,82 @@ class SignUp extends Component {
   constructor() {
     super();
     this.state = {
-    
       username: '',
-      //bannerMessage: 'BruinMatch',
       password:'',
       name:'',
+      gender:'',
+      major: '',
+      year: '',
+      phone: '',
       email: '',
-      major:'',
-      phone:'',
-      bio:''
+      bio: '',
+      instagram: '',
+      discord: '',
+      facebook: '',
+      samegender: '',
+      onthehill: '',
+      alchohol: '',
+      pets: '',
+      nightowl:''
     };
   }
 
   onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    //gender
+    if(e.target.name === "male"){
+      this.setState({["gender"]: 1});
+    }else if(e.target.name === "female"){
+      this.setState({["gender"]: 2});
+    }else if(e.target.name === "undef"){
+      this.setState({["gender"]: 3});
+    }
+    //year
+    else if(e.target.name === "first"){
+      this.setState({["year"]: 1});
+    }else if(e.target.name === "second"){
+      this.setState({["year"]: 2});
+    }else if(e.target.name === "third"){
+      this.setState({["year"]: 3});
+    }else if(e.target.name === "fourth"){
+      this.setState({["year"]: 4});
+    }else if(e.target.name === "grad"){
+      this.setState({["year"]: 5});
+    }
+
+    else if(e.target.name[0] == "x" && e.target.value == "t"){
+      this.setState({[e.target.name.substring(1)]: true});
+    }
+    else if(e.target.name[0] == "x" && e.target.value == "f"){
+      this.setState({[e.target.name.substring(1)]: false});
+    }
+
+    else{
+      this.setState({[e.target.name]: e.target.value});
+    }
   };
 
   onSubmit = e => {
+    console.log(this.state)
     e.preventDefault();
 
     const data = {
       username: this.state.username,
       password: this.state.password,
       name: this.state.name,
-      email: this.state.email,
+      gender: this.state.gender,
       major: this.state.major,
+      year: this.state.year,
       phone: this.state.phone,
+      email: this.state.email,
       bio : this.state.bio,
-      facebook: this.state.facebook,
+      instagram: this.state.instagram,
       discord : this.state.discord,
-      instagram: this.state.instagram
+      facebook: this.state.facebook,
+      samegender: this.state.samegender,
+      onthehill: this.state.onthehill,
+      alchohol: this.state.alchohol,
+      pets: this.state.pets,
+      nightowl: this.state.nightowl
     };
 
     axios
@@ -51,12 +97,24 @@ class SignUp extends Component {
           username: '',
           password:'',
           name:'',
+          gender:'',
+          major: '',
+          year: '',
+          phone: '',
           email: '',
-          major:'',
-          phone:'',
-          bio:''
+          bio: '',
+          instagram: '',
+          discord: '',
+          facebook: '',
+          samegender: '',
+          onthehill: '',
+          alchohol: '',
+          pets: '',
+          nightowl:''
         })
-        this.props.history.push('/signup');
+        //ADD CODE HERE TO CLEAR OUT RADIO BUTTONS
+        this.props.history.push('/rec');
+        window.location.reload(false);
       })
       .catch(err => {
         console.log("Error in CreateUser!");
@@ -67,10 +125,8 @@ class SignUp extends Component {
     return (
     
       <div className="SignUp">
-        
         <div className="container">
         <div className= {styles.FullFrame}>
-        
         </div>
         <div className={styles.TopBanner}>
               <div className= {styles.topBannerText} >
@@ -80,17 +136,11 @@ class SignUp extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <br />
-              {/* <Link to="/" className="btn btn-outline-warning float-left">
-                  Show BooK List
-              </Link> */}
             </div>
             <div className="col-md-8 m-auto">
-           
-              
 
               <form noValidate onSubmit={this.onSubmit}>
               <div className= {styles.FullFrame}>
-        
         </div>
               <div className= "Profile section">
                 <div className= {styles.SetProfileButton}>
@@ -111,8 +161,6 @@ class SignUp extends Component {
               <div className= {styles.UserNameText}>
                   Username*
                 </div>
-              
-
               <div className='form-group'>
                   <input
                     type='text'
@@ -124,14 +172,14 @@ class SignUp extends Component {
                   />
                 </div>
                 <br />
+
+
                 <div className= {styles.PasswordText}>
                   Password*
                 </div>
-
                 <div className='form-group'>
                   <input
                     type='text'
-                    
                     name='password'
                     className={styles.password}
                     value={this.state.password}
@@ -142,18 +190,13 @@ class SignUp extends Component {
              
                
               <div className= {styles.Frame2}>
-
-              
                 <div className={"name"}>
                   <div className={styles.Name}>
                     Name*
                   </div>
-
                   <div className="nameinput">
-                
                     <input
                       type='text'
-                      //placeholder='Full Name'
                       name='name'
                       className={styles.NameInput}
                       value={this.state.name}
@@ -161,8 +204,6 @@ class SignUp extends Component {
                     />
                   </div>
                 </div>
-                
-
 
                 <div className={"email"}>
                   <div className={styles.Email}>
@@ -171,7 +212,6 @@ class SignUp extends Component {
                   <div className={"emailinput"}>
                     <input
                       type='text'
-                      //placeholder='Email'
                       name='email'
                       className={styles.EmailInput}
                       value={this.state.email}
@@ -188,7 +228,6 @@ class SignUp extends Component {
                   <div className={"majorinput"}>
                     <input
                       type='text'
-                      //placeholder='Email'
                       name='major'
                       className={styles.MajorInput}
                       value={this.state.major}
@@ -210,99 +249,41 @@ class SignUp extends Component {
                   <div className={"phoneinput"}>
                     <input
                       type='text'
-                      //placeholder='Email'
                       name='phone'
                       className={styles.PhoneInput}
                       value={this.state.phone}
                       onChange={this.onChange}
                     />
-                </div>
+                </div> 
                 
                 <div className= "year">
                   <div className={styles.Year}>
                     Year*
                   </div>
-                  
-                        <input  type="button" className={styles.Grad}  
-                        />
-                         <input  type="button" className={styles.first}  
-                        />
-                         <input  type="button" className={styles.second}  
-                        />
-                       
-                        <input  type="button" className={styles.third}  
-                        />
-                         <input  type="button" className={styles.fourth}  
-                        />
-                        
-
-                  
-                    
-                   
-
-                 
-
-                  <div className={styles.gradstring}>
-                    Grad
-                  </div>
-
-                  <div className={styles.firststring}>
-                    1st
-                  </div>
-
-                  <div className={styles.secondstring}>
-                    2nd
-                  </div>
-
-                  <div className={styles.thirdstring}>
-                    3rd
-                  </div>
-
-                  <div className={styles.fourthstring}>
-                    4th
-                  </div>
-
-                  
-                        <input  type="button" className={styles.male}  
-                        />
-                         <input  type="button" className={styles.female}  
-                        />
-                         <input  type="button" className={styles.undef}  
-                        />
-
-                    
-                   
+                         <input  type="button" className={styles.first} name="first" onClick={this.onChange}/>
+                         <input  type="button" className={styles.second} name="second" onClick={this.onChange}/>
+                         <input  type="button" className={styles.third} name="third" onClick={this.onChange}/>
+                         <input  type="button" className={styles.fourth} name="fourth" onClick={this.onChange}/>
+                         <input  type="button" className={styles.Grad} name="grad" onClick={this.onChange}/>
+                  <div className={styles.gradstring}>Grad</div>
+                  <div className={styles.firststring}>1st</div>
+                  <div className={styles.secondstring}>2nd</div>
+                  <div className={styles.thirdstring}>3rd</div>
+                  <div className={styles.fourthstring}>4th</div>
                 </div>
 
-                <div className="Gender">
+                 <div className="Gender">
                   <div className={styles.Gender}>
                     Gender*
                   </div>
-
-                  
-                        <input  type="button" className={styles.male}  
-                        />
-                         <input  type="button" className={styles.female}  
-                        />
-                         <input  type="button" className={styles.undef}  
-                        />
-
-                    
-                   
-                    <div className= {styles.Male}>
-                        Male
-                    </div>
-
-                    <div className= {styles.Female}>
-                        Female
-                    </div>
-
-                  
-                    <div className= {styles.NotDefined}>
-                        Not Defined
-                    </div>
-
-                </div>
+                         
+                         <input  type="button" className={styles.male} name="male" onClick={this.onChange}/>
+                         <input  type="button" className={styles.female} name="female" onClick={this.onChange}/>
+                         <input  type="button" className={styles.undef} name="undef" onClick={this.onChange}/>
+                    <div className= {styles.Male}>Male</div>
+                    <div className= {styles.Female}>Female</div>
+                    <div className= {styles.NotDefined}>Not Defined</div>
+                  </div>
                 
                 
                 <div className={"bio"}>
@@ -312,7 +293,6 @@ class SignUp extends Component {
                   <div className={"bioinput"}>
                    <textarea
                       type="textarea"
-                      //placeholder='Email'
                       name='bio'
                      className={styles.BioInput}
                      value={this.state.bio}
@@ -328,10 +308,9 @@ class SignUp extends Component {
                   <div className={"instagraminput"}>
                    <input
                       type="text"
-                      //placeholder='Email'
-                      name='Instagram'
-                     className={styles.InstagramInput}
-                     value={this.state.instagram}
+                      name='instagram'
+                      className={styles.InstagramInput}
+                      value={this.state.instagram}
                       onChange={this.onChange}
                     />
                   </div>
@@ -344,8 +323,7 @@ class SignUp extends Component {
                   <div className={"discordinput"}>
                    <input
                       type="text"
-                      //placeholder='Email'
-                      name='Discord'
+                      name='discord'
                      className={styles.DiscordInput}
                      value={this.state.discord}
                       onChange={this.onChange}
@@ -360,8 +338,7 @@ class SignUp extends Component {
                   <div className={"faceookinput"}>
                    <input
                       type="text"
-                      //placeholder='Email'
-                      name='Discord'
+                      name='facebook'
                      className={styles.FacebookInput}
                      value={this.state.facebook}
                       onChange={this.onChange}
@@ -371,7 +348,6 @@ class SignUp extends Component {
                
                 <input
                     type="submit"
-                    
                     className={styles.SubmitButton}
                 />
                 
@@ -386,86 +362,44 @@ class SignUp extends Component {
 
                 <div className={styles.Preferences}>
                  </div>
-                 <div className= {styles.PreferencesText}>
-                    Preferences
-                   </div>
-                 <div className={styles.Option1}>
-                   Same Gender?
-                 </div>
-                 <div className={styles.Option2}>
-                   On the Hill?
-                 </div>
-                 <div className={styles.Option3}>
-                   Alcohol?
-                 </div>
-                 <div className={styles.Option4}>
-                   Pets?
-                 </div>
-                 <div className={styles.Option5}>
-                   Night Owl?
-                 </div>
+                 <div className= {styles.PreferencesText}> Preferences</div>
+                 <div className={styles.Option1}>Same Gender?</div>
+                 <div className={styles.Option2}>On the Hill?</div>
+                 <div className={styles.Option3}>Alcohol?</div>
+                 <div className={styles.Option4}>Pets?</div>
+                 <div className={styles.Option5}>Night Owl?</div>
 
-                 <div className={styles.Switchtext}>
-                   Yes
-                 </div>
-                 <div className={styles.Switchtextno}>
-                   No
-                 </div>
-
-                 
-                    
+                 <div className={styles.Switchtext}>Yes</div>
+                 <div className={styles.Switchtextno}>No</div>
+                    {/*
+                    Option Order:
+                    1. same gender
+                    2. on the hill
+                    3. alchohol
+                    4. pets
+                    5. nightowl
+                    */}                 
                     <div>
-                      <input className= {styles.Switch1} type="radio" name= "switch1"/>
-                      
+                      <input className= {styles.Switch1} type="radio" name= "xsamegender" value="t" onClick={this.onChange}/>
+                      <input className= {styles.Switch1No} type="radio" name= "xsamegender" value="f" onClick={this.onChange}/>
+                      <input className= {styles.Switch2} type="radio" name= "xonthehill" value="t" onClick={this.onChange}/>
+                      <input className= {styles.Switch2No} type="radio" name= "xonthehill" value="f" onClick={this.onChange}/>
+                      <input className= {styles.Switch3} type="radio" name= "xalchohol" value="t" onClick={this.onChange}/>
+                      <input className= {styles.Switch3No} type="radio" name= "xalchohol" value="f" onClick={this.onChange}/>
+                      <input className= {styles.Switch4} type="radio" name= "xpets" value="t" onClick={this.onChange}/>
+                      <input className= {styles.Switch4No} type="radio" name= "xpets" value="f" onClick={this.onChange}/>
+                      <input className= {styles.Switch5} type="radio" name= "xnightowl" value="t" onClick={this.onChange}/>
+                      <input className= {styles.Switch5No} type="radio" name= "xnightowl" value="f" onClick={this.onChange}/>
+                </div>
+                </div>
 
-                      <input className= {styles.Switch2} type="radio" name= "switch2" />
-                     
-
-                      <input className= {styles.Switch3} type="radio" name= "switch3" />
-
-                      
-                      <input className= {styles.Switch4} type="radio" name= "switch4" />
-                      
-
-                      <input className= {styles.Switch5} type="radio" name= "switch5" />
-
-                      
-                      <input className= {styles.Switch1No} type="radio"  name= "switch1"/>
-                      
-
-                      <input className= {styles.Switch2No} type="radio"  name= "switch2" />
-                     
-
-                      <input className= {styles.Switch3No} type="radio" name= "switch3"/>
-
-                      
-                      <input className= {styles.Switch4No} type="radio" name= "switch4"/>
-                      
-
-                      <input className= {styles.Switch5No} type="radio" name= "switch5" />
-                     
-
-                    
-                    </div>
-                 
-                  
-                    
-                
-
-                 
-
-               </div>
-
-               
               </form>
-
-            
           </div>
           </div>
         </div>
      
       </div>
-       
+      
     );
   }
 }

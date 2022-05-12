@@ -38,6 +38,7 @@ class LogIn extends Component {
           if(found){
             console.log("found")
             this.props.history.push('/rec');
+            window.location.reload(false);
           }else{
             this.props.history.push('/login');
             console.log("not found")
@@ -131,9 +132,7 @@ class LogIn extends Component {
                 value="Create Account"
                 /> */}
               </form>
-              <div className={styles.createAccount}>
-              <a href='/SignUp'>Create Account</a>
-              </div>
+              <a href='/SignUp'>Sign Up</a>
               </div>
           </div>
           </div>
