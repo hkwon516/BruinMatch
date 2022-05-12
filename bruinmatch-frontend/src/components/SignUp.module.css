@@ -21,6 +21,15 @@ html {
     height: 3600px;
 }
 
+.test {
+    background-color: #EFEFEF;
+    position: absolute;
+    /*min-height: 100vh;*/
+   
+    top: 0px;
+    height: 3600px;
+}
+
     /* my pf */
 
    /* box-sizing: border-box; 
@@ -31,10 +40,7 @@ html {
     background: rgba(196, 196, 196, 0.27);
     border: 1px solid #000000;*/
 
-.test
-{
-    background-color: white;
-}
+
 .TopBanner {
         position: absolute;
         width: 1920px;

@@ -86,7 +86,9 @@ class SignUp extends Component {
               
 
               <form noValidate onSubmit={this.onSubmit}>
-              
+              <div className= {styles.FullFrame}>
+        
+        </div>
               <div className= "Profile section">
                 <div className= {styles.SetProfileButton}>
                   </div>
@@ -217,7 +219,7 @@ class SignUp extends Component {
                   <div className={styles.Year}>
                     Year*
                   </div>
-                  <form>
+                  
                         <input  type="button" className={styles.Grad}  
                         />
                          <input  type="button" className={styles.first}  
@@ -232,7 +234,7 @@ class SignUp extends Component {
                         
 
                   
-                    </form>
+                    
                    
 
                  
@@ -257,7 +259,7 @@ class SignUp extends Component {
                     4th
                   </div>
 
-                  <form>
+                  
                         <input  type="button" className={styles.male}  
                         />
                          <input  type="button" className={styles.female}  
@@ -265,7 +267,7 @@ class SignUp extends Component {
                          <input  type="button" className={styles.undef}  
                         />
 
-                    </form>
+                    
                    
                 </div>
 
@@ -274,7 +276,7 @@ class SignUp extends Component {
                     Gender*
                   </div>
 
-                  <form>
+                  
                         <input  type="button" className={styles.male}  
                         />
                          <input  type="button" className={styles.female}  
@@ -282,7 +284,7 @@ class SignUp extends Component {
                          <input  type="button" className={styles.undef}  
                         />
 
-                    </form>
+                    
                    
                     <div className= {styles.Male}>
                         Male
@@ -407,7 +409,7 @@ class SignUp extends Component {
                    No
                  </div>
 
-                 <form>
+                 
                     
                     <div>
                       <input className= {styles.Switch1} type="radio" name= "switch1"/>
@@ -443,7 +445,7 @@ class SignUp extends Component {
                     
                     </div>
                  
-                  </form>
+                  
 
                 
 
