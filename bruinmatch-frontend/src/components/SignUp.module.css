@@ -306,6 +306,9 @@ color: rgba(39, 116, 174, 0.53);*/
     height: 63px;
     left: 299px;
     top: 1030px;
+
+    color: black;
+    font-size: 30px;
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
@@ -342,6 +345,8 @@ color: rgba(39, 116, 174, 0.53);*/
     height: 63px;
     left: 299px;
     top: 1144px;
+    color: black;
+    font-size: 30px;
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
@@ -376,6 +381,8 @@ color: rgba(39, 116, 174, 0.53);*/
     height: 63px;
     left: 299px;
     top: 1258px;
+    color: black;
+    font-size: 30px;
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
@@ -545,7 +552,8 @@ color: rgba(39, 116, 174, 0.53);*/
     height: 63px;
     left: 299px;
     top: 155px;
-    
+    color: black;
+    font-size: 30px;
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
     border-radius: 20px;
@@ -565,6 +573,8 @@ color: rgba(39, 116, 174, 0.53);*/
     left: 299px;
     top: 356px;
     
+    color: black;
+    font-size: 30px;
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
     border-radius: 20px;
@@ -580,7 +590,8 @@ color: rgba(39, 116, 174, 0.53);*/
     height: 63px;
     left: 299px;
     top: 577px;
-    
+    color: black;
+    font-size: 30px;
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
     border-radius: 20px;
@@ -597,7 +608,8 @@ color: rgba(39, 116, 174, 0.53);*/
     height: 63px;
     left: 299px;
     top: 684px;
-    
+    color: black;
+    font-size: 30px;
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
     border-radius: 20px;
@@ -615,7 +627,8 @@ color: rgba(39, 116, 174, 0.53);*/
     height: 203px;
     left: 299px;
     top: 791px;
-    
+    color: black;
+    font-size: 30px;
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
     border-radius: 20px;
@@ -2190,6 +2203,8 @@ height: 63px;
 left: 299px;
 top: 155px;
 
+color: black;
+    font-size: 30px;
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
 border-radius: 20px;
@@ -2207,6 +2222,8 @@ height: 63px;
 left: 298px;
 top: 235px;
 
+color: black;
+    font-size: 30px;
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
 border-radius: 20px;

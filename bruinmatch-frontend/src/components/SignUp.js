@@ -38,7 +38,10 @@ class SignUp extends Component {
       email: this.state.email,
       major: this.state.major,
       phone: this.state.phone,
-      bio : this.state.bio
+      bio : this.state.bio,
+      facebook: this.state.facebook,
+      discord : this.state.discord,
+      instagram: this.state.instagram
     };
 
     axios
@@ -328,7 +331,7 @@ class SignUp extends Component {
                       //placeholder='Email'
                       name='Instagram'
                      className={styles.InstagramInput}
-                     value={this.state.bio}
+                     value={this.state.instagram}
                       onChange={this.onChange}
                     />
                   </div>
@@ -344,7 +347,7 @@ class SignUp extends Component {
                       //placeholder='Email'
                       name='Discord'
                      className={styles.DiscordInput}
-                     value={this.state.bio}
+                     value={this.state.discord}
                       onChange={this.onChange}
                     />
                   </div>
@@ -360,7 +363,7 @@ class SignUp extends Component {
                       //placeholder='Email'
                       name='Discord'
                      className={styles.FacebookInput}
-                     value={this.state.bio}
+                     value={this.state.facebook}
                       onChange={this.onChange}
                     />
                   </div>
