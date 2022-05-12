@@ -143,8 +143,7 @@ class SignUp extends Component {
               <div className= {styles.FullFrame}>
         </div>
               <div className= "Profile section">
-                <div className= {styles.SetProfileButton}>
-                  </div>
+              <input  type="button" className={styles.SetProfileButton} name="setprofile" onClick={this.onChange}/>
                   <div className= {styles.ProfilePhoto}>
                   </div>
                   <div className= {styles.PhotoButtonText}>
@@ -261,15 +260,10 @@ class SignUp extends Component {
                     Year*
                   </div>
                          <input  type="button" className={styles.first} name="first" onClick={this.onChange}/>
-                         <input  type="button" className={styles.second} name="second" onClick={this.onChange}/>
-                         <input  type="button" className={styles.third} name="third" onClick={this.onChange}/>
-                         <input  type="button" className={styles.fourth} name="fourth" onClick={this.onChange}/>
-                         <input  type="button" className={styles.Grad} name="grad" onClick={this.onChange}/>
-                  <div className={styles.gradstring}>Grad</div>
-                  <div className={styles.firststring}>1st</div>
-                  <div className={styles.secondstring}>2nd</div>
-                  <div className={styles.thirdstring}>3rd</div>
-                  <div className={styles.fourthstring}>4th</div>
+                         <input  type="button" className={styles.second} name="second" onClick={this.onChange}/> 
+                         <input  type="button" className={styles.third} name="third" onClick={this.onChange}/> 
+                         <input  type="button" className={styles.fourth} name="fourth" onClick={this.onChange}/> 
+                         <input  type="button" className={styles.Grad} name="grad" onClick={this.onChange}/> 
                 </div>
 
                  <div className="Gender">
@@ -277,12 +271,10 @@ class SignUp extends Component {
                     Gender*
                   </div>
                          
-                         <input  type="button" className={styles.male} name="male" onClick={this.onChange}/>
-                         <input  type="button" className={styles.female} name="female" onClick={this.onChange}/>
+                         <input  type="button" className={styles.male} name="male" onClick={this.onChange}/> 
+                         <input  type="button" className={styles.female} name="female" onClick={this.onChange}/> 
                          <input  type="button" className={styles.undef} name="undef" onClick={this.onChange}/>
-                    <div className= {styles.Male}>Male</div>
-                    <div className= {styles.Female}>Female</div>
-                    <div className= {styles.NotDefined}>Not Defined</div>
+                 
                   </div>
                 
                 

@@ -646,6 +646,16 @@ height: 63px;
 left: 1086px;
 top: 456px;
 
+font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: rgba(82, 82, 82, 0.62);
+
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
 border-radius: 20px;
@@ -670,6 +680,16 @@ width: 162px;
 height: 63px;
 left: 298px;
 top: 456px;
+
+font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: rgba(82, 82, 82, 0.62);
 
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
@@ -698,6 +718,16 @@ height: 63px;
 left: 495px;
 top: 456px;
 
+font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: rgba(82, 82, 82, 0.62);
+
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
 border-radius: 20px;
@@ -722,6 +752,16 @@ transition-duration: 0.1s;
     height: 63px;
     left: 692px;
     top: 456px;
+
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: rgba(82, 82, 82, 0.62);
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
@@ -747,6 +787,16 @@ transition-duration: 0.1s;
     height: 63px;
     left: 889px;
     top: 456px;
+
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: rgba(82, 82, 82, 0.62);
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
@@ -772,6 +822,15 @@ transition-duration: 0.1s;
     height: 63px;
     left: 299px;
     top: 253px;
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: rgba(82, 82, 82, 0.62);
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
@@ -796,6 +855,16 @@ transition-duration: 0.1s;
     height: 63px;
     left: 939px;
     top: 253px;
+
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: rgba(82, 82, 82, 0.62);
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
@@ -820,6 +889,16 @@ width: 309px;
 height: 63px;
 left: 619px;
 top: 253px;
+
+font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 53px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: rgba(82, 82, 82, 0.62);
 
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
@@ -1418,17 +1497,17 @@ color: #525252;
 
 .Switch1
 {
-    box-sizing: border-box;
+   
     
     position: absolute;
-    width: 324px;
+    width: 63px;
     height: 63px;
-    left: 325px;
+    left: 455px;
     top: 140px;
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
-    border-radius: 20px;
+   
     
 }
 
@@ -1436,16 +1515,16 @@ color: #525252;
 /* Rectangle 32 */
 
 .Switch1No
-{box-sizing: border-box;
+{
 
     position: absolute;
-    width: 162px;
+    width: 63px;
     height: 63px;
-    left: 487px;
+    left: 537px;
     top: 140px;
     
     background: rgba(255, 255, 255, 0.75);
-    border: 2px solid #989898;
+   
     /*border-radius: 20px;*/
     
 }
@@ -1454,17 +1533,15 @@ color: #525252;
 /* Rectangle 33 */
 
 .Switch2
-{box-sizing: border-box;
-
-position: absolute;
-width: 324px;
-height: 63px;
-left: 325px;
+{position: absolute;
+    width: 63px;
+    height: 63px;
+    left: 455px;
 top: 140px;
 
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
-border-radius: 20px;
+
 }
 
 
@@ -1474,9 +1551,9 @@ border-radius: 20px;
 box-sizing: border-box;
 
 position: absolute;
-width: 162px;
+width: 63px;
 height: 63px;
-left: 487px;
+left: 537px;
 top: 140px;
 
 background: rgba(255, 255, 255, 0.75);
@@ -1668,17 +1745,15 @@ color: rgba(82, 82, 82, 0.62);
 /* Rectangle 35 */
 
 .Switch2
-{box-sizing: border-box;
-
-    position: absolute;
-    width: 324px;
+{position: absolute;
+    width: 63px;
     height: 63px;
-    left: 325px;
+    left: 455px;
     top: 217px;
     
     background: rgba(255, 255, 255, 0.75);
     border: 2px solid #989898;
-    border-radius: 20px;
+    
 }
 
 
@@ -1688,9 +1763,9 @@ color: rgba(82, 82, 82, 0.62);
     box-sizing: border-box;
 
     position: absolute;
-    width: 162px;
+    width: 63px;
     height: 63px;
-    left: 487px;
+    left: 537px;
     top: 217px;
     
     background: rgba(255, 255, 255, 0.75);
@@ -1742,30 +1817,27 @@ color: rgba(82, 82, 82, 0.62);
 /* Rectangle 37 */
 
 .Switch3
-{box-sizing: border-box;
-
-position: absolute;
-width: 324px;
-height: 63px;
-left: 325px;
+{position: absolute;
+    width: 63px;
+    height: 63px;
+    left: 455px;
 top: 304px;
 
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
-border-radius: 20px;
+
 }
 
 
 /* Rectangle 38 */
 
 .Switch3No
-{box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 487px;
-top: 304px;
+{
+    position: absolute;
+     width: 63px;
+    height: 63px;
+    left: 537px;
+    top: 304px;
 
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
@@ -1816,29 +1888,26 @@ color: rgba(82, 82, 82, 0.62);
 /* Rectangle 39 */
 
 .Switch4
-{box-sizing: border-box;
-
-position: absolute;
-width: 324px;
-height: 63px;
-left: 325px;
+{position: absolute;
+    width: 63px;
+    height: 63px;
+    left: 455px;
 top: 393px;
 
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
-border-radius: 20px;
+
 }
 
 
 /* Rectangle 40 */
 
 .Switch4No
-{box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 487px;
+{ 
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    left: 537px;
 top: 393px;
 
 background: rgba(255, 255, 255, 0.75);
@@ -1892,29 +1961,27 @@ color: rgba(82, 82, 82, 0.62);
 .Switch5
 {
 
-box-sizing: border-box;
 
-position: absolute;
-width: 324px;
-height: 63px;
-left: 325px;
+
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    left: 455px;
 top: 489px;
 
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
-border-radius: 20px;
+
 }
 
 
 /* Rectangle 42 */
 
 .Switch5No
-{box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 487px;
+{ position: absolute;
+    width: 63px;
+    height: 63px;
+    left: 537px;
 top: 489px;
 
 background: rgba(255, 255, 255, 0.75);
@@ -2379,677 +2446,6 @@ letter-spacing: 0.05em;
 color: #7B7B7B;
 }
 
-
-
-/* Saved Match 
-
-position: absolute;
-visibility: hidden;
-width: 440px;
-height: 72px;
-left: 50px;
-top: 122px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 600;
-font-size: 50px;
-line-height: 76px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #2774AE;
-
-
-
-/* image 1 
-
-position: absolute;
-visibility: hidden;
-width: 523px;
-height: 1053px;
-left: 8px;
-top: 234px;
-
-background: url(image.png);
-
-
-/* Frame 4 
-
-position: absolute;
-width: 1291px;
-height: 1321px;
-left: 322px;
-top: 712px;
-
-
-
-/* Frame 2 
-
-position: absolute;
-width: 1303px;
-height: 1019px;
-left: -23px;
-top: 283px;
-
-
-
-/* Name* 
-
-position: absolute;
-width: 284px;
-height: 84px;
-left: 23px;
-top: 155px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Email* 
-
-position: absolute;
-width: 284px;
-height: 84px;
-left: 15px;
-top: 684px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Bio 
-
-position: absolute;
-width: 211px;
-height: 62px;
-left: 43px;
-top: 811px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Major* 
-
-position: absolute;
-width: 284px;
-height: 84px;
-left: 15px;
-top: 364px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Year* 
-
-position: absolute;
-width: 284px;
-height: 84px;
-left: 15px;
-top: 470px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Phone* 
-
-position: absolute;
-width: 284px;
-height: 84px;
-left: 24px;
-top: 584px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Create Profile 
-
-position: absolute;
-width: 334px;
-height: 54px;
-left: 87px;
-top: 43px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 600;
-font-size: 45px;
-line-height: 68px;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Rectangle 7 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 949px;
-height: 63px;
-left: 299px;
-top: 155px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 26 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 949px;
-height: 63px;
-left: 299px;
-top: 155px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 12 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 949px;
-height: 63px;
-left: 299px;
-top: 356px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 27 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 949px;
-height: 63px;
-left: 299px;
-top: 577px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 28 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 949px;
-height: 63px;
-left: 299px;
-top: 684px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 30 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 949px;
-height: 203px;
-left: 299px;
-top: 791px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 25 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 1086px;
-top: 456px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 21 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 298px;
-top: 456px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 22 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 495px;
-top: 456px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 23 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 692px;
-top: 456px;
-
-background: #8DB5D4;
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 24 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 889px;
-top: 456px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 9 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 309px;
-height: 63px;
-left: 299px;
-top: 253px;
-
-background: rgba(39, 116, 174, 0.53);
-border: 2px solid #2774AE;
-border-radius: 20px;
-
-
-/* Rectangle 10 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 309px;
-height: 63px;
-left: 939px;
-top: 253px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 11 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 309px;
-height: 63px;
-left: 619px;
-top: 253px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Gender* 
-
-position: absolute;
-width: 284px;
-height: 84px;
-left: 24px;
-top: 257px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Male 
-
-position: absolute;
-width: 284px;
-height: 38px;
-left: 308px;
-top: 258px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #FFFFFF;
-
-
-
-/* Female 
-
-position: absolute;
-width: 284px;
-height: 38px;
-left: 632px;
-top: 257px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* 1st 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 322px;
-top: 459px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* 2nd 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 519px;
-top: 459px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* 3rd 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 716px;
-top: 459px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #FFFFFF;
-
-
-
-/* 4th 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 909px;
-top: 459px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* Grad 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 1110px;
-top: 459px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* Not Defined 
-
-position: absolute;
-width: 284px;
-height: 38px;
-left: 955px;
-top: 257px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* Sign Up 
-
-position: absolute;
-width: 334px;
-height: 54px;
-left: 62px;
-top: 57px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 600;
-font-size: 45px;
-line-height: 68px;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Username* 
-
-position: absolute;
-width: 284px;
-height: 84px;
-left: 23px;
-top: 155px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Password* 
-
-position: absolute;
-width: 284px;
-height: 84px;
-left: 23px;
-top: 239px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #525252;
-
-
-
-/* Rectangle 7 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 949px;
-height: 63px;
-left: 299px;
-top: 155px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 8 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 949px;
-height: 63px;
-left: 298px;
-top: 235px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
 
 
 /* Group 1 */
