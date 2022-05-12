@@ -125,7 +125,15 @@ class LogIn extends Component {
                     className={styles.button}
                     value="Login"
                 />
+                {/* <input 
+                type="submit"
+                className={styles.createAccount}
+                value="Create Account"
+                /> */}
               </form>
+              <div className={styles.createAccount}>
+              <a href='/SignUp'>Create Account</a>
+              </div>
               </div>
           </div>
           </div>
