@@ -654,7 +654,7 @@ font-family: 'Prompt';
     text-align: center;
     letter-spacing: 0.05em;
     
-    color: rgba(82, 82, 82, 0.62);
+    color: #5252529e;
 
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
@@ -665,6 +665,11 @@ transition-duration: 0.1s;
 .Grad:hover {
     background-color: rgba(39, 116, 174, 0.53); /* blue */
     border: 2px solid #2774AE;
+    color: white;
+  }
+  .Grad:focus
+  {
+    background-color: rgb(39, 115, 174); /* blue */
     color: white;
   }
 
@@ -690,7 +695,6 @@ font-family: 'Prompt';
     letter-spacing: 0.05em;
     
     color: rgba(82, 82, 82, 0.62);
-
 background: rgba(255, 255, 255, 0.75);
 border: 2px solid #989898;
 border-radius: 20px;
@@ -705,6 +709,13 @@ transition-duration: 0.1s;
     border: 2px solid #2774AE;
     color: white;
   }
+  /*.first:focus
+  {
+    background-color: rgb(39, 115, 174); /* blue 
+    color: white;
+  }*/
+
+  
 
 
 /* Rectangle 22 */
@@ -740,6 +751,11 @@ transition-duration: 0.1s;
     border: 2px solid #2774AE;
     color: white;
   }
+  .second:focus
+  {
+    background-color: rgb(39, 115, 174); /* blue */
+    color: white;
+  }
 
 
 /* Rectangle 23 */
@@ -772,6 +788,11 @@ transition-duration: 0.1s;
 .third:hover {
     background-color: rgba(39, 116, 174, 0.53); /* blue */
     border: 2px solid #2774AE;
+    color: white;
+  }
+  .third:focus
+  {
+    background-color: rgb(39, 115, 174); /* blue */
     color: white;
   }
 
@@ -810,6 +831,11 @@ transition-duration: 0.1s;
     border: 2px solid #2774AE;
     color: white;
   }
+  .fourth:focus
+  {
+    background-color: rgb(39, 115, 174); /* blue */
+    color: white;
+  }
 
 
 /* Rectangle 9 male*/
@@ -842,6 +868,17 @@ transition-duration: 0.1s;
     background-color: rgba(39, 116, 174, 0.53); /* blue */
     border: 2px solid #2774AE;
     color: white;
+  }
+
+  .male:focus
+  {
+    background-color: rgb(39, 115, 174); /* blue */
+    color: white;
+  }
+  .male:active
+  {
+    background-color: rgb(174, 39, 163); /* blue */
+    color: white; 
   }
 
 
@@ -879,6 +916,12 @@ transition-duration: 0.1s;
     color: white;
   }
 
+  .undef:focus
+  {
+    background-color: rgb(39, 115, 174); /* blue */
+    color: white;
+  }
+
 
 /* Rectangle 11 female*/
 .female {
@@ -909,6 +952,12 @@ border-radius: 20px;
   .female:hover {
     background-color: rgba(39, 116, 174, 0.53); /* blue */
     border: 2px solid #2774AE;
+    color: white;
+  }
+
+  .female:focus
+  {
+    background-color: rgb(39, 115, 174); /* blue */
     color: white;
   }
 

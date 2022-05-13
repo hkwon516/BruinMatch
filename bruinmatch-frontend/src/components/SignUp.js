@@ -28,30 +28,149 @@ class SignUp extends Component {
       onthehill: '',
       alchohol: '',
       pets: '',
-      nightowl:''
+      nightowl:'',
+      
     };
   }
 
+
   onChange = e => {
+    var male = document.getElementById('male');
+   var female = document.getElementById('female');
+   var undef = document.getElementById('undef');
+
+   var first = document.getElementById('first');
+   var second = document.getElementById('second');
+   var third = document.getElementById('third');
+   var fourth = document.getElementById('fourth');
+   var grad = document.getElementById('grad');
+
+
     //gender
     if(e.target.name === "male"){
       this.setState({["gender"]: 1});
+      e.target.style.backgroundColor= 'blue';
+      e.target.style.color= 'white';
+
+      female.style.backgroundColor = 'white';
+      female.style.color= '#5252529e';
+
+      undef.style.backgroundColor = 'white'; 
+      undef.style.color = '#5252529e';
+      
+    
     }else if(e.target.name === "female"){
       this.setState({["gender"]: 2});
+      e.target.style.backgroundColor= 'blue';
+      e.target.style.color= 'white';
+
+      male.style.backgroundColor = 'white'; 
+      male.style.color = '#5252529e';
+
+      undef.style.backgroundColor = 'white'; 
+      undef.style.color = '#5252529e';
+   
     }else if(e.target.name === "undef"){
       this.setState({["gender"]: 3});
+      e.target.style.backgroundColor= 'blue';
+      e.target.style.color= 'white';
+
+      male.style.backgroundColor = 'white';
+      male.style.color= '#5252529e';
+
+      female.style.backgroundColor = 'white';
+      female.style.color= '#5252529e';
+  
     }
     //year
+
+ 
     else if(e.target.name === "first"){
-      this.setState({["year"]: 1});
+      this.setState({["year"]: 1, });
+      e.target.style.backgroundColor= 'blue';
+      e.target.style.color= 'white';
+
+      second.style.backgroundColor = 'white';
+      second.style.color= '#5252529e';
+
+      third.style.backgroundColor = 'white';
+      third.style.color= '#5252529e';
+
+      fourth.style.backgroundColor = 'white';
+      fourth.style.color = '#5252529e';
+
+      grad.style.backgroundColor = 'white';
+      grad.style.color= '#5252529e';
+      
     }else if(e.target.name === "second"){
       this.setState({["year"]: 2});
+
+      e.target.style.backgroundColor= 'blue';
+      e.target.style.color= 'white';
+
+      first.style.backgroundColor = 'white';
+      first.style.color = '#5252529e';
+
+      third.style.backgroundColor = 'white';
+      third.style.color= '#5252529e';
+
+      fourth.style.backgroundColor = 'white';
+      fourth.style.color = '#5252529e';
+
+      grad.style.backgroundColor = 'white';
+      grad.style.color= '#5252529e';
+
     }else if(e.target.name === "third"){
       this.setState({["year"]: 3});
+     
+      e.target.style.backgroundColor= 'blue';
+      e.target.style.color= 'white';
+
+      second.style.backgroundColor = 'white';
+      second.style.color = '#5252529e';
+
+      first.style.backgroundColor = 'white';
+      first.style.color= '#5252529e';
+
+      fourth.style.backgroundColor = 'white';
+      fourth.style.color = '#5252529e';
+
+      grad.style.backgroundColor = 'white';
+      grad.style.color= '#5252529e';
     }else if(e.target.name === "fourth"){
       this.setState({["year"]: 4});
+
+      e.target.style.backgroundColor= 'blue';
+      e.target.style.color= 'white';
+
+      second.style.backgroundColor = 'white';
+      second.style.color = '#5252529e';
+
+      third.style.backgroundColor = 'white';
+      third.style.color= '#5252529e';
+
+      first.style.backgroundColor = 'white';
+      first.style.color = '#5252529e';
+
+      grad.style.backgroundColor = 'white';
+      grad.style.color= '#5252529e';
     }else if(e.target.name === "grad"){
       this.setState({["year"]: 5});
+
+      e.target.style.backgroundColor= 'blue';
+      e.target.style.color= 'white';
+
+      second.style.backgroundColor = 'white';
+      second.style.color = '#5252529e';
+
+      third.style.backgroundColor = 'white';
+      third.style.color= '#5252529e';
+
+      fourth.style.backgroundColor = 'white';
+      fourth.style.color = '#5252529e';
+
+      first.style.backgroundColor = 'white';
+      first.style.color= '#5252529e';
     }
 
     else if(e.target.name[0] == "x" && e.target.value == "t"){
@@ -65,6 +184,8 @@ class SignUp extends Component {
       this.setState({[e.target.name]: e.target.value});
     }
   };
+
+
 
   onSubmit = e => {
     console.log(this.state)
@@ -120,8 +241,10 @@ class SignUp extends Component {
         console.log("Error in CreateUser!");
       })
   };
+ 
 
   render() {
+   
     return (
     
       <div className="SignUp">
@@ -259,11 +382,15 @@ class SignUp extends Component {
                   <div className={styles.Year}>
                     Year*
                   </div>
-                         <input  type="button" className={styles.first} name="first" onClick={this.onChange}/>
-                         <input  type="button" className={styles.second} name="second" onClick={this.onChange}/> 
-                         <input  type="button" className={styles.third} name="third" onClick={this.onChange}/> 
-                         <input  type="button" className={styles.fourth} name="fourth" onClick={this.onChange}/> 
-                         <input  type="button" className={styles.Grad} name="grad" onClick={this.onChange}/> 
+                         <input  type="button" className={styles.first} name="first" onClick={this.onChange} value= "1st" id= "first"/>
+                         <input  type="button" className={styles.second} name="second" onClick={this.onChange} value= "2nd" id= "second"/> 
+                         <input  type="button" className={styles.third} name="third" onClick={this.onChange} value= "3rd" id= "third"/> 
+                         <input  type="button" className={styles.fourth} name="fourth" onClick={this.onChange} value= "4th" id= "fourth"/> 
+                         <input  type="button" className={styles.Grad} name="grad" onClick={this.onChange} value= "Grad" id= "grad"/> 
+
+                         
+      
+                       
                 </div>
 
                  <div className="Gender">
@@ -271,9 +398,9 @@ class SignUp extends Component {
                     Gender*
                   </div>
                          
-                         <input  type="button" className={styles.male} name="male" onClick={this.onChange}/> 
-                         <input  type="button" className={styles.female} name="female" onClick={this.onChange}/> 
-                         <input  type="button" className={styles.undef} name="undef" onClick={this.onChange}/>
+                         <input  type="button" className={styles.male} name="male" onClick={this.onChange} value= "Male" id= "male"/> 
+                         <input  type="button" className={styles.female} name="female" onClick={this.onChange} value= "Female"  id= "female"/> 
+                         <input  type="button" className={styles.undef} name="undef" onClick={this.onChange} value= "Not Defined"  id= "undef"/>
                  
                   </div>
                 
@@ -386,13 +513,17 @@ class SignUp extends Component {
                 </div>
 
               </form>
+         
           </div>
           </div>
         </div>
      
       </div>
       
+    
+      
     );
+    
   }
 }
 
