@@ -49,7 +49,7 @@ class SignUp extends Component {
     //gender
     if(e.target.name === "male"){
       this.setState({["gender"]: 1});
-      e.target.style.backgroundColor= 'blue';
+      e.target.style.backgroundColor= '#2773ae';
       e.target.style.color= 'white';
 
       female.style.backgroundColor = 'white';
@@ -61,7 +61,7 @@ class SignUp extends Component {
     
     }else if(e.target.name === "female"){
       this.setState({["gender"]: 2});
-      e.target.style.backgroundColor= 'blue';
+      e.target.style.backgroundColor= '#2773ae';
       e.target.style.color= 'white';
 
       male.style.backgroundColor = 'white'; 
@@ -72,7 +72,7 @@ class SignUp extends Component {
    
     }else if(e.target.name === "undef"){
       this.setState({["gender"]: 3});
-      e.target.style.backgroundColor= 'blue';
+      e.target.style.backgroundColor= '#2773ae';
       e.target.style.color= 'white';
 
       male.style.backgroundColor = 'white';
@@ -87,7 +87,7 @@ class SignUp extends Component {
  
     else if(e.target.name === "first"){
       this.setState({["year"]: 1, });
-      e.target.style.backgroundColor= 'blue';
+      e.target.style.backgroundColor= '#2773ae';
       e.target.style.color= 'white';
 
       second.style.backgroundColor = 'white';
@@ -105,7 +105,7 @@ class SignUp extends Component {
     }else if(e.target.name === "second"){
       this.setState({["year"]: 2});
 
-      e.target.style.backgroundColor= 'blue';
+      e.target.style.backgroundColor= '#2773ae';
       e.target.style.color= 'white';
 
       first.style.backgroundColor = 'white';
@@ -123,7 +123,7 @@ class SignUp extends Component {
     }else if(e.target.name === "third"){
       this.setState({["year"]: 3});
      
-      e.target.style.backgroundColor= 'blue';
+      e.target.style.backgroundColor= '#2773ae';
       e.target.style.color= 'white';
 
       second.style.backgroundColor = 'white';
@@ -140,7 +140,7 @@ class SignUp extends Component {
     }else if(e.target.name === "fourth"){
       this.setState({["year"]: 4});
 
-      e.target.style.backgroundColor= 'blue';
+      e.target.style.backgroundColor= '#2773ae';
       e.target.style.color= 'white';
 
       second.style.backgroundColor = 'white';
@@ -157,7 +157,7 @@ class SignUp extends Component {
     }else if(e.target.name === "grad"){
       this.setState({["year"]: 5});
 
-      e.target.style.backgroundColor= 'blue';
+      e.target.style.backgroundColor= '#2773ae';
       e.target.style.color= 'white';
 
       second.style.backgroundColor = 'white';
@@ -467,6 +467,7 @@ class SignUp extends Component {
                
                 <input
                     type="submit"
+                    value = "Create Account"
                     className={styles.SubmitButton}
                 />
                 
