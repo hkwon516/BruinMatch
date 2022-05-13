@@ -875,11 +875,6 @@ transition-duration: 0.1s;
     background-color: rgb(39, 115, 174); /* blue */
     color: white;
   }
-  .male:active
-  {
-    background-color: rgb(174, 39, 163); /* blue */
-    color: white; 
-  }
 
 
 /* Rectangle 10 undef*/
