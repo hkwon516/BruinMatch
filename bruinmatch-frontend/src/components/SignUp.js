@@ -266,12 +266,11 @@ class SignUp extends Component {
               <div className= {styles.FullFrame}>
         </div>
               <div className= "Profile section">
-              <input  type="button" className={styles.SetProfileButton} name="setprofile" onClick={this.onChange}/>
+              <input  type="button" className={styles.SetProfileButton} name="setprofile" onClick={this.onChange} value= "Set Profile Photo"/>
                   <div className= {styles.ProfilePhoto}>
+                   
                   </div>
-                  <div className= {styles.PhotoButtonText}>
-                    Set Profile Photo
-                  </div>
+                 
              
                 </div>
 
