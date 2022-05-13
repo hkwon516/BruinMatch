@@ -15,30 +15,28 @@ class Rec extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:8082/api/users/rec")
-      .then((res) => {
+      .get('http://localhost:8082/api/users/rec')
+      .then(res => {
         this.setState({
-          users: res.data,
-        });
-        this.props.history.push("/rec");
+          users: res.data
+        })
       })
-      .catch((err) => {
-        console.log("Error from Rec");
-      });
-  }
+      .catch(err =>{
+        console.log('Error from ShowUserList');
+      })
+  };
 
   render() {
     const users = this.state.users;
-    console.log("PrintUser: " + users);
     let userList;
 
-    if (!users) {
+    if(!users) {
       userList = "there is no user record!";
     } else {
-      console.log("Hello");
-      userList = users.map((user, k) => <UserProfile user={user} key={k} />);
+      userList = users.map((user, k) =>
+        <UserProfile user={user} key={k} />
+      );
     }
-
     return (
       <div>
         <div className="w-full">
@@ -55,23 +53,9 @@ class Rec extends Component {
                   <a href="./UserProfile">My Profile</a>
                 </div>
               </div>
-              <div className="frame1"></div>
-              <div className="ProfilePhoto1"></div>
-              <div className="name1">Name</div>
-              <div className="gender1">Gender:</div>
-              <div className="major1">Major:</div>
-              <div className="year1">Year:</div>
-              <div className="phone1">Phone:</div>
-              <div className="email1">Email:</div>
-              <div className="comments1">Comments:</div>
-              <div className="pref1">Pref1:</div>
-              <div className="pref2">Pref2:</div>
-              <div className="pref3">Pref3:</div>
-              <div className="pref4">Pref4:</div>
-              <div className="pref5">Pref5:</div>
-              <div className="rectangle2" />
-              <div className="rectangle3" />
-              <div className="rectangle4" />
+              <div className="list">
+                {userList}
+              </div>
             </div>
           </div>
         </div>
