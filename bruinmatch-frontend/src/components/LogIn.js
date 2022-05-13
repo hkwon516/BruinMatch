@@ -4,6 +4,7 @@ import styles from './login.module.css';
 import axios from 'axios';
 import image from './bannerPic.png'
 import image2 from './dormPic.png'
+import swal from 'sweetalert';
 
 class LogIn extends Component {
   constructor() {
@@ -42,6 +43,13 @@ class LogIn extends Component {
           }else{
             this.props.history.push('/login');
             console.log("not found")
+            swal({
+              title: "Incorrect Username/Password",
+              text: "Please Try Again",
+              icon: "error",
+              button: "Try again",
+            });
+ 
           }
       })
       .catch(err =>{
