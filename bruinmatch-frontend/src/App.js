@@ -5,6 +5,7 @@ import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Rec from "./components/Rec";
 import Saved from "./components/Saved";
+import Profile from "./components/UserProfile";
 
 class App extends Component {
   render() {
@@ -13,10 +14,10 @@ class App extends Component {
         <div>
           <Route path="/signup" component={SignUp} />
           <Route path="/login" component={LogIn} />
-          <Route path="/rec" component={Rec} />
-          <Route path="/saved" component={Saved} />
-          {/*<Route path='/profile' component={Rec} />
-            <Route path='/edit' component={Rec} />
+          <Route path="/rec/:id" component={Rec} />
+          <Route path='/profile/:id' component={Profile} />
+          {/*<Route path="/saved/:" component={Saved} />
+             <Route path='/edit' component={Rec} />
             <Route path='/save' component={Rec} /> */}
         </div>
       </Router>

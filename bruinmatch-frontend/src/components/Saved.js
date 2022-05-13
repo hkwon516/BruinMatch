@@ -3,7 +3,7 @@ import "../App.css";
 import "../index.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import UserProfile from "./UserProfile";
+import UserProfile from "./Profile";
 
 class Saved extends Component {
   // constructor(props) {

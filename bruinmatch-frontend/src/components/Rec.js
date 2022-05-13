@@ -3,23 +3,40 @@ import "../Rec.css";
 import styles from "../Rec.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import UserProfile from "./UserProfile";
+import UserProfile from "./Profile";
 
 class Rec extends Component {
   constructor(props) {
     super(props);
     this.state = {
       users: [],
+      // updatedUsers: []
+      id: this.props.match.params.id
     };
+  }
+
+  // onChange = e => {
+  //   if(e.target.name == "samegender" && e.target.checked){
+  //     this.setState({updatedUsers: this.state.updatedUsers.filter((user) => user.samegender)})
+  //   }else if(e.target.name == "samegender" && !e.target.checked){
+  //     this.setState({updatedUsers: this.state.users.filter((user) => !user.samegender)})
+  //   }
+  // }
+
+  onClick = e => {
+    this.props.history.push(`/profile/${this.state.id}`);
+    window.location.reload(false);
   }
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/users/rec')
+      .get('http://localhost:8082/api/users/rec/')
       .then(res => {
         this.setState({
-          users: res.data
+          users: res.data,
+          // updatedUsers: res.data
         })
+        console.log(this.state.history)
       })
       .catch(err =>{
         console.log('Error from ShowUserList');
@@ -27,16 +44,19 @@ class Rec extends Component {
   };
 
   render() {
+    // console.log("Hello")
     const users = this.state.users;
     let userList;
 
     if(!users) {
       userList = "there is no user record!";
     } else {
+      console.log(users)
       userList = users.map((user, k) =>
         <UserProfile user={user} key={k} />
       );
     }
+    console.log(this.props.match.params.id)
     return (
       <div>
         <div className="w-full">
@@ -50,7 +70,7 @@ class Rec extends Component {
                   <a href="./Saved">Saved</a>
                 </div>
                 <div className="-mt-12 hover:text-yellow">
-                  <a href="./UserProfile">My Profile</a>
+                  <a onClick={this.onClick}>My Profile</a>
                 </div>
               </div>
               <div className="list">
@@ -73,6 +93,8 @@ class Rec extends Component {
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
+                      name="samegender"
+                      // onChange={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"
@@ -89,13 +111,15 @@ class Rec extends Component {
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
+                      name="onthehill"
+                      // onChange={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
                       <div className="font-sub text-2xl tracking-wide">
-                        On-Campus
+                        On The Hill
                       </div>
                     </label>
                   </div>
@@ -105,6 +129,8 @@ class Rec extends Component {
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
+                      name="nightowl"
+                      // onChange={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"
@@ -121,13 +147,15 @@ class Rec extends Component {
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
+                      name="alchohol"
+                      // onChange={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
                       <div className="font-sub text-2xl tracking-wide">
-                        Alcohol Free
+                        Alcohol
                       </div>
                     </label>
                   </div>
@@ -137,6 +165,8 @@ class Rec extends Component {
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
+                      name="pets"
+                      // onChange={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"

@@ -31,14 +31,16 @@ class LogIn extends Component {
       .get('http://localhost:8082/api/users/login')
       .then(res => {
           var found = false;
+          var id;
           for (var i = 0; i < res.data.length; i++) {
               if(res.data[i].username == data.username && res.data[i].password == data.password){
-                  found = true;
+                id = res.data[i]._id;
+                found = true;
               }
           }
           if(found){
             console.log("found")
-            this.props.history.push('/rec');
+            this.props.history.push(`/rec/${id}`);
             window.location.reload(false);
           }else{
             this.props.history.push('/login');
