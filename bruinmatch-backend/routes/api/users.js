@@ -62,18 +62,18 @@ router.get('/rec/:usrnm', async(req, res) => {
     }
     ranked.sort((a,b) => b[1] - a[1])
     ranked = ranked.map((user) => user[0])
-    console.log(ranked)
+    // console.log(ranked)
     res.json(ranked)
   } catch(e){
     console.log('No Users found')
   }
 });
 
-// @route GET api/users/:id
-// @description Get single user by id
+// @route GET api/users/:usrnm
+// @description Get single user by username
 // @access Public
-router.get('/:id', (req, res) => {
-  User.findById(req.params.id)
+router.get('/:usrnm', (req, res) => {
+  User.findOne({username: req.params.usrnm})
     .then(user => res.json(user))
     .catch(err => res.status(404).json({ nousersfound: 'No User found' }));
 });
