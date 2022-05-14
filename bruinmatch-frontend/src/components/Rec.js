@@ -11,7 +11,7 @@ class Rec extends Component {
     this.state = {
       users: [],
       // updatedUsers: []
-      id: this.props.match.params.id
+      usrnm: this.props.match.params.usrnm
     };
   }
 
@@ -30,7 +30,7 @@ class Rec extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/users/rec/')
+      .get('http://localhost:8082/api/users/rec/'+this.state.usrnm)
       .then(res => {
         this.setState({
           users: res.data,
@@ -44,26 +44,21 @@ class Rec extends Component {
   };
 
   render() {
-    // console.log("Hello")
     const users = this.state.users;
     let userList;
 
-    if(!users) {
-      userList = "there is no user record!";
-    } else {
-      console.log(users)
-      userList = users.map((user, k) =>
-        <UserProfile user={user} key={k} />
+    if(users){
+      userList = users.map((user) =>
+        <UserProfile user={user} />
       );
     }
-    console.log(this.props.match.params.id)
     return (
       <div>
         <div className="w-full">
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
               <div className="py-3 text-white text-3xl font-main font-bold tracking-wider ">
-                <a href="./SignUp">BruinMatch</a>
+                <a href="./Rec">BruinMatch</a>
               </div>
               <div className="flex w-full items-center justify-end text-xl font-navbar text-white text-bold">
                 <div className="-mt-12 mx-6 hover:text-yellow">

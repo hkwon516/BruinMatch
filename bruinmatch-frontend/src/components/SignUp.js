@@ -29,7 +29,7 @@ class SignUp extends Component {
       alchohol: '',
       pets: '',
       nightowl:'',
-      
+      attributes: [0, 0, 0, 0, 0]
     };
   }
 
@@ -183,6 +183,7 @@ class SignUp extends Component {
     else{
       this.setState({[e.target.name]: e.target.value});
     }
+    
   };
 
 

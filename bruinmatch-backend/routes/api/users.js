@@ -1,9 +1,9 @@
-// routes/api/books.js
+// routes/api/users.js
 
 const express = require('express');
 const router = express.Router();
 
-// Load Book model
+// Load User model
 const User = require('../../models/User');
 
 // @route GET api/users
@@ -28,10 +28,45 @@ router.get('/login', (req, res) => {
 // @route GET api/users
 // @description Get all users
 // @access Public
-router.get('/rec', (req, res) => {
-  User.find()
-    .then(users => res.json(users))
-    .catch(err => res.status(404).json({ nousersfound: 'No Users found' }));
+router.get('/rec/:usrnm', async(req, res) => {
+  try{
+    var allUsers = await User.find()
+    var me;
+    for(var i = 0; i < allUsers.length; i++){
+       if(allUsers[i].username == req.params.usrnm){
+         me = allUsers[i];
+         break;
+       }
+    }
+    allUsers = allUsers.filter((user) => user.username != req.params.usrnm)
+    
+    var ranked = []
+    for(var i = 0; i < allUsers.length; i++){
+      var sim = 0;
+      if(me.samegender === allUsers[i].samegender){
+        sim += 1;
+      }
+      if(me.onthehill === allUsers[i].onthehill){
+        sim += 1;
+      }
+      if(me.alchohol === allUsers[i].alchohol){
+        sim += 1;
+      }
+      if(me.pets === allUsers[i].pets){
+        sim += 1;
+      }
+      if(me.nightowl === allUsers[i].nightowl){
+        sim += 1;
+      }
+      ranked.push([allUsers[i], sim])
+    }
+    ranked.sort((a,b) => b[1] - a[1])
+    ranked = ranked.map((user) => user[0])
+    console.log(ranked)
+    res.json(ranked)
+  } catch(e){
+    console.log('No Users found')
+  }
 });
 
 // @route GET api/users/:id

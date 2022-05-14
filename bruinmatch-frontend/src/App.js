@@ -14,7 +14,7 @@ class App extends Component {
         <div>
           <Route path="/signup" component={SignUp} />
           <Route path="/login" component={LogIn} />
-          <Route path="/rec/:id" component={Rec} />
+          <Route path="/rec/:usrnm" component={Rec} />
           <Route path='/profile/:id' component={Profile} />
           {/*<Route path="/saved/:" component={Saved} />
              <Route path='/edit' component={Rec} />
