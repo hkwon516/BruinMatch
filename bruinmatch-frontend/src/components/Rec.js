@@ -11,7 +11,7 @@ class Rec extends Component {
     this.state = {
       users: [],
       // updatedUsers: []
-      id: this.props.match.params.id
+      id: this.props.match.params.id,
     };
   }
 
@@ -23,40 +23,38 @@ class Rec extends Component {
   //   }
   // }
 
-  onClick = e => {
+  onClick = (e) => {
     this.props.history.push(`/profile/${this.state.id}`);
     window.location.reload(false);
-  }
+  };
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/users/rec/')
-      .then(res => {
+      .get("http://localhost:8082/api/users/rec/")
+      .then((res) => {
         this.setState({
           users: res.data,
           // updatedUsers: res.data
-        })
-        console.log(this.state.history)
+        });
+        console.log(this.state.history);
       })
-      .catch(err =>{
-        console.log('Error from ShowUserList');
-      })
-  };
+      .catch((err) => {
+        console.log("Error from ShowUserList");
+      });
+  }
 
   render() {
     // console.log("Hello")
     const users = this.state.users;
     let userList;
 
-    if(!users) {
+    if (!users) {
       userList = "there is no user record!";
     } else {
-      console.log(users)
-      userList = users.map((user, k) =>
-        <UserProfile user={user} key={k} />
-      );
+      console.log(users);
+      userList = users.map((user, k) => <UserProfile user={user} key={k} />);
     }
-    console.log(this.props.match.params.id)
+    console.log(this.props.match.params.id);
     return (
       <div>
         <div className="w-full">
@@ -73,15 +71,13 @@ class Rec extends Component {
                   <a onClick={this.onClick}>My Profile</a>
                 </div>
               </div>
-              <div className="list">
-                {userList}
-              </div>
+              <div className="list">{userList}</div>
             </div>
           </div>
         </div>
         <div className="flex flex-row">
           <div className="w-2/12">
-            <div className="min-h-screen bg-filter">
+            <div className="h-screen bg-filter">
               <div className="font-navbar text-2xl text-center py-4 text-main text-extrabold tracking-wide">
                 Filter
               </div>
