@@ -56,7 +56,7 @@ class Rec extends Component {
     }
     console.log(this.props.match.params.id);
     return (
-      <div>
+      <div clasName="absolute">
         <div className="w-full">
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
@@ -175,6 +175,22 @@ class Rec extends Component {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="relative max-w-screen-lg mx-auto p-4">
+          <div className="grid grid-cols-2 gap-8 mt-12">
+            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-yellow-300">
+              HELLO
+            </div>
+            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-red-300">
+              HOLA
+            </div>
+            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-green-300">
+              HOLA
+            </div>
+            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-indigo-300">
+              HOLA
             </div>
           </div>
         </div>
