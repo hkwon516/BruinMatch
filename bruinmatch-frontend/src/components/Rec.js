@@ -10,21 +10,22 @@ class Rec extends Component {
     super(props);
     this.state = {
       users: [],
-      // updatedUsers: []
+      filter: {"samegender":false, "onthehill":false, "alchohol":false, "pets":false, "nightowl":false},
       usrnm: this.props.match.params.usrnm
     };
   }
 
-  // onChange = e => {
-  //   if(e.target.name == "samegender" && e.target.checked){
-  //     this.setState({updatedUsers: this.state.updatedUsers.filter((user) => user.samegender)})
-  //   }else if(e.target.name == "samegender" && !e.target.checked){
-  //     this.setState({updatedUsers: this.state.users.filter((user) => !user.samegender)})
-  //   }
-  // }
+  onChange = e => {
+    var newFilter = this.state.filter;
+    newFilter[e.target.name] = !newFilter[e.target.name];
+    this.setState({
+      filter: newFilter,
+    })
+    console.log(this.state.filter)
+  }
 
   onClick = e => {
-    this.props.history.push(`/profile/${this.state.id}`);
+    this.props.history.push(`/profile/${this.state.usrnm}`);
     window.location.reload(false);
   }
 
@@ -34,7 +35,6 @@ class Rec extends Component {
       .then(res => {
         this.setState({
           users: res.data,
-          // updatedUsers: res.data
         })
         console.log(this.state.history)
       })
@@ -45,10 +45,43 @@ class Rec extends Component {
 
   render() {
     const users = this.state.users;
+    const filter = this.state.filter;
+    var newUsers = [];
     let userList;
 
     if(users){
-      userList = users.map((user) =>
+      var keystuff = Object.keys(filter);
+      var shouldFilter = false;
+      for(var i = 0; i < keystuff.length; i++){
+        if(filter[keystuff[i]]){
+          shouldFilter = true;
+          console.log("H")
+          break;
+        }
+      }
+      if(shouldFilter){
+        for(var i = 0; i < users.length; i++){
+          if(users[i].samegender && filter["samegender"]){
+            console.log(1);
+            newUsers.push(users[i]);
+          }else if(users[i].onthehill && filter["onthehill"]){
+            console.log(2);
+            newUsers.push(users[i]);
+          }else if(users[i].alchohol && filter["alchohol"]){
+            console.log(3);
+            newUsers.push(users[i]);
+          }else if(users[i].pets && filter["pets"]){
+            console.log(4);
+            newUsers.push(users[i]);
+          }else if(users[i].nightowl && filter["nightowl"]){
+            console.log(5);
+            newUsers.push(users[i]);
+          }
+        }
+      }else{
+        newUsers = users;
+      }
+      userList = newUsers.map((user) =>
         <UserProfile user={user} />
       );
     }
@@ -89,7 +122,7 @@ class Rec extends Component {
                       value=""
                       id="flexCheckDefault"
                       name="samegender"
-                      // onChange={this.onChange}
+                      onClick={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"
@@ -107,7 +140,7 @@ class Rec extends Component {
                       value=""
                       id="flexCheckDefault"
                       name="onthehill"
-                      // onChange={this.onChange}
+                      onClick={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"
@@ -125,7 +158,7 @@ class Rec extends Component {
                       value=""
                       id="flexCheckDefault"
                       name="nightowl"
-                      // onChange={this.onChange}
+                      onClick={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"
@@ -143,7 +176,7 @@ class Rec extends Component {
                       value=""
                       id="flexCheckDefault"
                       name="alchohol"
-                      // onChange={this.onChange}
+                      onClick={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"
@@ -161,7 +194,7 @@ class Rec extends Component {
                       value=""
                       id="flexCheckDefault"
                       name="pets"
-                      // onChange={this.onChange}
+                      onClick={this.onChange}
                     ></input>
                     <label
                       className="form-check-label inline-block text-gray-800"

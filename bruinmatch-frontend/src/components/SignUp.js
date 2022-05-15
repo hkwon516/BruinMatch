@@ -6,8 +6,6 @@ import { Button } from 'react-native'
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 
-
-
 class SignUp extends Component {
   constructor() {
     super();
@@ -235,7 +233,7 @@ class SignUp extends Component {
           nightowl:''
         })
         //ADD CODE HERE TO CLEAR OUT RADIO BUTTONS
-        this.props.history.push('/rec');
+        this.props.history.push(`/login`);
         window.location.reload(false);
       })
       .catch(err => {

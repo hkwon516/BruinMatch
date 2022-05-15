@@ -62,7 +62,6 @@ router.get('/rec/:usrnm', async(req, res) => {
     }
     ranked.sort((a,b) => b[1] - a[1])
     ranked = ranked.map((user) => user[0])
-    // console.log(ranked)
     res.json(ranked)
   } catch(e){
     console.log('No Users found')
