@@ -32,9 +32,8 @@ class UserProfile extends Component {
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/users/'+this.props.match.params.id)
+      .get('http://localhost:8082/api/users/'+this.props.match.params.usrnm)
       .then(res => {
-        // console.log("Print-showBookDetails-API-response: " + res.data);
         this.setState({
           user: res.data,
         })

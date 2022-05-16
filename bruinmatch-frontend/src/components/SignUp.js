@@ -4,9 +4,28 @@ import styles from './SignUp.module.css';
 import axios from 'axios';
 import { Button } from 'react-native'
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+import swal from 'sweetalert';
 
-
-
+function validatePassword(password)
+{
+   var errors = '';
+  // null check
+  if (!password) {
+      errors = 'This field cannot be empty.';
+      return true;
+}
+// After null checking, check length
+else if (password.length < 8) {
+ errors = 'The password provided is not long enough.';
+ return true;
+  } 
+  //check if there is at least one capital letter, at least one lowercase letter, and digit
+  else if(!password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/))
+  {
+    return true;
+  }
+  return false;
+}
 
 class SignUp extends Component {
   constructor() {
@@ -29,7 +48,7 @@ class SignUp extends Component {
       alchohol: '',
       pets: '',
       nightowl:'',
-      
+      attributes: [0, 0, 0, 0, 0]
     };
   }
 
@@ -183,6 +202,7 @@ class SignUp extends Component {
     else{
       this.setState({[e.target.name]: e.target.value});
     }
+    
   };
 
 
@@ -211,6 +231,19 @@ class SignUp extends Component {
       nightowl: this.state.nightowl
     };
 
+    if(validatePassword(this.state.password))
+    {
+      console.log("invalid password");
+      swal({
+        title: "Invalid Password",
+        text: "Password must be minimum of 8 characters\n Must have at least one capital letter, lowercase letter, and digit",
+        icon: "error",
+        button: "Try again",
+      });
+    }
+
+    else {
+
     axios
       .post('http://localhost:8082/api/users/signup', data)
       .then(res => {
@@ -233,13 +266,19 @@ class SignUp extends Component {
           pets: '',
           nightowl:''
         })
+
+
+
         //ADD CODE HERE TO CLEAR OUT RADIO BUTTONS
-        this.props.history.push('/rec');
+        this.props.history.push(`/login`);
         window.location.reload(false);
       })
+    
       .catch(err => {
         console.log("Error in CreateUser!");
       })
+    }
+    
   };
  
 

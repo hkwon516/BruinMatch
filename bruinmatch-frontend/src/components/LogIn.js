@@ -31,18 +31,20 @@ class LogIn extends Component {
       .get('http://localhost:8082/api/users/login')
       .then(res => {
           var found = false;
-          var id;
+          var usrnm;
           for (var i = 0; i < res.data.length; i++) {
               if(res.data[i].username == data.username && res.data[i].password == data.password){
-                id = res.data[i]._id;
+                usrnm = res.data[i].username;
                 found = true;
               }
           }
           if(found){
             console.log("found")
-            this.props.history.push(`/rec/${id}`);
+            this.props.history.push(`/rec/${usrnm}`);
             window.location.reload(false);
-          }else{
+          }
+          else
+          {
             this.props.history.push('/login');
             console.log("not found")
             swal({
@@ -51,13 +53,12 @@ class LogIn extends Component {
               icon: "error",
               button: "Try again",
             });
- 
           }
       })
       .catch(err =>{
         console.log('Error from Log In');
       })
-
+    
   };
 
   render() {
