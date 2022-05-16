@@ -6,28 +6,6 @@ import image from './bannerPic.png'
 import image2 from './dormPic.png'
 import swal from 'sweetalert';
 
-function validatePassword(password)
-{
-   var errors = '';
-  // null check
-  if (!password) {
-      errors = 'This field cannot be empty.';
-      return true;
-}
-// After null checking, check length
-else if (password.length < 8) {
- errors = 'The password provided is not long enough.';
- return true;
-  } 
-  //check if there is at least one capital letter, at least one lowercase letter, and digit
-  else if(!password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/))
-  {
-    return true;
-  }
-  return false;
-}
-
-
 class LogIn extends Component {
   constructor() {
     super();
@@ -64,16 +42,6 @@ class LogIn extends Component {
             console.log("found")
             this.props.history.push(`/rec/${usrnm}`);
             window.location.reload(false);
-          }else if(validatePassword(data.password)){
-            this.props.history.push('/login');
-            console.log("invalid password")
-            swal({
-              title: "Invalid Password",
-              text: "Password must be minimum of 8 characters\n Must have at least one capital letter, lowercase letter, and digit",
-              icon: "error",
-              button: "Try again",
-            });
- 
           }
           else
           {
