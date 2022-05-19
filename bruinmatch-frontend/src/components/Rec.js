@@ -217,7 +217,7 @@ class Rec extends Component {
             <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-yellow-300">
               HELLO
             </div>
-            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-red-300">
+            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-blue-300">
               HOLA
             </div>
             <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-green-300">
