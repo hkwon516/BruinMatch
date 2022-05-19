@@ -215,7 +215,7 @@ class Rec extends Component {
         <div className="relative max-w-screen-lg mx-auto p-4">
           <div className="grid grid-cols-2 gap-8 mt-12">
             <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-yellow-300">
-              HELLO
+              red bull did not give me wings
             </div>
             <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-black-300">
               HOLA
