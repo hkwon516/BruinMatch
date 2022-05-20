@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const UserProfile = (props) => {
     const  user  = props.user;
+    console.log(user.articleImage)
     return(
               <div className="container">
                 <div className="ProfilePhoto1"></div>

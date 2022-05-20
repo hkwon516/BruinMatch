@@ -1,16 +1,39 @@
 // routes/api/users.js
 
 const express = require('express');
+const multer = require("multer")
 const router = express.Router();
 
 // Load User model
 const User = require('../../models/User');
 
+// const storage = multer.diskStorage({
+//   destination: (req, file, callback) => {
+//     callback(null, "uploads/");
+//   },
+//   filename: (req, file, callback) => {
+//     callback(null, file.originalname)
+//   }
+// })
+
+const storage = multer.diskStorage({
+  destination: (req, file, callback) => {
+    callback(null, "bruinmatch/bruinmatch-frontend/public/uploads/");
+  },
+  filename: (req, file, callback) => {
+    callback(null, file.originalname)
+  }
+})
+
+const upload = multer({storage: storage});
+
 // @route GET api/users
 // @description sign up
 // @access Public
-router.post('/signup', (req, res) => {
-  User.create(req.body)
+router.post('/signup', upload.single("articleImage"), (req, res) => {
+  var info = req.body
+  info["articleImage"] = req.file.originalname;
+  User.create(info)
     .then(user => res.json({ msg: 'User added successfully' }))
     .catch(err => res.status(400).json({ error: 'Unable to add this User' }));
 });
@@ -19,7 +42,6 @@ router.post('/signup', (req, res) => {
 // @description Get all users
 // @access Public
 router.get('/login', (req, res) => {
-    console.log("hello")
     User.find()
       .then(users => res.json(users))
       .catch(err => res.status(404).json({ nousersfound: 'No Users found' }));

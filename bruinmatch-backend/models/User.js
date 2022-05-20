@@ -69,6 +69,10 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     required: true
   },
+  articleImage:{
+    type: String,
+    required: true
+  }
 });
 
 module.exports = User = mongoose.model('user', UserSchema);
