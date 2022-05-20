@@ -12,6 +12,10 @@ module.exports = {
         main: ["Unbutu"],
         navbar: ["Prompt"],
       },
+      padding: {
+        "1/2": "50%",
+        full: "100%",
+      },
     },
   },
   plugins: [],
