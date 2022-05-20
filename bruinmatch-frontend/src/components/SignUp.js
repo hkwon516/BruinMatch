@@ -231,15 +231,6 @@ class SignUp extends Component {
       nightowl: this.state.nightowl
     };
 
-<<<<<<< HEAD
-    function navigateNext()
-    {
-      var a = document.getElementById("submit")
-      a.href= '/Rec';
-     
-
-    };
-=======
     if(validatePassword(this.state.password))
     {
       console.log("invalid password");
@@ -252,7 +243,6 @@ class SignUp extends Component {
     }
 
     else {
->>>>>>> 4967cd4e29b3e495af97498aebd3f3e9fa9b7de1
 
     axios
       .post('http://localhost:8082/api/users/signup', data)
@@ -280,15 +270,13 @@ class SignUp extends Component {
 
 
         //ADD CODE HERE TO CLEAR OUT RADIO BUTTONS
-<<<<<<< HEAD
+
         var radioButtons = document.querySelectorAll('input[type="radio"]');
         for(var i=0;i<radioButtons.length;i++)
           radioButtons[i].checked = false;
 
-        this.props.history.push('/rec');
-=======
+
         this.props.history.push(`/login`);
->>>>>>> 4967cd4e29b3e495af97498aebd3f3e9fa9b7de1
         window.location.reload(false);
       })
     
@@ -520,24 +508,12 @@ class SignUp extends Component {
                     />
                   </div>
                 </div>
-
-                <div>
-                  
-                </div>
-                <a href="/rec">
-     
-    
+               
                 <input
                     type="submit"
                     value = "Create Account"
-                    id= "submit"
-                    className={styles.SubmitButton}/>
-                    </a>
-                       
-                 
-                    
-                   
-               
+                    className={styles.SubmitButton}
+                />
                 
                </div>
                </div>
