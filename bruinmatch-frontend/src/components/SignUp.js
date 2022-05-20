@@ -211,6 +211,14 @@ class SignUp extends Component {
       nightowl: this.state.nightowl
     };
 
+    function navigateNext()
+    {
+      var a = document.getElementById("submit")
+      a.href= '/Rec';
+     
+
+    };
+
     axios
       .post('http://localhost:8082/api/users/signup', data)
       .then(res => {
@@ -234,6 +242,10 @@ class SignUp extends Component {
           nightowl:''
         })
         //ADD CODE HERE TO CLEAR OUT RADIO BUTTONS
+        var radioButtons = document.querySelectorAll('input[type="radio"]');
+        for(var i=0;i<radioButtons.length;i++)
+          radioButtons[i].checked = false;
+
         this.props.history.push('/rec');
         window.location.reload(false);
       })
@@ -463,12 +475,24 @@ class SignUp extends Component {
                     />
                   </div>
                 </div>
-               
+
+                <div>
+                  
+                </div>
+                <a href="/rec">
+     
+    
                 <input
                     type="submit"
                     value = "Create Account"
-                    className={styles.SubmitButton}
-                />
+                    id= "submit"
+                    className={styles.SubmitButton}/>
+                    </a>
+                       
+                 
+                    
+                   
+               
                 
                </div>
                </div>
