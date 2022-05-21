@@ -94,7 +94,7 @@ class Rec extends Component {
         <div className="w-full">
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
-              <div className="py-3 text-white text-3xl font-main font-bold tracking-wider ">
+              <div className="py-3 text-white text-3xl font-Ubuntu font-bold tracking-widest">
                 <a href="./Rec">BruinMatch</a>
               </div>
               <div className="flex w-full items-center justify-end text-xl font-navbar text-white text-bold">
@@ -214,8 +214,8 @@ class Rec extends Component {
         </div>
         <div className="relative max-w-screen-lg mx-auto p-4">
           <div className="grid grid-cols-2 gap-8 mt-12">
-            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-yellow-300">
-              HELLO
+            {/*<div className="w-full h-0 shadow-lg pb-full rounded-xl bg-yellow-300">
+              red bull did not give me wings
             </div>
             <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-black-300">
               HOLA
@@ -225,7 +225,7 @@ class Rec extends Component {
             </div>
             <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-indigo-300">
               HOLA
-            </div>
+    </div>*/}
           </div>
         </div>
       </div>

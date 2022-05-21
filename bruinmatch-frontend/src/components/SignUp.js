@@ -270,6 +270,12 @@ class SignUp extends Component {
 
 
         //ADD CODE HERE TO CLEAR OUT RADIO BUTTONS
+
+        var radioButtons = document.querySelectorAll('input[type="radio"]');
+        for(var i=0;i<radioButtons.length;i++)
+          radioButtons[i].checked = false;
+
+
         this.props.history.push(`/login`);
         window.location.reload(false);
       })
