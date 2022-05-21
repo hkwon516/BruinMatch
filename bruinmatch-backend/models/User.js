@@ -72,6 +72,10 @@ const UserSchema = new mongoose.Schema({
   articleImage:{
     type: String,
     required: true
+  },
+  savedProfiles:{
+    type: Array,
+    required: true
   }
 });
 

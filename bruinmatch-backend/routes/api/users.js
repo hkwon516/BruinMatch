@@ -7,18 +7,9 @@ const router = express.Router();
 // Load User model
 const User = require('../../models/User');
 
-// const storage = multer.diskStorage({
-//   destination: (req, file, callback) => {
-//     callback(null, "uploads/");
-//   },
-//   filename: (req, file, callback) => {
-//     callback(null, file.originalname)
-//   }
-// })
-
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
-    callback(null, "bruinmatch/bruinmatch-frontend/public/uploads/");
+    callback(null, "/Users/sreyamuppalla/Desktop/BruinMatch/bruinmatch-frontend/src/uploads");
   },
   filename: (req, file, callback) => {
     callback(null, file.originalname)
@@ -41,7 +32,7 @@ router.post('/signup', upload.single("articleImage"), (req, res) => {
 // @route GET api/users
 // @description Get all users
 // @access Public
-router.get('/login', (req, res) => {
+router.get('/allUsers', (req, res) => {
     User.find()
       .then(users => res.json(users))
       .catch(err => res.status(404).json({ nousersfound: 'No Users found' }));
@@ -97,6 +88,17 @@ router.get('/:usrnm', (req, res) => {
   User.findOne({username: req.params.usrnm})
     .then(user => res.json(user))
     .catch(err => res.status(404).json({ nousersfound: 'No User found' }));
+});
+
+// @route PUT api/users/saved/:usrnm
+// @description Update a single user's saved Profile List
+// @access Public
+router.put('/saved/:usrnm', (req, res) => {
+  User.findOneAndUpdate({username: req.params.usrnm}, req.body)
+  .then(book => res.json({ msg: 'Updated successfully' }))
+  .catch(err =>
+    res.status(400).json({ error: 'Unable to update the Database' })
+  );
 });
 
 module.exports = router;

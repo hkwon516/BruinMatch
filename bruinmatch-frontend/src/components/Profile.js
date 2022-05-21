@@ -4,11 +4,27 @@ import styles from "../Rec.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
+var user = "";
+var account = "";
+
+function addProfile() {
+  var currUser = account;
+  var saved = currUser.savedProfiles;
+  saved.push(user);
+  currUser.savedProfiles = saved;
+  axios
+    .put(`http://localhost:8082/api/users/saved/${account.username}`, currUser)
+    .then((res) => {});
+}
+
 const UserProfile = (props) => {
-  const user = props.user;
-  console.log(user.articleImage);
+  user = props.user;
+  account = props.account;
+  console.log(account);
   return (
-    <div className="container">
+    <div className="card-container">
+      {/* Change Image Routing!! And ProfPic Dimensions */}
+      {/* <img src={require(`/Users/sreyamuppalla/Desktop/BruinMatch/bruinmatch-frontend/src/uploads/${user.articleImage}`)} alt=""/> */}
       <div className="ProfilePhoto1"></div>
       <div className="name1">{user.name}</div>
       <div className="gender1">Gender: {user.gender}</div>
@@ -17,7 +33,9 @@ const UserProfile = (props) => {
       <div className="phone1">Phone: {user.phone}</div>
       <div className="email1">Email: {user.email}</div>
       <div className="bio1">Bio:</div>
-      <button class="save1">Like</button>
+      <button class="save1" onClick={addProfile}>
+        Save
+      </button>
       <button class="view1">View</button>
       {/*<div className="comments1">Comments:</div>
               <div className="pref1">Same Gender:</div>

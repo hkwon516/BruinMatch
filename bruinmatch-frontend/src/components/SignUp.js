@@ -48,8 +48,13 @@ class SignUp extends Component {
       alchohol: '',
       pets: '',
       nightowl:'',
-      attributes: [0, 0, 0, 0, 0]
+      fileName: '',
+      savedProfiles: []
     };
+  }
+
+  onChangeFile = e => {
+    this.setState({["fileName"]: e.target.files[0]});
   }
 
 
@@ -228,10 +233,33 @@ class SignUp extends Component {
       onthehill: this.state.onthehill,
       alchohol: this.state.alchohol,
       pets: this.state.pets,
-      nightowl: this.state.nightowl
+      nightowl: this.state.nightowl,
+      savedProfiles: []
     };
 
-    if(validatePassword(this.state.password))
+    var tempUsers;
+
+    axios
+      .get('http://localhost:8082/api/users/allUsers')
+      .then(res => {
+        tempUsers = res.data;
+      })
+      .catch(err =>{
+        console.log('Error from Log In');
+      })
+
+
+      var found = false;
+      var usrnm;
+      for (var i = 0; i < tempUsers.length; i++) {
+          if(tempUsers[i].username == data.username){
+            found = true;
+          }
+      }
+      if(found){
+        //ADD CODE TO TELL USERNAME ALREADY EXISTS
+        console.log("username already exists");
+      }else if(validatePassword(this.state.password))
     {
       console.log("invalid password");
       swal({
@@ -244,8 +272,28 @@ class SignUp extends Component {
 
     else {
 
+      const formData = new FormData();
+      formData.append("username", this.state.username);
+      formData.append("password", this.state.password);
+      formData.append("name", this.state.name);
+      formData.append("gender", this.state.gender);
+      formData.append("major", this.state.major);
+      formData.append("year", this.state.year);
+      formData.append("phone", this.state.phone);
+      formData.append("email", this.state.email);
+      formData.append("bio", this.state.bio);
+      formData.append("instagram", this.state.instagram);
+      formData.append("discord", this.state.discord);
+      formData.append("facebook", this.state.facebook);
+      formData.append("samegender", this.state.samegender);
+      formData.append("onthehill", this.state.onthehill);
+      formData.append("alchohol", this.state.alchohol);
+      formData.append("pets", this.state.pets);
+      formData.append("nightowl", this.state.nightowl);
+      formData.append("articleImage", this.state.fileName);
+
     axios
-      .post('http://localhost:8082/api/users/signup', data)
+      .post('http://localhost:8082/api/users/signup', formData)
       .then(res => {
         this.setState({
           username: '',
@@ -289,6 +337,8 @@ class SignUp extends Component {
  
 
   render() {
+    
+    
    
     return (
     
@@ -307,7 +357,7 @@ class SignUp extends Component {
             </div>
             <div className="col-md-8 m-auto">
 
-              <form noValidate onSubmit={this.onSubmit}>
+              <form noValidate onSubmit={this.onSubmit} encType="multipart/form-data">
               <div className= {styles.FullFrame}>
         </div>
               <div className= "Profile section">
@@ -322,6 +372,19 @@ class SignUp extends Component {
                 <div className = {styles.Frame4}>
                 <div className= {styles.SignUpText}>
                   Sign Up
+                </div>
+
+              {/* Profile Pic Button */}
+              <div className='form-group'>
+                  <label htmlFor='file'>
+                    Choose Image
+                  </label>
+                  <input
+                    type='file'
+                    fileName='articleImage'
+                    className='form-control-file'
+                    onChange={this.onChangeFile}
+                  />
                 </div>
 
               <div className= {styles.UserNameText}>

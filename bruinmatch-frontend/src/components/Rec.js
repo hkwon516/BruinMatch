@@ -3,12 +3,13 @@ import "../Rec.css";
 import styles from "../Rec.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import UserProfile from "./Profile";
+import Profile from "./Profile";
 
 class Rec extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      user: '',
       users: [],
       filter: {
         samegender: false,
@@ -30,8 +31,13 @@ class Rec extends Component {
     console.log(this.state.filter);
   };
 
-  onClick = (e) => {
+  onClickProfile = (e) => {
     this.props.history.push(`/profile/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
+
+  onClickSaved = (e) => {
+    this.props.history.push(`/saved/${this.state.usrnm}`);
     window.location.reload(false);
   };
 
@@ -42,7 +48,17 @@ class Rec extends Component {
         this.setState({
           users: res.data,
         });
-        console.log(this.state.history);
+      })
+      .catch((err) => {
+        console.log("Error from ShowUserList");
+      });
+
+    axios
+      .get("http://localhost:8082/api/users/" + this.state.usrnm)
+      .then((res) => {
+        this.setState({
+          user: res.data,
+        });
       })
       .catch((err) => {
         console.log("Error from ShowUserList");
@@ -54,40 +70,46 @@ class Rec extends Component {
     const filter = this.state.filter;
     var newUsers = [];
     let userList;
-
+    var keystuff = Object.keys(filter);
     if (users) {
-      var keystuff = Object.keys(filter);
       var shouldFilter = false;
       for (var i = 0; i < keystuff.length; i++) {
         if (filter[keystuff[i]]) {
           shouldFilter = true;
-          console.log("H");
           break;
         }
       }
       if (shouldFilter) {
         for (var i = 0; i < users.length; i++) {
-          if (users[i].samegender && filter["samegender"]) {
+          var check = false;
+          for(var j = 0; j < keystuff.length; j++){
+            if(filter[keystuff[j]] == true){
+              if(keystuff[j] == "samegender" && users[i].samegender){
+                check = true;
+              }else if(keystuff[j] == "onthehill" && users[i].onthehill){
+                check = true;
+              }else if(keystuff[j] == "alchohol" && users[i].alchohol){
+                check = true;
+              }else if(keystuff[j] == "pets" && users[i].pets){
+                check = true;
+              }else if(keystuff[j] == "nightowl" && users[i].nightowl){
+                check = true;
+              }else{
+                check = false;
+                break;
+              }
+            }
+          }
+          if(check){  
             console.log(1);
             newUsers.push(users[i]);
-          } else if (users[i].onthehill && filter["onthehill"]) {
-            console.log(2);
-            newUsers.push(users[i]);
-          } else if (users[i].alchohol && filter["alchohol"]) {
-            console.log(3);
-            newUsers.push(users[i]);
-          } else if (users[i].pets && filter["pets"]) {
-            console.log(4);
-            newUsers.push(users[i]);
-          } else if (users[i].nightowl && filter["nightowl"]) {
-            console.log(5);
-            newUsers.push(users[i]);
-          }
+          } 
         }
       } else {
         newUsers = users;
       }
-      userList = newUsers.map((user) => <UserProfile user={user} />);
+      // console.log(this.state.user);
+      userList = newUsers.map((user) => <Profile user={user} account={this.state.user}/>);
     }
     return (
       <div clasName="absolute">
@@ -99,10 +121,10 @@ class Rec extends Component {
               </div>
               <div className="flex w-full items-center justify-end text-xl font-navbar text-white text-bold">
                 <div className="-mt-12 mx-6 hover:text-yellow">
-                  <a href="./Saved">Saved</a>
+                  <a onClick={this.onClickSaved}>Saved</a>
                 </div>
                 <div className="-mt-12 hover:text-yellow">
-                  <a onClick={this.onClick}>My Profile</a>
+                  <a onClick={this.onClickProfile}>My Profile</a>
                 </div>
               </div>
               <div className="list">{userList}</div>
@@ -214,18 +236,6 @@ class Rec extends Component {
         </div>
         <div className="relative max-w-screen-lg mx-auto p-4">
           <div className="grid grid-cols-2 gap-8 mt-12">
-            {/*<div className="w-full h-0 shadow-lg pb-full rounded-xl bg-yellow-300">
-              red bull did not give me wings
-            </div>
-            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-black-300">
-              HOLA
-            </div>
-            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-green-300">
-              HOLA
-            </div>
-            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-indigo-300">
-              HOLA
-    </div>*/}
           </div>
         </div>
       </div>

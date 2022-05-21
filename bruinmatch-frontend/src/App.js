@@ -4,7 +4,7 @@ import "./App.css";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Rec from "./components/Rec";
-import Saved from "./components/Saved";
+import Saved from "./components/SavedProfiles";
 import Profile from "./components/UserProfile";
 
 class App extends Component {
@@ -16,10 +16,8 @@ class App extends Component {
           <Route path="/login" component={LogIn} />
           <Route path="/rec/:usrnm" component={Rec} />
           <Route path="/profile/:usrnm" component={Profile} />
-          <Route path="/edit" component={Rec} />
-          {/*<Route path="/saved/:" component={Saved} />
-             <Route path='/edit' component={Rec} />
-            <Route path='/save' component={Rec} /> */}
+          {/*<Route path="/edit" component={Rec} />*/}
+          <Route path="/saved/:usrnm" component={Saved} />
         </div>
       </Router>
     );
