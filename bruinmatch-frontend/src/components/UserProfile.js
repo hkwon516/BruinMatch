@@ -85,25 +85,31 @@ class UserProfile extends Component {
                   <div className={styles.SetProfileButton}></div>
                   <div className={styles.ProfilePhoto}></div>
                   <div className={styles.Instagram}>
-                    <img
-                      src="https://static.cdn.wisestamp.com/wp-content/uploads/2020/06/instagram-icon-2.jpeg"
-                      alt=""
-                      style={{ width: "70%" }}
-                    />
+                    <a href={this.state.instagram}>
+                      <img
+                        src="https://static.cdn.wisestamp.com/wp-content/uploads/2020/06/instagram-icon-2.jpeg"
+                        alt=""
+                        style={{ width: "70%" }}
+                      />
+                    </a>
                   </div>
                   <div className={styles.Twitter}>
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/124/124021.png"
-                      alt=""
-                      style={{ width: "53%" }}
-                    />
+                    <a href={this.state.Twitter}>
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/124/124021.png"
+                        alt=""
+                        style={{ width: "53%" }}
+                      />
+                    </a>
                   </div>
                   <div className={styles.Facebook}>
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
-                      alt=""
-                      style={{ width: "57%" }}
-                    />
+                    <a href={this.state.facebook}>
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
+                        alt=""
+                        style={{ width: "57%" }}
+                      />
+                    </a>
                   </div>
                   <div className={styles.PhotoButtonText}>
                     Edit Profile Photo
