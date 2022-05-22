@@ -7,9 +7,10 @@ module.exports = {
         headingBox: "#2774AE",
         yellow: "#FFD100",
         filter: "#D4E6F3",
+        greyText: "#525252",
       },
       fontFamily: {
-        main: ["Unbutu"],
+        main: ["Ubuntu"],
         navbar: ["Prompt"],
       },
       padding: {

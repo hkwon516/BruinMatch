@@ -3,6 +3,7 @@ import "../Rec.css";
 import styles from "../Rec.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import swal from 'sweetalert';
 
 var user = "";
 var account = "";
@@ -33,10 +34,21 @@ const UserProfile = (props) => {
       <div className="phone1">Phone: {user.phone}</div>
       <div className="email1">Email: {user.email}</div>
       <div className="bio1">Bio:</div>
-      <button class="save1" onClick={addProfile}>
-        Save
-      </button>
-      <button class="view1">View</button>
+      {/*<button className="save1">
+        Like
+      </button>*/}
+      <input
+        type="button"
+        className="save1"
+        value="Like"
+        onClick="alert('aaaaaaa')"
+      />
+      <input
+        type="button"
+        className="view1"
+        value="View"
+        onClick="alert('aaaaaaa')"
+      />      
       {/*<div className="comments1">Comments:</div>
               <div className="pref1">Same Gender:</div>
               <div className="pref2">On The Hill:</div>
@@ -44,6 +56,7 @@ const UserProfile = (props) => {
               <div className="pref4">Pets:</div>
               <div className="pref5">Night Owl:</div>*/}
     </div>
+    
   );
 };
 

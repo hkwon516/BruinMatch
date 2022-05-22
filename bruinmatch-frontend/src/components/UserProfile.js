@@ -126,7 +126,9 @@ class UserProfile extends Component {
                     <div className={styles.showMajor}>{this.state.major}</div>
                   </div>
 
-                  <div className={styles.MyProfile}>My Profile</div>
+                  <div className={"MyProfile"}>
+                    <div className={styles.MyProfile}>My Profile</div>
+                  </div>
 
                   <div className={"phone"}>
                     <div className={styles.Phone}>Phone</div>

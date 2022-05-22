@@ -136,14 +136,14 @@ class Rec extends Component {
         <div className="flex flex-row">
           <div className="w-2/12">
             <div className="h-screen bg-filter">
-              <div className="font-navbar text-2xl text-center py-4 text-main text-extrabold tracking-wide">
+              <div className="font-navbar text-2xl text-center font-Ubuntu font-bold py-4 text-main text-extrabold tracking-wide">
                 Filter
               </div>
               <div className="flex justify-center ">
                 <div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -154,14 +154,14 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         Same gender only
                       </div>
                     </label>
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -172,14 +172,14 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         On The Hill
                       </div>
                     </label>
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -190,14 +190,14 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         Night Owl
                       </div>
                     </label>
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -208,14 +208,14 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         Alcohol
                       </div>
                     </label>
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -226,7 +226,7 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         Pets Allowed
                       </div>
                     </label>
