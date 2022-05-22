@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './SignUp.module.css';
+import styles from './EditProfile.module.css';
 import axios from 'axios';
 import { Button } from 'react-native'
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
@@ -8,7 +8,7 @@ import swal from 'sweetalert';
 
 
 
-class SignUp extends Component {
+class EditProfile extends Component {
   constructor() {
     super();
     this.state = {
@@ -323,7 +323,7 @@ class SignUp extends Component {
    
     return (
     
-      <div className="SignUp">
+      <div className="EditProfile">
         <div className="container">
         <div className= {styles.FullFrame}>
         </div>
@@ -616,4 +616,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default EditProfile;
