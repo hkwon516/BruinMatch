@@ -189,3 +189,15 @@ p {
   font-size: 1em;
   padding: 10px 0 10px 0;
 }
+
+
+.ProfilePhoto1{
+
+  border-radius: 50%;
+  display: inline-block; 
+  position: absolute; 
+  width: 200px; 
+  height: 200px;
+  overflow: hidden; 
+  
+}

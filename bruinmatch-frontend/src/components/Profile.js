@@ -18,6 +18,24 @@ function addProfile() {
     .then((res) => {});
 }
 
+function ViewButton(username)
+{
+ swal({
+   title: username,
+   // text: "Please Try Again",
+   // icon: "error",
+   // button: "Try again",
+ });
+}
+
+function importAllImages(r) {
+  let images = {};
+  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+  return images;
+}
+
+const images = importAllImages(require.context('../../../bruinmatch-backend/images', false, /\.(png|jpe?g|svg)$/));
+
 const UserProfile = (props) => {
   user = props.user;
   account = props.account;
@@ -26,7 +44,9 @@ const UserProfile = (props) => {
     <div className="card-container">
       {/* Change Image Routing!! And ProfPic Dimensions */}
       {/* <img src={require(`/Users/sreyamuppalla/Desktop/BruinMatch/bruinmatch-frontend/src/uploads/${user.articleImage}`)} alt=""/> */}
-      <div className="ProfilePhoto1"></div>
+      {/* <img src={images['test1.png']} /> */}
+      
+      <img class="ProfilePhoto1" src={images['test1.png']} />
       <div className="name1">{user.name}</div>
       <div className="gender1">Gender: {user.gender}</div>
       <div className="major1">Major: {user.major}</div>
