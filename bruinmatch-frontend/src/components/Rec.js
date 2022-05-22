@@ -9,7 +9,7 @@ class Rec extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: '',
+      user: "",
       users: [],
       filter: {
         samegender: false,
@@ -82,37 +82,39 @@ class Rec extends Component {
       if (shouldFilter) {
         for (var i = 0; i < users.length; i++) {
           var check = false;
-          for(var j = 0; j < keystuff.length; j++){
-            if(filter[keystuff[j]] == true){
-              if(keystuff[j] == "samegender" && users[i].samegender){
+          for (var j = 0; j < keystuff.length; j++) {
+            if (filter[keystuff[j]] == true) {
+              if (keystuff[j] == "samegender" && users[i].samegender) {
                 check = true;
-              }else if(keystuff[j] == "onthehill" && users[i].onthehill){
+              } else if (keystuff[j] == "onthehill" && users[i].onthehill) {
                 check = true;
-              }else if(keystuff[j] == "alchohol" && users[i].alchohol){
+              } else if (keystuff[j] == "alchohol" && users[i].alchohol) {
                 check = true;
-              }else if(keystuff[j] == "pets" && users[i].pets){
+              } else if (keystuff[j] == "pets" && users[i].pets) {
                 check = true;
-              }else if(keystuff[j] == "nightowl" && users[i].nightowl){
+              } else if (keystuff[j] == "nightowl" && users[i].nightowl) {
                 check = true;
-              }else{
+              } else {
                 check = false;
                 break;
               }
             }
           }
-          if(check){  
+          if (check) {
             console.log(1);
             newUsers.push(users[i]);
-          } 
+          }
         }
       } else {
         newUsers = users;
       }
       // console.log(this.state.user);
-      userList = newUsers.map((user) => <Profile user={user} account={this.state.user}/>);
+      userList = newUsers.map((user) => (
+        <Profile user={user} account={this.state.user} />
+      ));
     }
     return (
-      <div clasName="absolute">
+      <div>
         <div className="w-full">
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
@@ -234,10 +236,9 @@ class Rec extends Component {
             </div>
           </div>
         </div>
-        <div className="relative max-w-screen-lg mx-auto p-4">
-          <div className="grid grid-cols-2 gap-8 mt-12">
-          </div>
-        </div>
+        {/* <div className="relative max-w-screen-lg mx-auto p-4">
+          <div className="grid grid-cols-2 gap-8 mt-12"></div>
+        </div> */}
       </div>
     );
   }

@@ -37,11 +37,11 @@
   padding-left: 300px;
 }
 
-.year1{
+.year1 {
   padding-left: 300px;
 }
 
-.phone1{
+.phone1 {
   padding-left: 300px;
   padding-top: 100px;
 
@@ -65,15 +65,15 @@
   padding-left: 300px;
 }
 
-.year1{
+.year1 {
   padding-left: 300px;
 }
 
-.phone1{
+.phone1 {
   padding-left: 300px;
 }
 
-.email1{
+.email1 {
   padding-left: 300px;
 }
 
@@ -102,7 +102,7 @@
   font-size: 20px;
 }
 
-.email1{
+.email1 {
   padding-left: 300px;
 }
 
@@ -141,7 +141,8 @@
   font-weight: 400;
 }
 
-.desc h3, p {
+.desc h3,
+p {
   font-weight: 300;
 }
 
