@@ -28,7 +28,7 @@ class LogIn extends Component {
     };
 
     axios
-      .get('http://localhost:8082/api/users/login')
+      .get('http://localhost:8082/api/users/allUsers')
       .then(res => {
           var found = false;
           var usrnm;

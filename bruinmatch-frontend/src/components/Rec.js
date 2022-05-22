@@ -3,12 +3,13 @@ import "../Rec.css";
 import styles from "../Rec.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import UserProfile from "./Profile";
+import Profile from "./Profile";
 
 class Rec extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      user: "",
       users: [],
       filter: {
         samegender: false,
@@ -30,8 +31,13 @@ class Rec extends Component {
     console.log(this.state.filter);
   };
 
-  onClick = (e) => {
+  onClickProfile = (e) => {
     this.props.history.push(`/profile/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
+
+  onClickSaved = (e) => {
+    this.props.history.push(`/saved/${this.state.usrnm}`);
     window.location.reload(false);
   };
 
@@ -42,7 +48,17 @@ class Rec extends Component {
         this.setState({
           users: res.data,
         });
-        console.log(this.state.history);
+      })
+      .catch((err) => {
+        console.log("Error from ShowUserList");
+      });
+
+    axios
+      .get("http://localhost:8082/api/users/" + this.state.usrnm)
+      .then((res) => {
+        this.setState({
+          user: res.data,
+        });
       })
       .catch((err) => {
         console.log("Error from ShowUserList");
@@ -54,43 +70,52 @@ class Rec extends Component {
     const filter = this.state.filter;
     var newUsers = [];
     let userList;
-
+    var keystuff = Object.keys(filter);
     if (users) {
-      var keystuff = Object.keys(filter);
       var shouldFilter = false;
       for (var i = 0; i < keystuff.length; i++) {
         if (filter[keystuff[i]]) {
           shouldFilter = true;
-          console.log("H");
           break;
         }
       }
       if (shouldFilter) {
         for (var i = 0; i < users.length; i++) {
-          if (users[i].samegender && filter["samegender"]) {
+          var check = false;
+          for (var j = 0; j < keystuff.length; j++) {
+            if (filter[keystuff[j]] == true) {
+              if (keystuff[j] == "samegender" && users[i].samegender) {
+                check = true;
+              } else if (keystuff[j] == "onthehill" && users[i].onthehill) {
+                check = true;
+              } else if (keystuff[j] == "alchohol" && users[i].alchohol) {
+                check = true;
+              } else if (keystuff[j] == "pets" && users[i].pets) {
+                check = true;
+              } else if (keystuff[j] == "nightowl" && users[i].nightowl) {
+                check = true;
+              } else {
+                check = false;
+                break;
+              }
+            }
+          }
+          if (check) {
             console.log(1);
-            newUsers.push(users[i]);
-          } else if (users[i].onthehill && filter["onthehill"]) {
-            console.log(2);
-            newUsers.push(users[i]);
-          } else if (users[i].alchohol && filter["alchohol"]) {
-            console.log(3);
-            newUsers.push(users[i]);
-          } else if (users[i].pets && filter["pets"]) {
-            console.log(4);
-            newUsers.push(users[i]);
-          } else if (users[i].nightowl && filter["nightowl"]) {
-            console.log(5);
             newUsers.push(users[i]);
           }
         }
       } else {
         newUsers = users;
       }
-      userList = newUsers.map((user) => <UserProfile user={user} />);
+      // console.log(this.state.user);
+      userList = newUsers.map((user) => (
+        <Profile user={user} account={this.state.user} />
+      ));
     }
-    return (
-      <div clasName="absolute">
+
+    return(
+      <div className="overflow-auto">
         <div className="w-full">
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
@@ -99,19 +124,18 @@ class Rec extends Component {
               </div>
               <div className="flex w-full items-center justify-end text-xl font-navbar text-white text-bold">
                 <div className="-mt-12 mx-6 hover:text-yellow">
-                  <a href="./Saved">Saved</a>
+                  <a onClick={this.onClickSaved}>Saved</a>
                 </div>
                 <div className="-mt-12 hover:text-yellow">
-                  <a onClick={this.onClick}>My Profile</a>
+                  <a onClick={this.onClickProfile}>My Profile</a>
                 </div>
               </div>
-              <div className="list">{userList}</div>
             </div>
           </div>
         </div>
-        <div className="flex flex-row">
-          <div className="w-2/12">
-            <div className="h-screen bg-filter">
+        <div className="flex flex-row static">
+          <div className=" w-2/12 sticky top-0">
+            <div className="min-h-full bg-filter">
               <div className="font-navbar text-2xl text-center py-4 text-main text-extrabold tracking-wide">
                 Filter
               </div>
@@ -119,7 +143,7 @@ class Rec extends Component {
                 <div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -130,14 +154,14 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         Same gender only
                       </div>
                     </label>
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -148,14 +172,14 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         On The Hill
                       </div>
                     </label>
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -166,14 +190,14 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         Night Owl
                       </div>
                     </label>
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -184,14 +208,14 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         Alcohol
                       </div>
                     </label>
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -202,7 +226,7 @@ class Rec extends Component {
                       className="form-check-label inline-block text-gray-800"
                       for="flexCheckDefault"
                     >
-                      <div className="font-sub text-2xl tracking-wide">
+                      <div className="font-sub text-2xl text-greyText font-semibold tracking-normal font-Ubuntu">
                         Pets Allowed
                       </div>
                     </label>
@@ -211,21 +235,9 @@ class Rec extends Component {
               </div>
             </div>
           </div>
-        </div>
-        <div className="relative max-w-screen-lg mx-auto p-4">
-          <div className="grid grid-cols-2 gap-8 mt-12">
-            {/*<div className="w-full h-0 shadow-lg pb-full rounded-xl bg-yellow-300">
-              red bull did not give me wings
-            </div>
-            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-black-300">
-              HOLA
-            </div>
-            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-green-300">
-              HOLA
-            </div>
-            <div className="w-full h-0 shadow-lg pb-full rounded-xl bg-indigo-300">
-              HOLA
-    </div>*/}
+
+          <div className="ml-2">
+            <div className="list">{userList}</div>
           </div>
         </div>
       </div>
@@ -233,4 +245,4 @@ class Rec extends Component {
   }
 }
 
-export default Rec;
+export default Rec
