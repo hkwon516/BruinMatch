@@ -342,7 +342,7 @@ class SignUp extends Component {
    
     return (
     
-      <div className="SignUp">
+      <div className={styles.zoom}>
         <div className="container">
         <div className= {styles.FullFrame}>
         </div>
