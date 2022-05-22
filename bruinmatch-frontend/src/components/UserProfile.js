@@ -9,34 +9,34 @@ class UserProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: '',
-      username: '',
-      password:'',
-      name:'',
-      gender:'',
-      major: '',
-      year: '',
-      phone: '',
-      email: '',
-      bio: '',
-      instagram: '',
-      discord: '',
-      facebook: '',
-      samegender: '',
-      onthehill: '',
-      alchohol: '',
-      pets: '',
-      nightowl:''
+      user: "",
+      username: "",
+      password: "",
+      name: "",
+      gender: "",
+      major: "",
+      year: "",
+      phone: "",
+      email: "",
+      bio: "",
+      instagram: "",
+      discord: "",
+      facebook: "",
+      samegender: "",
+      onthehill: "",
+      alchohol: "",
+      pets: "",
+      nightowl: "",
     };
   }
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/users/'+this.props.match.params.usrnm)
-      .then(res => {
+      .get("http://localhost:8082/api/users/" + this.props.match.params.usrnm)
+      .then((res) => {
         this.setState({
           user: res.data,
-        })
+        });
         this.setState({
           username: this.state.user.username,
           password: this.state.user.password,
@@ -54,13 +54,13 @@ class UserProfile extends Component {
           onthehill: this.state.user.onthehill,
           alchohol: this.state.user.alchohol,
           pets: this.state.user.pets,
-          nightowl: this.state.user.nightowl
-        })
+          nightowl: this.state.user.nightowl,
+        });
       })
-      .catch(err => {
+      .catch((err) => {
         console.log("Error from ShowUserDetails");
-      })
-  };
+      });
+  }
 
   render() {
     // console.log(user)
@@ -85,25 +85,31 @@ class UserProfile extends Component {
                   <div className={styles.SetProfileButton}></div>
                   <div className={styles.ProfilePhoto}></div>
                   <div className={styles.Instagram}>
-                    <img
-                      src="https://static.cdn.wisestamp.com/wp-content/uploads/2020/06/instagram-icon-2.jpeg"
-                      alt=""
-                      style={{ width: "70%" }}
-                    />
+                    <a href={this.state.instagram}>
+                      <img
+                        src="https://static.cdn.wisestamp.com/wp-content/uploads/2020/06/instagram-icon-2.jpeg"
+                        alt=""
+                        style={{ width: "70%" }}
+                      />
+                    </a>
                   </div>
                   <div className={styles.Twitter}>
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/124/124021.png"
-                      alt=""
-                      style={{ width: "53%" }}
-                    />
+                    <a href={this.state.Twitter}>
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/124/124021.png"
+                        alt=""
+                        style={{ width: "53%" }}
+                      />
+                    </a>
                   </div>
                   <div className={styles.Facebook}>
-                    <img
-                      src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
-                      alt=""
-                      style={{ width: "57%" }}
-                    />
+                    <a href={this.state.facebook}>
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
+                        alt=""
+                        style={{ width: "57%" }}
+                      />
+                    </a>
                   </div>
                   <div className={styles.PhotoButtonText}>
                     Edit Profile Photo
@@ -142,7 +148,7 @@ class UserProfile extends Component {
                     <div className="Gender">
                       <div className={styles.Gender}>Gender</div>
                       <div className={styles.showGender}>
-                      {this.state.gender}
+                        {this.state.gender}
                       </div>
                     </div>
 
