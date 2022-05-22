@@ -1,6 +1,7 @@
-/* html {
+.FormatPadding {
     zoom: 0.75;
     background-color: #EFEFEF;
+}
      /* Old IE only */
 /*-moz-transform: scale(0.8);
     -webkit-transform: scale(0.8);*/
@@ -235,7 +236,7 @@
     /*width: 1303px;*/
     height: 1019px;
     left: 310px;
-    top: 1203px;
+    top: 853px;
     background-color: #efefef;
   }
   
@@ -1035,7 +1036,7 @@
     width: 1330px;
     height: 817px;
     left: 295px;
-    top: 2600px;
+    top: 2300px;
   }
   
   /* Rectangle 29*/
@@ -1662,8 +1663,8 @@
   
   .Frame4 {
     position: absolute;
-    /*width: 1303px;*/
-    height: 1321px;
+    width: 1303px;
+    height: 1421px;
     left: 310px;
     top: 852px;
     background-color: #efefef;
@@ -1784,7 +1785,7 @@
     width: 293px;
     height: 90px;
     left: 1197px;
-    top: 2200px;
+    top: 2250px;
   
     color: rgba(82, 82, 82, 0.62);
     font-family: "Prompt";

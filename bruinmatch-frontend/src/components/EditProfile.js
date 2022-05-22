@@ -237,82 +237,9 @@ class EditProfile extends Component {
             found = true;
           }
       }
-      if(found){
-        //ADD CODE TO TELL USERNAME ALREADY EXISTS
-        console.log("username already exists");
-      }else if(validatePassword(this.state.password))
-    {
-      console.log("invalid password");
-      swal({
-        title: "Invalid Password",
-        text: "Password must be minimum of 8 characters\n Must have at least one capital letter, lowercase letter, and digit",
-        icon: "error",
-        button: "Try again",
-      });
-    }
+      
 
-    else {
-
-      const formData = new FormData();
-      formData.append("username", this.state.username);
-      formData.append("password", this.state.password);
-      formData.append("name", this.state.name);
-      formData.append("gender", this.state.gender);
-      formData.append("major", this.state.major);
-      formData.append("year", this.state.year);
-      formData.append("phone", this.state.phone);
-      formData.append("email", this.state.email);
-      formData.append("bio", this.state.bio);
-      formData.append("instagram", this.state.instagram);
-      formData.append("discord", this.state.discord);
-      formData.append("facebook", this.state.facebook);
-      formData.append("samegender", this.state.samegender);
-      formData.append("onthehill", this.state.onthehill);
-      formData.append("alchohol", this.state.alchohol);
-      formData.append("pets", this.state.pets);
-      formData.append("nightowl", this.state.nightowl);
-      formData.append("articleImage", this.state.fileName);
-
-    axios
-      .post('http://localhost:8082/api/users/signup', formData)
-      .then(res => {
-        this.setState({
-          username: '',
-          password:'',
-          name:'',
-          gender:'',
-          major: '',
-          year: '',
-          phone: '',
-          email: '',
-          bio: '',
-          instagram: '',
-          discord: '',
-          facebook: '',
-          samegender: '',
-          onthehill: '',
-          alchohol: '',
-          pets: '',
-          nightowl:''
-        })
-
-
-
-        
-
-        var radioButtons = document.querySelectorAll('input[type="radio"]');
-        for(var i=0;i<radioButtons.length;i++)
-          radioButtons[i].checked = false;
-
-
-        this.props.history.push(`/login`);
-        window.location.reload(false);
-      })
     
-      .catch(err => {
-        console.log("Error in CreateUser!");
-      })
-    }
     
   };
  
@@ -323,7 +250,7 @@ class EditProfile extends Component {
    
     return (
     
-      <div className="EditProfile">
+      <div className={styles.FormatPadding}>
         <div className="container">
         <div className= {styles.FullFrame}>
         </div>
@@ -351,9 +278,6 @@ class EditProfile extends Component {
                 </div>
 
                 <div className = {styles.Frame4}>
-                <div className= {styles.SignUpText}>
-                  Sign Up
-                </div>
 
               {/* Profile Pic Button */}
               <div className='form-group'>
@@ -367,35 +291,7 @@ class EditProfile extends Component {
                     onChange={this.onChangeFile}
                   />
                 </div>
-
-              <div className= {styles.UserNameText}>
-                  Username*
-                </div>
-              <div className='form-group'>
-                  <input
-                    type='text'
-                    
-                    name='username'
-                    className={styles.username}
-                    value={this.state.username}
-                    onChange={this.onChange}
-                  />
-                </div>
                 <br />
-
-
-                <div className= {styles.PasswordText}>
-                  Password*
-                </div>
-                <div className='form-group'>
-                  <input
-                    type='text'
-                    name='password'
-                    className={styles.password}
-                    value={this.state.password}
-                    onChange={this.onChange}
-                  />
-                </div>
                 </div>
              
                
@@ -448,7 +344,7 @@ class EditProfile extends Component {
 
                 
                 <div className={styles.CreateProfile}>
-                  Create Profile
+                  Edit Profile
                 </div>
 
                 
