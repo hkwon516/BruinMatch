@@ -9,6 +9,33 @@
   padding-top: 33px;
 }
 
+.TopBanner {
+  position: absolute;
+  width: 1920px;
+  height: 94px;
+  left: 0px;
+  top: 0px;
+  background: #2774ae;
+}
+
+.topBannerText {
+  position: absolute;
+  width: 295px;
+  height: 56px;
+  left: 24px;
+  top: 19px;
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 55px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
 .list {
   display: grid;
   margin: 10px 0 50px 0;

@@ -9,34 +9,34 @@ class UserProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: '',
-      username: '',
-      password:'',
-      name:'',
-      gender:'',
-      major: '',
-      year: '',
-      phone: '',
-      email: '',
-      bio: '',
-      instagram: '',
-      discord: '',
-      facebook: '',
-      samegender: '',
-      onthehill: '',
-      alchohol: '',
-      pets: '',
-      nightowl:''
+      user: "",
+      username: "",
+      password: "",
+      name: "",
+      gender: "",
+      major: "",
+      year: "",
+      phone: "",
+      email: "",
+      bio: "",
+      instagram: "",
+      discord: "",
+      facebook: "",
+      samegender: "",
+      onthehill: "",
+      alchohol: "",
+      pets: "",
+      nightowl: "",
     };
   }
 
   componentDidMount() {
     axios
-      .get('http://localhost:8082/api/users/'+this.props.match.params.usrnm)
-      .then(res => {
+      .get("http://localhost:8082/api/users/" + this.props.match.params.usrnm)
+      .then((res) => {
         this.setState({
           user: res.data,
-        })
+        });
         this.setState({
           username: this.state.user.username,
           password: this.state.user.password,
@@ -54,13 +54,13 @@ class UserProfile extends Component {
           onthehill: this.state.user.onthehill,
           alchohol: this.state.user.alchohol,
           pets: this.state.user.pets,
-          nightowl: this.state.user.nightowl
-        })
+          nightowl: this.state.user.nightowl,
+        });
       })
-      .catch(err => {
+      .catch((err) => {
         console.log("Error from ShowUserDetails");
-      })
-  };
+      });
+  }
 
   render() {
     // console.log(user)
@@ -140,7 +140,7 @@ class UserProfile extends Component {
                     <div className="Gender">
                       <div className={styles.Gender}>Gender</div>
                       <div className={styles.showGender}>
-                      {this.state.gender}
+                        {this.state.gender}
                       </div>
                     </div>
 
