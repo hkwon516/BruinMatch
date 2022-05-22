@@ -113,7 +113,8 @@ class Rec extends Component {
         <Profile user={user} account={this.state.user} />
       ));
     }
-    return (
+
+    return(
       <div className="overflow-auto">
         <div className="w-full">
           <div className="h-16 bg-headingBox">
@@ -132,24 +133,17 @@ class Rec extends Component {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="flex flex-row">
-          <div className="w-2/12">
-            <div className="h-screen bg-filter">
-              <div className="font-navbar text-2xl text-center font-Ubuntu font-bold py-4 text-main text-extrabold tracking-wide">
-=======
         <div className="flex flex-row static">
           <div className=" w-2/12 sticky top-0">
             <div className="min-h-full bg-filter">
               <div className="font-navbar text-2xl text-center py-4 text-main text-extrabold tracking-wide">
->>>>>>> 3ddf1a174b989e77e3a309dec115a66ab7ed7fb2
                 Filter
               </div>
               <div className="flex justify-center ">
                 <div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -167,7 +161,7 @@ class Rec extends Component {
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -185,7 +179,7 @@ class Rec extends Component {
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -203,7 +197,7 @@ class Rec extends Component {
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -221,7 +215,7 @@ class Rec extends Component {
                   </div>
                   <div className="form-check py-3">
                     <input
-                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
+                      className="form-check-input appearance-none h-6 w-6 border rounded-lg border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
@@ -246,12 +240,9 @@ class Rec extends Component {
             <div className="list">{userList}</div>
           </div>
         </div>
-        {/* <div className="relative max-w-screen-lg mx-auto p-4">
-          <div className="grid grid-cols-2 gap-8 mt-12"></div>
-        </div> */}
       </div>
     );
   }
 }
 
-export default Rec;
+export default Rec

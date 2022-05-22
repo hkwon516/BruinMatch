@@ -16,7 +16,7 @@ class App extends Component {
           <Route path="/login" component={LogIn} />
           <Route path="/rec/:usrnm" component={Rec} />
           <Route path="/profile/:usrnm" component={Profile} />
-          {/*<Route path="/edit" component={Rec} />*/}
+          <Route path="/edit" component={Rec} />
           <Route path="/saved/:usrnm" component={Saved} />
         </div>
       </Router>
