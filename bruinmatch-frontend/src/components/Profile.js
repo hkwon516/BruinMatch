@@ -40,13 +40,14 @@ const UserProfile = (props) => {
   user = props.user;
   account = props.account;
   console.log(account);
+  let picId = user.username + '.png';
   return (
     <div className="card-container">
       {/* Change Image Routing!! And ProfPic Dimensions */}
       {/* <img src={require(`/Users/sreyamuppalla/Desktop/BruinMatch/bruinmatch-frontend/src/uploads/${user.articleImage}`)} alt=""/> */}
       {/* <img src={images['test1.png']} /> */}
       
-      <img class="ProfilePhoto1" src={images['test1.png']} />
+      <img class="ProfilePhoto1" src={images[picId]} />
       <div className="name1">{user.name}</div>
       <div className="gender1">Gender: {user.gender}</div>
       <div className="major1">Major: {user.major}</div>
