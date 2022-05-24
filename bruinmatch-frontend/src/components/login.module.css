@@ -2,11 +2,11 @@
     background-color: #2774AE;
     min-height: 100vh;
     color: white;
-    max-width: 1435px;
+    /* max-width: 1435px; */
     /* margin: 0; */
     width: 100%;
     margin: auto;
-    zoom: 1.45;
+    zoom: 1.05;
     
   }
 
@@ -67,7 +67,7 @@ color: #2774AE;
   height: 500px;
   left: 0px;
   top: 176px;
-  max-width: 1445px;
+  /* max-width: 1445px; */
 }
 
 img{ 
@@ -85,7 +85,7 @@ height: 125px;
 left: 186px;
 top: 304px; */
 
-font-family: 'Telex';
+font-family: 'Ubuntu';
 font-style: normal;
 font-weight: 400;
 font-size: 64px;
@@ -121,7 +121,7 @@ font-style: normal;
 font-weight: 400;
 font-size: 36px;
 line-height: 41px;
- text-align: center;
+text-align: center;
 letter-spacing: 0.05em;
 
 color: #ffffff;
@@ -159,7 +159,7 @@ background-color: #2774AE;
 .loginText {
 
 padding-top: 700px;
-color: #FFFFFF;
+color: #ffffff;
 font-family: 'Ubuntu';
 font-style: normal;
 font-weight: 400;
@@ -250,14 +250,13 @@ border-radius: 40px;
 position: absolute;
 width: 150px;
 height: 42px;
-left: 1000px;
-top: 120px;
+left: 986px;
+top: 140px;
 
 font-family: 'Prompt';
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
-line-height: 38px;
 text-align: center;
 letter-spacing: 0.05em;
 
@@ -279,13 +278,14 @@ color: #2774AE;
     position: relative;
     left: 0;
     outline: none;
-    border: 1px solid #cdcdcd;
+    border: 1px solid #e01616;
     border-color: rgba(0, 0, 0, .15);
     background-color: white;
     font-size: 16px;
     border-radius: 12px;
     padding-left: 2px;
     color: black;
+    margin-bottom: 10px;
   }
 
 
@@ -316,7 +316,7 @@ color: #2774AE;
 position: absolute;
 height: 39px;
 left: 1045px;
-top: 92px;
+top: 105px;
 
 
 font-family: 'Ubuntu';

@@ -50,6 +50,24 @@
   background-color: #efefef;
 }
 
+.MyProfile {
+  position: absolute;
+  width: 284px;
+  height: 84px;
+  left: 520px;
+  top: 0px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 53px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
 /* Name* */
 
 .Name {
@@ -133,7 +151,7 @@
   width: 211px;
   height: 62px;
   left: 43px;
-  top: 811px;
+  top: 790px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -151,7 +169,7 @@
   width: 284px;
   height: 84px;
   left: 265px;
-  top: 811px;
+  top: 790px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -247,7 +265,7 @@
   width: 284px;
   height: 84px;
   left: 24px;
-  top: 584px;
+  top: 576px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -265,7 +283,7 @@
   width: 284px;
   height: 84px;
   left: 250px;
-  top: 584px;
+  top: 576px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -727,7 +745,7 @@
   position: absolute;
   width: 265px;
   height: 61px;
-  left: 875px;
+  left: 846px;
   top: 708px;
 
   background: rgba(255, 255, 255, 0.75);
@@ -741,7 +759,7 @@
   position: absolute;
   width: 237px;
   height: 42px;
-  left: 892px;
+  left: 863px;
   top: 720px;
 
   font-family: "Prompt";

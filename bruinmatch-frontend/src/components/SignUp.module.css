@@ -1,6 +1,7 @@
-/* html {
+ .zoom {
     zoom: 0.75;
     background-color: #EFEFEF;
+ }
      /* Old IE only */
 /*-moz-transform: scale(0.8);
     -webkit-transform: scale(0.8);*/
@@ -594,7 +595,7 @@ color: rgba(39, 116, 174, 0.53);*/
 .Grad:hover {
   /*background-color: rgba(39, 116, 174, 0.53); /* blue */
   border: 2px solid #2774ae;
-  color: white;
+  /*color: white;*/
 }
 .Grad:focus {
   background-color: rgb(39, 115, 174); /* blue */
@@ -1662,8 +1663,8 @@ color: rgba(82, 82, 82, 0.62);
 
 .Frame4 {
   position: absolute;
-  /*width: 1303px;*/
-  height: 1321px;
+  width: 1303px;
+  height: 1721px;
   left: 310px;
   top: 852px;
   background-color: #efefef;

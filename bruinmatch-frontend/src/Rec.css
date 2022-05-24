@@ -71,34 +71,6 @@
 
 .phone1 {
   padding-left: 300px;
-  padding-top: 100px;
-
-  font-size: 18px;
-  font-weight: 500;
-  font-family: "Prompt";
-  color: #525252;
-}
-
-.name1 {
-  font-size: 28px;
-  padding-left: 350px;
-}
-
-.gender1 {
-  padding-top: 5px;
-  padding-left: 300px;
-}
-
-.major1 {
-  padding-left: 300px;
-}
-
-.year1 {
-  padding-left: 300px;
-}
-
-.phone1 {
-  padding-left: 300px;
 }
 
 .email1 {
@@ -120,33 +92,12 @@
   font-size: 20px;
 }
 
-.view1 {
-  margin-left: 200px;
-  margin-top: 75px;
-  border: 3px solid #2774ae;
-  border-radius: 40px;
-  background-color: #c1e4ff;
-  padding: 5px 20px;
-  font-size: 20px;
+.save1:hover {
+  background: #659eca;
 }
 
-.email1 {
-  padding-left: 300px;
-}
-
-.bio1 {
-  padding-top: 10px;
-  padding-left: 290px;
-}
-
-.save1 {
-  margin-left: 130px;
-  margin-top: 75px;
-  border: 3px solid #2774ae;
-  border-radius: 40px;
-  background-color: #c1e4ff;
-  padding: 5px 20px;
-  font-size: 20px;
+.save1:active {
+  background: #c1e4ff;
 }
 
 .view1 {
@@ -157,6 +108,24 @@
   background-color: #c1e4ff;
   padding: 5px 20px;
   font-size: 20px;
+}
+
+.view1:hover {
+  background: #659eca;
+}
+
+.view1:active {
+  background: #c1e4ff;
+}
+
+.ProfilePhoto1{
+  border-radius: 50%;
+  display: inline-block; 
+  margin-bottom: -200;
+  position: relative; 
+  width: 200px; 
+  height: 200px;
+  overflow: hidden; 
 }
 
 .desc {
