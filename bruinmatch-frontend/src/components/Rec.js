@@ -132,17 +132,10 @@ class Rec extends Component {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="flex flex-row">
-          <div className="w-2/12">
-            <div className="h-screen bg-filter">
-              <div className="font-navbar text-2xl text-center font-Ubuntu font-bold py-4 text-main text-extrabold tracking-wide">
-=======
         <div className="flex flex-row static">
           <div className=" w-2/12 sticky top-0">
             <div className="min-h-full bg-filter">
               <div className="font-navbar text-2xl text-center py-4 text-main text-extrabold tracking-wide">
->>>>>>> 3ddf1a174b989e77e3a309dec115a66ab7ed7fb2
                 Filter
               </div>
               <div className="flex justify-center ">
