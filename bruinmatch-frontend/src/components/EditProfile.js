@@ -340,7 +340,7 @@ class EditProfile extends Component {
 
 
   onSubmit = e => {
-    console.log(this.state)
+    console.log(this.state.year)
     e.preventDefault();
 
     const data = {
@@ -394,22 +394,7 @@ class EditProfile extends Component {
       formData.append("articleImage", this.state.fileName);
 
     axios
-      .put('http://localhost:8082/api/users/signup',
-      { name: this.state.name,
-        gender: this.state.gender,
-        major: this.state.major,
-        year: this.state.year,
-        phone: this.state.phone,
-        email: this.state.email,
-        bio : this.state.bio,
-        instagram: this.state.instagram,
-        discord : this.state.discord,
-        facebook: this.state.facebook,
-        samegender: this.state.samegender,
-        onthehill: this.state.onthehill,
-        alchohol: this.state.alchohol,
-        pets: this.state.pets,
-        nightowl: this.state.nightowl,} ) 
+      .put(`http://localhost:8082/api/users/update/${this.state.user.username}`,formData ) 
       .then(res => {
         this.setState({
           username: '',
@@ -430,6 +415,7 @@ class EditProfile extends Component {
           pets: '',
           nightowl:''
         })
+        console.log("success!!");
 
 
 
@@ -440,7 +426,7 @@ class EditProfile extends Component {
           radioButtons[i].checked = false;
 
 
-        this.props.history.push(`/login`);
+        this.props.history.push(`/rec/${this.state.user.username}`);
         window.location.reload(false);
       })
     

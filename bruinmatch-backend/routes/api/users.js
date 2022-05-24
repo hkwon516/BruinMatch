@@ -29,6 +29,28 @@ router.post('/signup', upload.single("articleImage"), (req, res) => {
     .catch(err => res.status(400).json({ error: 'Unable to add this User' }));
 });
 
+// @route PUT api/users
+// @description update info
+// @access Public
+
+router.put('/update/:usrnm', upload.single("articleImage"), async(req, res) => {
+  console.log("coming here!")
+  var info = req.body
+  info["articleImage"] = req.file.originalname;
+  var allUsers = await User.find()
+    var me;
+    for(var i = 0; i < allUsers.length; i++){
+       if(allUsers[i].username == req.params.usrnm){
+         me = allUsers[i];
+         break;
+       }
+    }
+    console.log(me.gender);
+  me.updateOne(info)
+    .then(user => res.json({ msg: 'User updated successfully' }))
+    .catch(err => res.status(400).json({ error: 'Unable to update this User' }));
+});
+
 // @route GET api/users
 // @description Get all users
 // @access Public
