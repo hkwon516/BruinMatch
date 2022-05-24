@@ -165,25 +165,11 @@ class UserProfile extends Component {
                 <div className={styles.Frame3}>
                   <div className={styles.Preferences}></div>
                   <div className={styles.PreferencesText}>Preferences</div>
-                  <div className={styles.Option1}>Preference1</div>
-                  <div className={styles.Option2}>Preference2</div>
-                  <div className={styles.Option3}>Preference3</div>
-                  <div className={styles.Option4}>Preference4</div>
-                  <div className={styles.Option5}>Preference5</div>
-
-                  <div className="switches">
-                    <div className={styles.Switch1}></div>
-                    <div className={styles.Switch1No}></div>
-
-                    <div className={styles.Switch2}></div>
-                    <div className={styles.Switch2No}></div>
-                    <div className={styles.Switch3}></div>
-                    <div className={styles.Switch3No}></div>
-                    <div className={styles.Switch4}></div>
-                    <div className={styles.Switch4No}></div>
-                    <div className={styles.Switch5}></div>
-                    <div className={styles.Switch5No}></div>
-                  </div>
+                  <div className={styles.Option1}>Same Gender?</div>
+                  <div className={styles.Option2}>On the Hill?</div>
+                  <div className={styles.Option3}>Alcohol?</div>
+                  <div className={styles.Option4}>Pets?</div>
+                  <div className={styles.Option5}>Night Owl?</div>
                 </div>
               </form>
             </div>

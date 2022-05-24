@@ -4,6 +4,7 @@ import styles from "../Rec.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Profile from "./Profile";
+import swal from 'sweetalert';
 
 class Rec extends Component {
   constructor(props) {
@@ -39,6 +40,12 @@ class Rec extends Component {
   onClickSaved = (e) => {
     this.props.history.push(`/saved/${this.state.usrnm}`);
     window.location.reload(false);
+    swal({
+      title: "Incorrect Username/Password",
+      text: "Please Try Again",
+      icon: "error",
+      button: "Try again",
+    });
   };
 
   componentDidMount() {

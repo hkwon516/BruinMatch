@@ -47,7 +47,8 @@
   height: 1019px;
   left: 310px;
   top: 1203px;
-  background-color: #efefef;
+  background-color: #ffffff;
+  justify-content:right;
 }
 
 .MyProfile {
@@ -62,7 +63,7 @@
   font-weight: 500;
   font-size: 50px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -72,9 +73,7 @@
 
 .Name {
   position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 23px;
+  left: 150px;
   top: 155px;
 
   font-family: "Prompt";
@@ -82,7 +81,7 @@
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -90,9 +89,7 @@
 
 .showName {
   position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 210px;
+  left: 400px;
   top: 155px;
 
   font-family: "Prompt";
@@ -100,215 +97,24 @@
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
 }
 
-/* Email* */
-
-.Email {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 15px;
-  top: 684px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.showEmail {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 300px;
-  top: 684px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-/* Bio */
-
-.Bio {
-  position: absolute;
-  width: 211px;
-  height: 62px;
-  left: 43px;
-  top: 790px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.showBio {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 265px;
-  top: 790px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-/* Major* */
-
-.Major {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 15px;
-  top: 364px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.showMajor {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 180px;
-  top: 364px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-/* Year* */
-
-.Year {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 15px;
-  top: 470px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.showYear {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 185px;
-  top: 470px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-/* Phone* */
-
-.Phone {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 24px;
-  top: 576px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.showPhone {
-  position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 250px;
-  top: 576px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: center;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
 
 .Gender {
   position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 24px;
-  top: 257px;
+  left: 150px;
+  top: 255px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -316,10 +122,171 @@
 
 .showGender {
   position: absolute;
-  width: 284px;
-  height: 84px;
-  left: 195px;
-  top: 257px;
+  left: 400px;
+  top: 255px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Major {
+  position: absolute;
+  left: 150px;
+  top: 355px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showMajor {
+  position: absolute;
+  left: 400px;
+  top: 355px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+
+/* Year* */
+
+.Year {
+  position: absolute;
+  left: 150px;
+  top: 455px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showYear {
+  position: absolute;
+  left: 400px;
+  top: 455px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Phone {
+  position: absolute;
+  left: 150px;
+  top: 555px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showPhone {
+  position: absolute;
+  left: 400px;
+  top: 555px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Email {
+  position: absolute;
+  left: 150px;
+  top: 655px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showEmail {
+  position: absolute;
+  left: 400px;
+  top: 655px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Bio {
+  position: absolute;
+  left: 150px;
+  top: 755px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showBio {
+  position: absolute;
+  left: 400px;
+  top: 755px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -356,9 +323,10 @@
 .Frame3 {
   position: absolute;
   width: 1330px;
-  height: 817px;
+  height: 600px;
   left: 295px;
   top: 2238px;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Rectangle 29*/
@@ -368,7 +336,7 @@
 
   position: absolute;
   width: 1294px;
-  height: 768px;
+  height: 550px;
   left: 22px;
   top: 20px;
 
@@ -379,18 +347,15 @@
 
 .Option1 {
   position: absolute;
-  width: 156px;
-  height: 46px;
   left: 104px;
-
-  top: 140px;
+  top: 144px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -400,8 +365,6 @@
 
 .Option2 {
   position: absolute;
-  width: 156px;
-  height: 46px;
   left: 104px;
   top: 224px;
 
@@ -410,7 +373,7 @@
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -420,17 +383,15 @@
 
 .Option3 {
   position: absolute;
-  width: 156px;
-  height: 46px;
   left: 104px;
-  top: 314px;
+  top: 304px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -439,17 +400,15 @@
 /* Pref3 */
 .Option4 {
   position: absolute;
-  width: 156px;
-  height: 46px;
   left: 104px;
-  top: 403px;
+  top: 384px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -458,17 +417,15 @@
 /* Pref4 */
 .Option5 {
   position: absolute;
-  width: 156px;
-  height: 46px;
   left: 104px;
-  top: 493px;
+  top: 464px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -476,10 +433,8 @@
 
 .PreferencesText {
   position: absolute;
-  width: 334px;
-  height: 54px;
-  left: 40px;
-  top: 42px;
+  left: 100px;
+  top: 50px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -492,189 +447,6 @@
   color: #2774ae;
 }
 
-/*Rectangle 31 */
-
-.Switch1 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 324px;
-  height: 63px;
-  left: 325px;
-  top: 140px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-/* Rectangle 32 */
-
-.Switch1No {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 162px;
-  height: 63px;
-  left: 487px;
-  top: 140px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-/* Rectangle 33 */
-
-.Switch2 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 324px;
-  height: 63px;
-  left: 325px;
-  top: 140px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-/* Rectangle 34 */
-.Switch2No {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 162px;
-  height: 63px;
-  left: 487px;
-  top: 140px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-.Switch2 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 324px;
-  height: 63px;
-  left: 325px;
-  top: 217px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-/* Rectangle 36 */
-.Switch2No {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 162px;
-  height: 63px;
-  left: 487px;
-  top: 217px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-.Switch3 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 324px;
-  height: 63px;
-  left: 324px;
-  top: 304px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-/* Rectangle 38 */
-
-.Switch3No {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 162px;
-  height: 63px;
-  left: 486px;
-  top: 304px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-.Switch4 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 324px;
-  height: 63px;
-  left: 324px;
-  top: 393px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-/* Rectangle 40 */
-
-.Switch4No {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 162px;
-  height: 63px;
-  left: 486px;
-  top: 393px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-.Switch5 {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 324px;
-  height: 63px;
-  left: 325px;
-  top: 489px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-/* Rectangle 42 */
-
-.Switch5No {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 162px;
-  height: 63px;
-  left: 487px;
-  top: 489px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-  border-radius: 20px;
-}
-
-/* Frame 4 */
 
 .Frame4 {
   position: absolute;
@@ -745,7 +517,7 @@
   position: absolute;
   width: 265px;
   height: 61px;
-  left: 846px;
+  left: 832px;
   top: 708px;
 
   background: rgba(255, 255, 255, 0.75);
@@ -759,7 +531,7 @@
   position: absolute;
   width: 237px;
   height: 42px;
-  left: 863px;
+  left: 850px;
   top: 720px;
 
   font-family: "Prompt";
@@ -778,7 +550,7 @@
   width: 531px;
   height: 531px;
   border-radius: 50%;
-  left: 720px;
+  left: 695px;
   top: 137px;
   background: url(https://samueli.ucla.edu/wp-content/uploads/samueli/Paul-Eggert_time_zone.png);
 }
@@ -788,7 +560,7 @@
   position: absolute;
   width: 245px;
   height: 230px;
-  left: 650px;
+  left: 620px;
   top: 875px;
 }
 
@@ -796,7 +568,7 @@
   position: absolute;
   width: 245px;
   height: 230px;
-  left: 938px;
+  left: 900px;
   top: 893px;
 }
 
@@ -804,6 +576,6 @@
   position: absolute;
   width: 224px;
   height: 225px;
-  left: 1204px;
+  left: 1167px;
   top: 893px;
 }
