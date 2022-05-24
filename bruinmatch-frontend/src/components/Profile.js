@@ -114,7 +114,7 @@ const UserProfile = (props) => {
  user = props.user;
  account = props.account;
  console.log(account);
- let picId = user.username + '.png';
+ let picId = user.articleImage;
  let usersName = user.name;
  let usersGender = user.gender;
  let usersMajor = user.major;

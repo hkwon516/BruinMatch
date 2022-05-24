@@ -209,7 +209,7 @@ class EditProfile extends Component {
           bio: this.state.user.bio,
           instagram: this.state.user.instagram,
           discord: this.state.user.discord,
-          facebook: this.state.user.faccebook,
+          facebook: this.state.user.facebook,
           samegender: this.state.user.samegender,
           onthehill: this.state.user.onthehill,
           alchohol: this.state.user.alchohol,
@@ -361,7 +361,95 @@ class EditProfile extends Component {
       nightowl: this.state.nightowl,
       
     };
-}
+    var tempUsers;
+
+    axios
+      .get('http://localhost:8082/api/users/allUsers')
+      .then(res => {
+        tempUsers = res.data;
+      })
+      .catch(err =>{
+        console.log('Error from Log In');
+      })
+
+
+      
+
+      const formData = new FormData();
+      formData.append("name", this.state.name);
+      formData.append("gender", this.state.gender);
+      formData.append("major", this.state.major);
+      formData.append("year", this.state.year);
+      formData.append("phone", this.state.phone);
+      formData.append("email", this.state.email);
+      formData.append("bio", this.state.bio);
+      formData.append("instagram", this.state.instagram);
+      formData.append("discord", this.state.discord);
+      formData.append("facebook", this.state.facebook);
+      formData.append("samegender", this.state.samegender);
+      formData.append("onthehill", this.state.onthehill);
+      formData.append("alchohol", this.state.alchohol);
+      formData.append("pets", this.state.pets);
+      formData.append("nightowl", this.state.nightowl);
+      formData.append("articleImage", this.state.fileName);
+
+    axios
+      .put('http://localhost:8082/api/users/signup',
+      { name: this.state.name,
+        gender: this.state.gender,
+        major: this.state.major,
+        year: this.state.year,
+        phone: this.state.phone,
+        email: this.state.email,
+        bio : this.state.bio,
+        instagram: this.state.instagram,
+        discord : this.state.discord,
+        facebook: this.state.facebook,
+        samegender: this.state.samegender,
+        onthehill: this.state.onthehill,
+        alchohol: this.state.alchohol,
+        pets: this.state.pets,
+        nightowl: this.state.nightowl,} ) 
+      .then(res => {
+        this.setState({
+          username: '',
+          password:'',
+          name:'',
+          gender:'',
+          major: '',
+          year: '',
+          phone: '',
+          email: '',
+          bio: '',
+          instagram: '',
+          discord: '',
+          facebook: '',
+          samegender: '',
+          onthehill: '',
+          alchohol: '',
+          pets: '',
+          nightowl:''
+        })
+
+
+
+        //ADD CODE HERE TO CLEAR OUT RADIO BUTTONS
+
+        var radioButtons = document.querySelectorAll('input[type="radio"]');
+        for(var i=0;i<radioButtons.length;i++)
+          radioButtons[i].checked = false;
+
+
+        this.props.history.push(`/login`);
+        window.location.reload(false);
+      })
+    
+      .catch(err => {
+        console.log("Error in CreateUser!");
+      })
+    
+    
+};
 
     
       

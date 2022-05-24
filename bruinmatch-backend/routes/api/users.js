@@ -9,7 +9,7 @@ const User = require('../../models/User');
 
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
-    callback(null, "/Users/sreyamuppalla/Desktop/BruinMatch/bruinmatch-frontend/src/uploads");
+    callback(null, "images");
   },
   filename: (req, file, callback) => {
     callback(null, file.originalname)
