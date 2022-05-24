@@ -251,11 +251,11 @@ class SignUp extends Component {
 
       var found = false;
       var usrnm;
-      for (var i = 0; i < tempUsers.length; i++) {
+      /*for (var i = 0; i < tempUsers.length; i++) {
           if(tempUsers[i].username == data.username){
             found = true;
           }
-      }
+      }*/
       if(found){
         //ADD CODE TO TELL USERNAME ALREADY EXISTS
         console.log("username already exists");

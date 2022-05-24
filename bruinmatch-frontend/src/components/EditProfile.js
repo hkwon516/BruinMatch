@@ -8,12 +8,11 @@ import swal from 'sweetalert';
 
 
 
+
 class EditProfile extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      username: '',
-      password:'',
       name:'',
       gender:'',
       major: '',
@@ -30,7 +29,9 @@ class EditProfile extends Component {
       pets: '',
       nightowl:'',
       fileName: '',
-      savedProfiles: []
+      savedProfiles: [],
+      usrnm: this.props.match.params.usrnm,
+      user:""
     };
   }
 
@@ -191,6 +192,35 @@ class EditProfile extends Component {
     
   };
 
+  componentDidMount() {
+    axios
+      .get("http://localhost:8082/api/users/" + this.props.match.params.usrnm)
+      .then((res) => {
+        this.setState({
+          user: res.data,
+        });
+        this.setState({
+          name: this.state.user.name,
+          gender: this.state.user.gender,
+          major: this.state.user.major,
+          year: this.state.user.year,
+          phone: this.state.user.phone,
+          email: this.state.user.email,
+          bio: this.state.user.bio,
+          instagram: this.state.user.instagram,
+          discord: this.state.user.discord,
+          facebook: this.state.user.faccebook,
+          samegender: this.state.user.samegender,
+          onthehill: this.state.user.onthehill,
+          alchohol: this.state.user.alchohol,
+          pets: this.state.user.pets,
+          nightowl: this.state.user.nightowl,
+        });
+      })
+      .catch((err) => {
+        console.log("Error from ShowUserDetails");
+      });
+  }
 
 
   onSubmit = e => {
@@ -198,8 +228,6 @@ class EditProfile extends Component {
     e.preventDefault();
 
     const data = {
-      username: this.state.username,
-      password: this.state.password,
       name: this.state.name,
       gender: this.state.gender,
       major: this.state.major,
@@ -215,38 +243,21 @@ class EditProfile extends Component {
       alchohol: this.state.alchohol,
       pets: this.state.pets,
       nightowl: this.state.nightowl,
-      savedProfiles: []
+      
     };
+}
 
-    var tempUsers;
-
-    axios
-      .get('http://localhost:8082/api/users/allUsers')
-      .then(res => {
-        tempUsers = res.data;
-      })
-      .catch(err =>{
-        console.log('Error from Log In');
-      })
-
-
-      var found = false;
-      var usrnm;
-      for (var i = 0; i < tempUsers.length; i++) {
-          if(tempUsers[i].username == data.username){
-            found = true;
-          }
-      }
+    
       
 
     
     
-  };
+  
  
 
   render() {
-    
-    
+    console.log(this.state.user);
+    const user = this.state.user;
    
     return (
     
@@ -307,6 +318,7 @@ class EditProfile extends Component {
                       className={styles.NameInput}
                       value={this.state.name}
                       onChange={this.onChange}
+                      
                     />
                   </div>
                 </div>
@@ -322,6 +334,7 @@ class EditProfile extends Component {
                       className={styles.EmailInput}
                       value={this.state.email}
                       onChange={this.onChange}
+                      
                     />
                   </div>
                 </div>
@@ -337,6 +350,7 @@ class EditProfile extends Component {
                       name='major'
                       className={styles.MajorInput}
                       value={this.state.major}
+                      placeholder={this.state.major}
                       onChange={this.onChange}
                     />
                   </div>
