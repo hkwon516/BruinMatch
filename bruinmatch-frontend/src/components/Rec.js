@@ -48,6 +48,11 @@ class Rec extends Component {
     });
   };
 
+  onClickSaved = (e) => {
+    this.props.history.push(`/rec/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
+
   componentDidMount() {
     axios
       .get("http://localhost:8082/api/users/rec/" + this.state.usrnm)
@@ -121,20 +126,29 @@ class Rec extends Component {
       ));
     }
 
-    return(
+    return (
       <div className="overflow-auto">
         <div className="w-full">
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
               <div className="py-3 text-white text-3xl font-Ubuntu font-bold tracking-widest">
-                <a href="./Rec">BruinMatch</a>
+                <a onClick={this.onClickSaved} style={{ cursor: "pointer" }}>
+                  BruinMatch
+                </a>
               </div>
               <div className="flex w-full items-center justify-end text-xl font-navbar text-white text-bold">
                 <div className="-mt-12 mx-6 hover:text-yellow">
-                  <a onClick={this.onClickSaved}>Saved</a>
+                  <a onClick={this.onClickSaved} style={{ cursor: "pointer" }}>
+                    Saved
+                  </a>
                 </div>
                 <div className="-mt-12 hover:text-yellow">
-                  <a onClick={this.onClickProfile}>My Profile</a>
+                  <a
+                    onClick={this.onClickProfile}
+                    style={{ cursor: "pointer" }}
+                  >
+                    My Profile
+                  </a>
                 </div>
               </div>
             </div>
@@ -252,4 +266,4 @@ class Rec extends Component {
   }
 }
 
-export default Rec
+export default Rec;
