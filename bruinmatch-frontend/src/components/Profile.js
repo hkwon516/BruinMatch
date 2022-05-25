@@ -5,10 +5,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import swal from 'sweetalert';
  
-var user = "";
-var account = "";
  
-function addProfile() {
+function addProfile(user,account) {
  var currUser = account;
  var saved = currUser.savedProfiles;
  saved.push(user);
@@ -16,6 +14,18 @@ function addProfile() {
  axios
    .put(`http://localhost:8082/api/users/saved/${account.username}`, currUser)
    .then((res) => {});
+
+   var notes = null;
+   let x = "Liked "+ user.name + "'s profile!";
+    swal({
+     title:x,
+     content: {
+       element: "input",
+       attributes: {
+         placeholder: "Why you liked this profile",
+       },
+     },
+   }).then(input => notes = input);
 }
  
 function ViewButton(username, gender1,major,phone,email,bio,picId,insta,fb,discord,pref1,pref2,pref3,pref4,pref5)
@@ -111,8 +121,10 @@ function importAllImages(r) {
 const images = importAllImages(require.context('../../../bruinmatch-backend/images', false, /\.(png|jpe?g|svg)$/));
  
 const UserProfile = (props) => {
- user = props.user;
- account = props.account;
+  var user = props.user;
+  var account = props.account;
+//  user = props.user;
+//  account = props.account;
  console.log(account);
  let picId = user.articleImage;
  let usersName = user.name;
@@ -166,7 +178,7 @@ const UserProfile = (props) => {
        onClick="alert('aaaaaaa')"
      /> */}
  
-   <button type="button" className="save1" onClick={(e) => SaveButton(usersName,e)}>
+   <button type="button" className="save1" onClick={(e) => addProfile(user,account,e)}>
      Like
      </button>
  
