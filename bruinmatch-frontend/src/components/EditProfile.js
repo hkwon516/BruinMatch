@@ -31,7 +31,8 @@ class EditProfile extends Component {
       fileName: '',
       savedProfiles: [],
       usrnm: this.props.match.params.usrnm,
-      user:""
+      user:"",
+      fileName:""
     };
   }
 
@@ -215,6 +216,7 @@ class EditProfile extends Component {
           alchohol: this.state.user.alchohol,
           pets: this.state.user.pets,
           nightowl: this.state.user.nightowl,
+          fileName: this.state.user.articleImage
         });
 
         var male = document.getElementById('male');
@@ -336,11 +338,18 @@ class EditProfile extends Component {
       });
 
 
-  }
+  };
+
+  importAllImages(r){
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+   };
 
 
   onSubmit = e => {
-    console.log(this.state.year)
+    console.log(this.state.fileName);
+    console.log(this.state.year);
     e.preventDefault();
 
     const data = {
@@ -359,8 +368,11 @@ class EditProfile extends Component {
       alchohol: this.state.alchohol,
       pets: this.state.pets,
       nightowl: this.state.nightowl,
+      fileName: this.state.fileName
       
     };
+
+   
     var tempUsers;
 
     axios
@@ -413,7 +425,8 @@ class EditProfile extends Component {
           onthehill: '',
           alchohol: '',
           pets: '',
-          nightowl:''
+          nightowl:'',
+          fileName: ''
         })
         console.log("success!!");
 
@@ -448,6 +461,7 @@ class EditProfile extends Component {
   render() {
     console.log(this.state.user);
     const user = this.state.user;
+    const images = this.importAllImages(require.context('../../../bruinmatch-backend/images', false, /\.(png|jpe?g|svg)$/));
    
     return (
     
@@ -471,9 +485,9 @@ class EditProfile extends Component {
         </div>
               <div className= "Profile section">
               <input  type="button" className={styles.SetProfileButton} name="setprofile" onClick={this.onChange} value= "Set Profile Photo"/>
-                  <div className= {styles.ProfilePhoto}>
+                  <img className= {styles.ProfilePhoto} src = {images[this.state.fileName]}/>
                    
-                  </div>
+                  
                  
              
                 </div>
