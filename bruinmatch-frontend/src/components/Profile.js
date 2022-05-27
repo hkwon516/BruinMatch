@@ -16,7 +16,6 @@ function addProfile(user,account,message) {
    .put(`http://localhost:8082/api/users/saved/${account.username}`, currUser)
    .then((res) => {});
 
-   var notes = null;
    let x = message+"d "+ user.name + "'s profile!";
     swal({
      title:x,
@@ -26,7 +25,10 @@ function addProfile(user,account,message) {
          placeholder: "Why you liked this profile",
        },
      },
-   }).then(input => notes = input);
+   }).then((value) => {
+     //the notes is written in value
+    console.log(value);
+  });
 }
  
 function ViewButton(username, gender1,major,phone,email,bio,picId,insta,fb,discord,pref1,pref2,pref3,pref4,pref5)
@@ -126,7 +128,7 @@ const UserProfile = (props) => {
  var account = props.account;
 //  user = props.user;
   //account = props.account;
- console.log(account);
+ //console.log(account);
  let picId = user.articleImage;
  let usersName = user.name;
  let usersGender = user.gender;
