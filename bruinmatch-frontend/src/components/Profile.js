@@ -5,8 +5,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import swal from 'sweetalert';
  
- 
-function addProfile(user,account) {
+//var account = ""; 
+
+function addProfile(user,account,message) {
  var currUser = account;
  var saved = currUser.savedProfiles;
  saved.push(user);
@@ -16,7 +17,7 @@ function addProfile(user,account) {
    .then((res) => {});
 
    var notes = null;
-   let x = "Liked "+ user.name + "'s profile!";
+   let x = message+"d "+ user.name + "'s profile!";
     swal({
      title:x,
      content: {
@@ -122,9 +123,9 @@ const images = importAllImages(require.context('../../../bruinmatch-backend/imag
  
 const UserProfile = (props) => {
   var user = props.user;
-  var account = props.account;
+ var account = props.account;
 //  user = props.user;
-//  account = props.account;
+  //account = props.account;
  console.log(account);
  let picId = user.articleImage;
  let usersName = user.name;
@@ -142,6 +143,22 @@ const UserProfile = (props) => {
  let pref4 = user.pets;
  let pref5 = user.nightowl;
  let gender2;
+
+ let likeMessage = "Like";
+
+
+ for (var j = 0; j < account.savedProfiles.length; j++) {
+  if(account.savedProfiles[j].username == user.username){
+    likeMessage = "Unsave";
+  }
+
+  // console.log(account.savedProfiles[j].username);
+  // console.log(user.username);
+}
+
+// document.getElementById("outputMessage").innerHTML=likeMessage;
+//console.log(likeMessage);
+
  if(usersGender == "1")
  {
    gender2 = "Male";
@@ -177,9 +194,10 @@ const UserProfile = (props) => {
        value="Like"
        onClick="alert('aaaaaaa')"
      /> */}
+
  
-   <button type="button" className="save1" onClick={(e) => addProfile(user,account,e)}>
-     Like
+   <button type="button" className="save1" onClick={(e) => addProfile(user,account,likeMessage,e)}>
+     {likeMessage}
      </button>
  
     

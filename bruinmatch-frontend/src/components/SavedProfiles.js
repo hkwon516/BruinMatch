@@ -36,7 +36,7 @@ class Rec extends Component {
       for (var i = 0; i < saved.length; i++) {
         userList.push(saved[i]);
       }
-      userList = userList.map((user) => <Profile user={user} />);
+      userList = userList.map((user) => <Profile user={user} account={this.state.user}/>);
     }
     return (
       <div clasName="absolute">
