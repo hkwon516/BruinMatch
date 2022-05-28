@@ -5,7 +5,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Profile from "./Profile";
 
-class Rec extends Component {
+class SavedProfiles extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,12 +31,12 @@ class Rec extends Component {
   render() {
     const user = this.state.user;
     const saved = user.savedProfiles;
+    const notes = user.savedNotes;
     var userList = [];
     if (user) {
       for (var i = 0; i < saved.length; i++) {
-        userList.push(saved[i]);
+        userList.push(<Profile user={saved[i]} account={this.state.user} note={notes[i]}/>);
       }
-      userList = userList.map((user) => <Profile user={user} account={this.state.user}/>);
     }
     return (
       <div clasName="absolute">
@@ -67,4 +67,4 @@ class Rec extends Component {
   }
 }
 
-export default Rec;
+export default SavedProfiles;

@@ -30,6 +30,7 @@ class EditProfile extends Component {
       nightowl:'',
       fileName: '',
       savedProfiles: [],
+      savedNotes: [],
       usrnm: this.props.match.params.usrnm,
       user:"",
       fileName:""
@@ -449,14 +450,6 @@ class EditProfile extends Component {
     
     
 };
-
-    
-      
-
-    
-    
-  
- 
 
   render() {
     console.log(this.state.user);

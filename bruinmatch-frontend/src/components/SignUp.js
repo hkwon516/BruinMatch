@@ -49,7 +49,8 @@ class SignUp extends Component {
       pets: '',
       nightowl:'',
       fileName: '',
-      savedProfiles: []
+      savedProfiles: [],
+      savedNotes: []
     };
   }
 
@@ -234,7 +235,8 @@ class SignUp extends Component {
       alchohol: this.state.alchohol,
       pets: this.state.pets,
       nightowl: this.state.nightowl,
-      savedProfiles: []
+      savedProfiles: [],
+      savedNotes: []
     };
 
     var tempUsers;

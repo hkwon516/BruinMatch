@@ -37,19 +37,19 @@ class Rec extends Component {
     window.location.reload(false);
   };
 
-  onClickSaved = (e) => {
-    this.props.history.push(`/saved/${this.state.usrnm}`);
-    window.location.reload(false);
-    swal({
-      title: "Incorrect Username/Password",
-      text: "Please Try Again",
-      icon: "error",
-      button: "Try again",
-    });
-  };
+  // onClickSaved = (e) => {
+  //   this.props.history.push(`/saved/${this.state.usrnm}`);
+  //   window.location.reload(false);
+  //   swal({
+  //     title: "Incorrect Username/Password",
+  //     text: "Please Try Again",
+  //     icon: "error",
+  //     button: "Try again",
+  //   });
+  // };
 
   onClickSaved = (e) => {
-    this.props.history.push(`/rec/${this.state.usrnm}`);
+    this.props.history.push(`/saved/${this.state.usrnm}`);
     window.location.reload(false);
   };
 
@@ -122,7 +122,7 @@ class Rec extends Component {
       }
       // console.log(this.state.user);
       userList = newUsers.map((user) => (
-        <Profile user={user} account={this.state.user} />
+        <Profile user={user} account={this.state.user} note="N/A"/>
       ));
     }
 

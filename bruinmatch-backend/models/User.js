@@ -76,6 +76,10 @@ const UserSchema = new mongoose.Schema({
   savedProfiles:{
     type: Array,
     required: true
+  },
+  savedNotes:{
+    type: Array,
+    required: true
   }
 });
 
