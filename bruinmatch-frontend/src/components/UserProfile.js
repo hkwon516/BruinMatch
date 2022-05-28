@@ -111,9 +111,6 @@ class UserProfile extends Component {
                       />
                     </a>
                   </div>
-                  <div className={styles.PhotoButtonText}>
-                    Edit Profile Photo
-                  </div>
                 </div>
 
                 <div className={styles.Frame2}>

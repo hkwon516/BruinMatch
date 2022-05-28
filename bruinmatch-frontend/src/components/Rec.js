@@ -4,7 +4,7 @@ import styles from "../Rec.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Profile from "./Profile";
-import swal from "sweetalert";
+import swal from 'sweetalert';
 
 class Rec extends Component {
   constructor(props) {
@@ -50,11 +50,6 @@ class Rec extends Component {
 
   onClickSaved = (e) => {
     this.props.history.push(`/saved/${this.state.usrnm}`);
-    window.location.reload(false);
-  };
-
-  onClickRec = (e) => {
-    this.props.history.push(`/rec/${this.state.usrnm}`);
     window.location.reload(false);
   };
 
@@ -127,7 +122,7 @@ class Rec extends Component {
       }
       // console.log(this.state.user);
       userList = newUsers.map((user) => (
-        <Profile user={user} account={this.state.user} note="N/A" />
+        <Profile user={user} account={this.state.user} note="N/A"/>
       ));
     }
 
@@ -137,7 +132,7 @@ class Rec extends Component {
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
               <div className="py-3 text-white text-3xl font-Ubuntu font-bold tracking-widest">
-                <a onClick={this.onClickRec} style={{ cursor: "pointer" }}>
+                <a onClick={this.onClickSaved} style={{ cursor: "pointer" }}>
                   BruinMatch
                 </a>
               </div>
