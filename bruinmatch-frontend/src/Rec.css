@@ -1,11 +1,11 @@
 .card-container {
-  /* width: 700px;
-  height: 400px; */
-  width: 103%;
-  height: 105%;
+  width: 700px;
+  height: 400px;
+  /*width: 700px;
+  height: 105%;*/
 
   border: 3px solid #2774ae;
-  margin: 1% auto;
+  margin: 0% auto;
   border-radius: 50px;
   overflow: hidden;
   /* padding: 5% 5%; */
@@ -48,8 +48,8 @@
   margin: 10px 0 50px 0;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 3fr;
-  padding-left: 100px;
-  padding-top: 100px;
+  padding-left: 40px;
+  padding-top: 3%;
   align-items: space-evenly;
 
   font-size: 18px;
