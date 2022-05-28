@@ -346,8 +346,6 @@ class SignUp extends Component {
     
       <div className={styles.zoom}>
         <div className="container">
-        <div className= {styles.FullFrame}>
-        </div>
         <div className={styles.TopBanner}>
               <div className= {styles.topBannerText} >
                 BruinMatch
