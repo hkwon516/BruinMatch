@@ -1,8 +1,15 @@
 .card-container {
+<<<<<<< Updated upstream
   width: 700px;
   height: 400px;
   /*width: 700px;
   height: 105%;*/
+=======
+  /* width: 700px;
+  height: 400px; */
+  width: 100%;
+  height: 105%;
+>>>>>>> Stashed changes
 
   border: 3px solid #2774ae;
   margin: 0% auto;

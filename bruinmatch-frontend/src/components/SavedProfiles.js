@@ -9,11 +9,26 @@ class SavedProfiles extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: '',
+      user: "",
       allUsers: [],
       usrnm: this.props.match.params.usrnm,
     };
   }
+
+  onClickSaved = (e) => {
+    this.props.history.push(`/saved/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
+
+  onClickRec = (e) => {
+    this.props.history.push(`/rec/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
+
+  onClickProfile = (e) => {
+    this.props.history.push(`/profile/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
 
   componentDidMount() {
     axios
@@ -35,7 +50,9 @@ class SavedProfiles extends Component {
     var userList = [];
     if (user) {
       for (var i = 0; i < saved.length; i++) {
-        userList.push(<Profile user={saved[i]} account={this.state.user} note={notes[i]}/>);
+        userList.push(
+          <Profile user={saved[i]} account={this.state.user} note={notes[i]} />
+        );
       }
     }
     return (
@@ -44,14 +61,23 @@ class SavedProfiles extends Component {
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
               <div className="py-3 text-white text-3xl font-Ubuntu font-bold tracking-widest">
-                <a href="./Rec">BruinMatch</a>
+                <a onClick={this.onClickRec} style={{ cursor: "pointer" }}>
+                  BruinMatch
+                </a>
               </div>
               <div className="flex w-full items-center justify-end text-xl font-navbar text-white text-bold">
                 <div className="-mt-12 mx-6 hover:text-yellow">
-                  <a href="./Saved">Saved</a>
+                  <a onClick={this.onClickSaved} style={{ cursor: "pointer" }}>
+                    Saved
+                  </a>
                 </div>
                 <div className="-mt-12 hover:text-yellow">
-                  <a onClick={this.onClick}>My Profile</a>
+                  <a
+                    onClick={this.onClickProfile}
+                    style={{ cursor: "pointer" }}
+                  >
+                    My Profile
+                  </a>
                 </div>
               </div>
               <div className="list">{userList}</div>
@@ -59,8 +85,7 @@ class SavedProfiles extends Component {
           </div>
         </div>
         <div className="relative max-w-screen-lg mx-auto p-4">
-          <div className="grid grid-cols-2 gap-8 mt-12">
-          </div>
+          <div className="grid grid-cols-2 gap-8 mt-12"></div>
         </div>
       </div>
     );
