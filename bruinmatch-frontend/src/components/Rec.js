@@ -4,7 +4,7 @@ import styles from "../Rec.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Profile from "./Profile";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
 class Rec extends Component {
   constructor(props) {
@@ -122,7 +122,7 @@ class Rec extends Component {
       }
       // console.log(this.state.user);
       userList = newUsers.map((user) => (
-        <Profile user={user} account={this.state.user} note="N/A"/>
+        <Profile user={user} account={this.state.user} note="N/A" />
       ));
     }
 
