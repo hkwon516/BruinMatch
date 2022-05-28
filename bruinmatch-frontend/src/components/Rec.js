@@ -53,6 +53,11 @@ class Rec extends Component {
     window.location.reload(false);
   };
 
+  onClickRec = (e) => {
+    this.props.history.push(`/rec/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
+
   componentDidMount() {
     axios
       .get("http://localhost:8082/api/users/rec/" + this.state.usrnm)
@@ -132,7 +137,7 @@ class Rec extends Component {
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
               <div className="py-3 text-white text-3xl font-Ubuntu font-bold tracking-widest">
-                <a onClick={this.onClickSaved} style={{ cursor: "pointer" }}>
+                <a onClick={this.onClickRec} style={{ cursor: "pointer" }}>
                   BruinMatch
                 </a>
               </div>
