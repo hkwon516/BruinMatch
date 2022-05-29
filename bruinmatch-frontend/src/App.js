@@ -6,7 +6,7 @@ import SignUp from "./components/SignUp";
 import Rec from "./components/Rec";
 import Saved from "./components/SavedProfiles";
 import Profile from "./components/UserProfile";
-import EditProfile from"./components/EditProfile";
+import EditProfile from "./components/EditProfile";
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
           <Route path="/rec/:usrnm" component={Rec} />
           <Route path="/profile/:usrnm" component={Profile} />
           <Route path="/saved/:usrnm" component={Saved} />
-          <Route path="/editprofile/:usrnm" component={EditProfile}/>
+          <Route path="/editprofile/:usrnm" component={EditProfile} />
         </div>
       </Router>
     );

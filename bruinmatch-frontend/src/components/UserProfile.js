@@ -27,8 +27,21 @@ class UserProfile extends Component {
       alchohol: "",
       pets: "",
       nightowl: "",
+      img: "",
+      usrnm: this.props.match.params.usrnm,
     };
   }
+
+  // onClickInstagram = (e) => {
+  //   // this.props.router(`http://instagram.com/${this.state.instagram}`);
+  //   // window.location.reload(false);
+  //   window.location.href = "http://instagram.com/";
+  // };
+
+  onClickRec = (e) => {
+    this.props.history.push(`/rec/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
 
   componentDidMount() {
     axios
@@ -55,6 +68,7 @@ class UserProfile extends Component {
           alchohol: this.state.user.alchohol,
           pets: this.state.user.pets,
           nightowl: this.state.user.nightowl,
+          img: this.state.user.img,
         });
       })
       .catch((err) => {
@@ -70,7 +84,9 @@ class UserProfile extends Component {
         <div className="container">
           <div className={styles.FullFrame}></div>
           <div className={styles.TopBanner}>
-            <div className={styles.topBannerText}>BruinMatch</div>
+            <a onClick={this.onClickRec} style={{ cursor: "pointer" }}>
+              <div className={styles.topBannerText}>BruinMatch</div>
+            </a>
           </div>
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -83,9 +99,12 @@ class UserProfile extends Component {
               <form noValidate onSubmit={this.onSubmit}>
                 <div className="Profile section">
                   <div className={styles.SetProfileButton}></div>
-                  <div className={styles.ProfilePhoto}></div>
+                  <img className={styles.ProfilePhoto}></img>
                   <div className={styles.Instagram}>
-                    <a href={this.state.Instagram}>
+                    <a href="http://instagram.com/">
+                      {/* <a onClick={this.onClickInstagram}> */}
+                      {/* consol.log({this.state.instagram}); */}
+                      {/* <a href=`{this.state.instagram}`> */}
                       <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
                         alt=""
@@ -164,11 +183,15 @@ class UserProfile extends Component {
                   <div className={styles.PreferencesText}>Preferences</div>
                   <div className={styles.Option1}>Same Gender?</div>
                   <div className={"samegender"}>
-                    <div className={styles.samegender}>{this.state.samegender}</div>
+                    <div className={styles.samegender}>
+                      {this.state.samegender}
+                    </div>
                   </div>
                   <div className={styles.Option2}>On the Hill?</div>
                   <div className={"onthehill"}>
-                    <div className={styles.onthehill}>{this.state.onthehill}</div>
+                    <div className={styles.onthehill}>
+                      {this.state.onthehill}
+                    </div>
                   </div>
                   <div className={styles.Option3}>Alcohol?</div>
                   <div className={"alcohol"}>
