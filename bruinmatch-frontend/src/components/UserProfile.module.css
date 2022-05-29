@@ -362,6 +362,87 @@
   color: #525252;
 }
 
+.samegender {
+  position: absolute;
+  left: 200px;
+  top: 144px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.onthehill {
+  position: absolute;
+  left: 200px;
+  top: 144px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.alcohol {
+  position: absolute;
+  left: 200px;
+  top: 144px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.pets {
+  position: absolute;
+  left: 200px;
+  top: 144px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.nightowl {
+  position: absolute;
+  left: 200px;
+  top: 144px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+
 /* uwu */
 
 .Option2 {
@@ -526,7 +607,7 @@
   width: 245px;
   height: 230px;
   left: 620px;
-  top: 875px;
+  top: 886px;
 }
 
 .Twitter {
