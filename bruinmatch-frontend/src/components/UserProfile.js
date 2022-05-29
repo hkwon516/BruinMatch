@@ -213,9 +213,9 @@ class UserProfile extends Component {
                     </div>
                   
                     <div className={styles.EditButton} />
-                    <button className={styles.EditText}>Edit
-                      <a onClick={this.onClickEdit} style={{ cursor: "pointer" }}></a>
-                    </button>
+                    <a onClick={this.onClickEdit} style={{ cursor: "pointer" }}>
+                      <button className={styles.EditText}>Edit</button>
+                    </a>
                   </div>
                 </div>
 
