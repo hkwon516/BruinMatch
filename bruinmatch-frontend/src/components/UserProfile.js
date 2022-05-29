@@ -83,6 +83,41 @@ class UserProfile extends Component {
 
   render() {
     // console.log(user)
+    var showsamegender = '';
+    if (this.state.samegender){
+      showsamegender = "Yes";
+    } else {
+      showsamegender = "No"
+    }
+
+    var showonthehill = '';
+    if (this.state.onthehill){
+      showonthehill = "Yes";
+    } else {
+      showonthehill = "No"
+    }
+
+    var showalcohol = '';
+    if (this.state.alcohol){
+      showalcohol = "Yes";
+    } else {
+      showalcohol = "No"
+    }
+
+    var showpets = '';
+    if (this.state.pets){
+      showpets = "Yes";
+    } else {
+      showpets = "No"
+    }
+
+    var shownightowl = '';
+    if (this.state.nightowl){
+      shownightowl = "Yes";
+    } else {
+      shownightowl = "No"
+    }
+
     const user = this.state.user;
     return (
       <div className="MyProfile">
@@ -176,7 +211,7 @@ class UserProfile extends Component {
                       <div className={styles.Bio}>Bio</div>
                       <div className={styles.showBio}>{this.state.bio}</div>
                     </div>
-
+                  
                     <div className={styles.EditButton} />
                     <button className={styles.EditText}>Edit
                       <a onClick={this.onClickEdit} style={{ cursor: "pointer" }}></a>
@@ -188,29 +223,20 @@ class UserProfile extends Component {
                   <div className={styles.Preferences}></div>
                   <div className={styles.PreferencesText}>Preferences</div>
                   <div className={styles.Option1}>Same Gender?</div>
-                  <div className={"samegender"}>
-                    <div className={styles.samegender}>
-                      {this.state.samegender}
-                    </div>
-                  </div>
+                  <div className={styles.showsamegender}>{showsamegender}</div>
+                  
                   <div className={styles.Option2}>On the Hill?</div>
-                  <div className={"onthehill"}>
-                    <div className={styles.onthehill}>
-                      {this.state.onthehill}
-                    </div>
-                  </div>
+                  <div className={styles.showonthehill}>{showonthehill}</div>
+
                   <div className={styles.Option3}>Alcohol?</div>
-                  <div className={"alcohol"}>
-                    <div className={styles.alcohol}>{this.state.alcohol}</div>
-                  </div>
+                  <div className={styles.showalcohol}>{showalcohol}</div>
+
                   <div className={styles.Option4}>Pets?</div>
-                  <div className={"pets"}>
-                    <div className={styles.pets}>{this.state.pets}</div>
-                  </div>
+                  <div className={styles.showpets}>{showpets}</div>
+
                   <div className={styles.Option5}>Night Owl?</div>
-                  <div className={"nightowl"}>
-                    <div className={styles.nightowl}>{this.state.nightowl}</div>
-                  </div>
+                  <div className={styles.shownightowl}>{shownightowl}</div>
+
                 </div>
               </form>
             </div>

@@ -362,73 +362,9 @@
   color: #525252;
 }
 
-.samegender {
+.showsamegender {
   position: absolute;
-  left: 200px;
-  top: 144px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: left;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.onthehill {
-  position: absolute;
-  left: 200px;
-  top: 144px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: left;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.alcohol {
-  position: absolute;
-  left: 200px;
-  top: 144px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: left;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.pets {
-  position: absolute;
-  left: 200px;
-  top: 144px;
-
-  font-family: "Prompt";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 53px;
-  text-align: left;
-  letter-spacing: 0.05em;
-
-  color: #525252;
-}
-
-.nightowl {
-  position: absolute;
-  left: 200px;
+  left: 500px;
   top: 144px;
 
   font-family: "Prompt";
@@ -460,11 +396,43 @@
   color: #525252;
 }
 
+.showonthehill {
+  position: absolute;
+  left: 500px;
+  top: 224px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
 /* Pref2 */
 
 .Option3 {
   position: absolute;
   left: 104px;
+  top: 304px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showalcohol {
+  position: absolute;
+  left: 500px;
   top: 304px;
 
   font-family: "Prompt";
@@ -495,10 +463,42 @@
   color: #525252;
 }
 
+.showpets {
+  position: absolute;
+  left: 500px;
+  top: 384px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
 /* Pref4 */
 .Option5 {
   position: absolute;
   left: 104px;
+  top: 464px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.shownightowl {
+  position: absolute;
+  left: 500px;
   top: 464px;
 
   font-family: "Prompt";
