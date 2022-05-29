@@ -33,12 +33,23 @@ class EditProfile extends Component {
       savedNotes: [],
       usrnm: this.props.match.params.usrnm,
       user:"",
-      fileName:""
+      fileName:"",
+      img:""
     };
   }
 
   onChangeFile = e => {
+    this.setState({
+      ["img"]: URL.createObjectURL(e.target.files[0])
+    });
     this.setState({["fileName"]: e.target.files[0]});
+    
+    
+
+    
+    console.log(e.target.files[0])
+    console.log("Hello")
+    
   }
 
 
@@ -193,6 +204,11 @@ class EditProfile extends Component {
     }
     
   };
+  importAllImages(r){
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+   };
 
   componentDidMount() {
     axios
@@ -219,6 +235,17 @@ class EditProfile extends Component {
           nightowl: this.state.user.nightowl,
           fileName: this.state.user.articleImage
         });
+
+        var testFile = this.state.user.articleImage;
+
+        var images = this.importAllImages(require.context('../../../bruinmatch-backend/images', false, /\.(png|jpe?g|svg)$/));
+        this.setState({img: images[testFile]});
+        console.log(images[testFile])
+        console.log(this.state.img)
+        console.log("hii")
+        console.log(this.state.fileName)
+        
+
 
         var male = document.getElementById('male');
         var female = document.getElementById('female');
@@ -341,11 +368,7 @@ class EditProfile extends Component {
 
   };
 
-  importAllImages(r){
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-   };
+ 
 
 
   onSubmit = e => {
@@ -454,7 +477,7 @@ class EditProfile extends Component {
   render() {
     console.log(this.state.user);
     const user = this.state.user;
-    const images = this.importAllImages(require.context('../../../bruinmatch-backend/images', false, /\.(png|jpe?g|svg)$/));
+    
    
     return (
     
@@ -478,7 +501,7 @@ class EditProfile extends Component {
         </div>
               <div className= "Profile section">
               <input  type="button" className={styles.SetProfileButton} name="setprofile" onClick={this.onChange} value= "Set Profile Photo"/>
-                  <img className= {styles.ProfilePhoto} src = {images[this.state.fileName]}/>
+                  <img className= {styles.ProfilePhoto} src = {this.state.img}/>
                    
                   
                  

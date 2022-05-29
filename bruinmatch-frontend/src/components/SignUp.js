@@ -50,12 +50,16 @@ class SignUp extends Component {
       nightowl:'',
       fileName: '',
       savedProfiles: [],
-      savedNotes: []
+      savedNotes: [],
+      img:null
     };
   }
 
   onChangeFile = e => {
     this.setState({["fileName"]: e.target.files[0]});
+    this.setState({
+      ["img"]: URL.createObjectURL(e.target.files[0])
+    });
   }
 
 
@@ -362,9 +366,9 @@ class SignUp extends Component {
         </div>
               <div className= "Profile section">
               <input  type="button" className={styles.SetProfileButton} name="setprofile" onClick={this.onChange} value= "Set Profile Photo"/>
-                  <div className= {styles.ProfilePhoto}>
+              <img className= {styles.ProfilePhoto} src = {this.state.img}/>
                    
-                  </div>
+                  
                  
              
                 </div>
