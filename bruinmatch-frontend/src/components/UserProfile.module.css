@@ -594,7 +594,6 @@
   border-radius: 50%;
   left: 695px;
   top: 137px;
-  background: url(https://samueli.ucla.edu/wp-content/uploads/samueli/Paul-Eggert_time_zone.png);
 }
 
 /*resize it later*/
@@ -606,11 +605,11 @@
   top: 886px;
 }
 
-.Twitter {
+.Discord {
   position: absolute;
   width: 245px;
   height: 230px;
-  left: 900px;
+  left: 890px;
   top: 893px;
 }
 

@@ -43,6 +43,11 @@ class UserProfile extends Component {
     window.location.reload(false);
   };
 
+  onClickEdit = (e) => {
+    this.props.history.push(`/editprofile/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
+
   componentDidMount() {
     axios
       .get("http://localhost:8082/api/users/" + this.props.match.params.usrnm)
@@ -62,7 +67,7 @@ class UserProfile extends Component {
           bio: this.state.user.bio,
           instagram: this.state.user.instagram,
           discord: this.state.user.discord,
-          facebook: this.state.user.faccebook,
+          facebook: this.state.user.facebook,
           samegender: this.state.user.samegender,
           onthehill: this.state.user.onthehill,
           alchohol: this.state.user.alchohol,
@@ -98,10 +103,9 @@ class UserProfile extends Component {
             <div className="col-md-8 m-auto">
               <form noValidate onSubmit={this.onSubmit}>
                 <div className="Profile section">
-                  <div className={styles.SetProfileButton}></div>
-                  <img className={styles.ProfilePhoto}></img>
+                  <img className={styles.ProfilePhoto} src={this.state.img} />
                   <div className={styles.Instagram}>
-                    <a href="http://instagram.com/">
+                    <a href={this.state.instagram}>
                       {/* <a onClick={this.onClickInstagram}> */}
                       {/* consol.log({this.state.instagram}); */}
                       {/* <a href=`{this.state.instagram}`> */}
@@ -112,12 +116,12 @@ class UserProfile extends Component {
                       />
                     </a>
                   </div>
-                  <div className={styles.Twitter}>
-                    <a href={this.state.Twitter}>
+                  <div className={styles.Discord}>
+                    <a href={this.state.discord}>
                       <img
-                        src="https://cdn-icons-png.flaticon.com/512/124/124021.png"
+                        src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-icon-24.png"
                         alt=""
-                        style={{ width: "53%" }}
+                        style={{ width: "55%" }}
                       />
                     </a>
                   </div>
@@ -173,8 +177,10 @@ class UserProfile extends Component {
                       <div className={styles.showBio}>{this.state.bio}</div>
                     </div>
 
-                    <input className={styles.EditButton} />
-                    <div className={styles.EditText}>Edit</div>
+                    <div className={styles.EditButton} />
+                    <button className={styles.EditText}>Edit
+                      <a onClick={this.onClickEdit} style={{ cursor: "pointer" }}></a>
+                    </button>
                   </div>
                 </div>
 
