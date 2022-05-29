@@ -1,6 +1,5 @@
 .zoom {
   zoom: 0.75;
-  background-color: #EFEFEF;
   height:100%;
   width: 100%;
 }
@@ -1785,10 +1784,10 @@ box-sizing: border-box;
 
 
 position: absolute;
-  width: 16.44%;
-  height: 6.625%;
-  left: 96.78%;
-  top:387.5%;
+  width: 300px;
+  height: 70px;
+  left: 1010px;
+  top:2200px;
 
 color: rgba(82, 82, 82, 0.62);
 font-family: "Prompt";
