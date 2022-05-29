@@ -55,6 +55,11 @@ class SignUp extends Component {
     };
   }
 
+  onClickLogin = (e) => {
+    this.props.history.push(`/login`);
+    window.location.reload(false);
+  };
+
   onChangeFile = e => {
     this.setState({["fileName"]: e.target.files[0]});
     this.setState({
@@ -351,9 +356,9 @@ class SignUp extends Component {
       <div className={styles.zoom}>
         <div className="container">
         <div className={styles.TopBanner}>
-              <div className= {styles.topBannerText} >
-                BruinMatch
-              </div>
+        <a onClick={this.onClickLogin} className= { styles.topBannerText} style={{ cursor: "pointer" }}>
+                    BruinMatch
+                  </a>
           </div>
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -361,17 +366,25 @@ class SignUp extends Component {
             </div>
             <div className="col-md-8 m-auto">
 
-              <form noValidate onSubmit={this.onSubmit} encType="multipart/form-data">
+              <form noValidate onSubmit={this.onSubmit} 
+              encType="multipart/form-data">
               <div className= {styles.FullFrame}>
         </div>
-              <div className= "Profile section">
-              <input  type="button" className={styles.SetProfileButton} name="setprofile" onClick={this.onChange} value= "Set Profile Photo"/>
+         <div className="Profile section">
+                  <input
+                    type="button"
+                    className={styles.SetProfileButton}
+                    name="setprofile"
+                    onClick={this.onChange}
+                    value="Set Profile Photo"
+                  />
               <img className= {styles.ProfilePhoto} src = {this.state.img}/>
+              </div>
                    
                   
                  
              
-                </div>
+             
 
                 <div className = {styles.Frame4}>
                 <div className= {styles.SignUpText}>
@@ -379,17 +392,19 @@ class SignUp extends Component {
                 </div>
 
               {/* Profile Pic Button */}
-              <div className='form-group'>
-                  <label htmlFor='file'>
-                    Choose Image
+              <div className="form-group">
+                  <label for="file-upload" class={styles.SetProfileButton}>
+                      Select Photo
                   </label>
-                  <input
-                    type='file'
-                    fileName='articleImage'
-                    className='form-control-file'
-                    onChange={this.onChangeFile}
-                  />
-                </div>
+                    <input
+                      type="file"
+                      id= "file-upload"
+                      fileName="articleImage"
+                      className="form-control-file"
+                      onChange={this.onChangeFile}
+                    />
+                  </div>
+                  <br />
 
               <div className= {styles.UserNameText}>
                   Username*

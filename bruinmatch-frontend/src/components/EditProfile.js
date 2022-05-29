@@ -34,7 +34,10 @@ class EditProfile extends Component {
       img: "",
     };
   }
-
+  onClickRec = (e) => {
+    this.props.history.push(`/rec/${this.state.usrnm}`);
+    window.location.reload(false);
+  };
   onChangeFile = (e) => {
     this.setState({
       ["img"]: URL.createObjectURL(e.target.files[0]),
@@ -227,7 +230,6 @@ class EditProfile extends Component {
         this.setState({ img: images[testFile] });
         console.log(images[testFile]);
         console.log(this.state.img);
-        console.log("hii");
         console.log(this.state.fileName);
 
         var male = document.getElementById("male");
@@ -425,7 +427,12 @@ class EditProfile extends Component {
         <div className="container">
           <div className={styles.FullFrame}></div>
           <div className={styles.TopBanner}>
-            <div className={styles.topBannerText}>BruinMatch</div>
+           
+            <a onClick={this.onClickRec} className= { styles.topBannerText} style={{ cursor: "pointer" }}>
+                    BruinMatch
+                  </a>
+          
+            
           </div>
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -451,10 +458,14 @@ class EditProfile extends Component {
 
                 <div className={styles.Frame4}>
                   {/* Profile Pic Button */}
+                
                   <div className="form-group">
-                    <label htmlFor="file">Choose Image</label>
+                  <label for="file-upload" class={styles.SetProfileButton}>
+                      Select Photo
+                  </label>
                     <input
                       type="file"
+                      id= "file-upload"
                       fileName="articleImage"
                       className="form-control-file"
                       onChange={this.onChangeFile}
@@ -645,7 +656,7 @@ class EditProfile extends Component {
 
                     <input
                       type="submit"
-                      value="Create Account"
+                      value="Save Changes"
                       className={styles.SubmitButton}
                     />
                   </div>

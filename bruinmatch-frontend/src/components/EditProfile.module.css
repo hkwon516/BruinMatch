@@ -3,6 +3,10 @@
   height: 100%;
   width: 100%;
 }
+
+input[type="file"] {
+  display: none;
+}
 /* Old IE only */
 /*-moz-transform: scale(0.8);
   -webkit-transform: scale(0.8);*/
@@ -36,8 +40,9 @@
 
 .TopBanner {
   position: absolute;
-  width: 100%;
+  
   /* height: 3%; */
+  width:100%;
   height: 94px;
   left: 0px;
   top: 0px;
@@ -1847,14 +1852,14 @@ color: rgba(82, 82, 82, 0.62);
   position: absolute;
   width: 265px;
   height: 61px;
-  left: 875px;
-  top: 708px;
+  left: 545px;
+  top: -160px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
-  line-height: 38px;
+  line-height: 53px;
   text-align: center;
   letter-spacing: 0.05em;
 
@@ -1878,7 +1883,7 @@ color: rgba(82, 82, 82, 0.62);
   width: 237px;
   height: 42px;
   left: 892px;
-  top: 720px;
+  top: 20px;
 
   font-family: "Prompt";
   font-style: normal;
