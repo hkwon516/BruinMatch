@@ -576,14 +576,15 @@ class SignUp extends Component {
                   </div>
                 </div>
                
-                <input
+                
+                
+               </div>
+               </div>
+               <input
                     type="submit"
                     value = "Create Account"
                     className={styles.SubmitButton}
                 />
-                
-               </div>
-               </div>
 
                
               

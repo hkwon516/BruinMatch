@@ -1,6 +1,10 @@
  .zoom {
     zoom: 0.75;
     background-color: #EFEFEF;
+    
+    white-space: nowrap;
+    overflow: hidden;
+
  }
      /* Old IE only */
 /*-moz-transform: scale(0.8);
@@ -1782,10 +1786,10 @@ color: rgba(82, 82, 82, 0.62);
   box-sizing: border-box;
 
   position: absolute;
-  width: 293px;
-  height: 90px;
-  left: 1197px;
-  top: 2200px;
+  width: 14.44%;
+  height: 5.625%;
+  left: 76.78%;
+  top:317.5%;
 
   color: rgba(82, 82, 82, 0.62);
   font-family: "Prompt";
@@ -1893,11 +1897,11 @@ color: rgba(82, 82, 82, 0.62);
 
 .ProfilePhoto {
   position: absolute;
-  width: 531px;
-  height: 531px;
+  width: 26.7%;
+  height: 46.19%;
   border-radius: 50%;
-  left: 720px;
-  top: 137px;
+  left: 38.125%;
+  top: 13.5625%;
 
   background: url(https://samueli.ucla.edu/wp-content/uploads/samueli/Paul-Eggert_time_zone.png);
 }
