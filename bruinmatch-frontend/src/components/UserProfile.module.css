@@ -16,7 +16,9 @@
 
 .TopBanner {
   position: absolute;
-  width: 1920px;
+  /* width: 1920px; */
+  width: 100%;
+  /* height: 4%; */
   height: 94px;
   left: 0px;
   top: 0px;
@@ -611,6 +613,7 @@
   height: 230px;
   left: 890px;
   top: 893px;
+  /* border-radius: 10%; */
 }
 
 .Facebook {
