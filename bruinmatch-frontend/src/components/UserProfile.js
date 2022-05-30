@@ -4,7 +4,21 @@ import styles from "./UserProfile.module.css";
 import axios from "axios";
 //import { Button } from "react-native";
 //import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+function importAllImages(r) {
+  let images = {};
+  r.keys().map((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
 
+const images = importAllImages(
+  require.context(
+    "../../../bruinmatch-backend/images",
+    false,
+    /\.(png|jpe?g|svg)$/
+  )
+);
 class UserProfile extends Component {
   constructor(props) {
     super(props);
@@ -83,42 +97,43 @@ class UserProfile extends Component {
 
   render() {
     // console.log(user)
-    var showsamegender = '';
-    if (this.state.samegender){
+    var showsamegender = "";
+    if (this.state.samegender) {
       showsamegender = "Yes";
     } else {
-      showsamegender = "No"
+      showsamegender = "No";
     }
 
-    var showonthehill = '';
-    if (this.state.onthehill){
+    var showonthehill = "";
+    if (this.state.onthehill) {
       showonthehill = "Yes";
     } else {
-      showonthehill = "No"
+      showonthehill = "No";
     }
 
-    var showalcohol = '';
-    if (this.state.alcohol){
+    var showalcohol = "";
+    if (this.state.alcohol) {
       showalcohol = "Yes";
     } else {
-      showalcohol = "No"
+      showalcohol = "No";
     }
 
-    var showpets = '';
-    if (this.state.pets){
+    var showpets = "";
+    if (this.state.pets) {
       showpets = "Yes";
     } else {
-      showpets = "No"
+      showpets = "No";
     }
 
-    var shownightowl = '';
-    if (this.state.nightowl){
+    var shownightowl = "";
+    if (this.state.nightowl) {
       shownightowl = "Yes";
     } else {
-      shownightowl = "No"
+      shownightowl = "No";
     }
 
     const user = this.state.user;
+    let picId = user.articleImage;
     return (
       <div className="MyProfile">
         <div className="container">
@@ -138,7 +153,7 @@ class UserProfile extends Component {
             <div className="col-md-8 m-auto">
               <form noValidate onSubmit={this.onSubmit}>
                 <div className="Profile section">
-                  <img className={styles.ProfilePhoto} src={this.state.img} />
+                  <img className={styles.ProfilePhoto} src={images[picId]} />
                   <div className={styles.Instagram}>
                     <a href={this.state.instagram}>
                       {/* <a onClick={this.onClickInstagram}> */}
@@ -211,7 +226,7 @@ class UserProfile extends Component {
                       <div className={styles.Bio}>Bio</div>
                       <div className={styles.showBio}>{this.state.bio}</div>
                     </div>
-                  
+
                     <div className={styles.EditButton} />
                     <a onClick={this.onClickEdit} style={{ cursor: "pointer" }}>
                       <button className={styles.EditText}>Edit</button>
@@ -224,7 +239,7 @@ class UserProfile extends Component {
                   <div className={styles.PreferencesText}>Preferences</div>
                   <div className={styles.Option1}>Same Gender?</div>
                   <div className={styles.showsamegender}>{showsamegender}</div>
-                  
+
                   <div className={styles.Option2}>On the Hill?</div>
                   <div className={styles.showonthehill}>{showonthehill}</div>
 
@@ -236,7 +251,6 @@ class UserProfile extends Component {
 
                   <div className={styles.Option5}>Night Owl?</div>
                   <div className={styles.shownightowl}>{shownightowl}</div>
-
                 </div>
               </form>
             </div>
