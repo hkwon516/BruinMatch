@@ -5,6 +5,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Profile from "./Profile";
 import swal from "sweetalert";
+import base64 from 'react-native-base64'
+
+const url = 'https://opentdb.com/api.php?amount=20&type=boolean&encode=base64'
 
 class Rec extends Component {
   constructor(props) {
@@ -23,6 +26,12 @@ class Rec extends Component {
     };
   }
 
+  async getTrivia () {
+    let response = await fetch(url);
+    let data = await response.json();
+    return data;
+  }
+
   onChange = (e) => {
     var newFilter = this.state.filter;
     newFilter[e.target.name] = !newFilter[e.target.name];
@@ -37,16 +46,6 @@ class Rec extends Component {
     window.location.reload(false);
   };
 
-  // onClickSaved = (e) => {
-  //   this.props.history.push(`/saved/${this.state.usrnm}`);
-  //   window.location.reload(false);
-  //   swal({
-  //     title: "Incorrect Username/Password",
-  //     text: "Please Try Again",
-  //     icon: "error",
-  //     button: "Try again",
-  //   });
-  // };
 
   onClickSaved = (e) => {
     this.props.history.push(`/saved/${this.state.usrnm}`);
@@ -58,6 +57,32 @@ class Rec extends Component {
     window.location.reload(false);
   };
   componentDidMount() {
+    var question = '';
+    this.getTrivia().then((data) => {
+      // this.setState({
+      //   questionToday: data.results[0]["question"],
+      // });
+      console.log(data.results[0])
+      // question = data.results[0]["question"]
+      // console.log(this.state.questionToday);
+      var question = data.results[0]["question"];
+      var correctAnswer = data.results[0]["correct_answer"];
+      question = base64.decode(question)
+      correctAnswer = base64.decode(correctAnswer)
+      swal({
+        title: "Trivia!",
+        text: correctAnswer + ": " + question,
+        icon: "success",
+        button: "Cool!",
+      })
+      // this.setState({
+      //   v: data,
+      // });
+      // console.log(data.results[0]["question"]),
+      // var v = data.results[0]["question"],
+    });
+    console.log(this.state.questionToday);
+    
     axios
       .get("http://localhost:8082/api/users/rec/" + this.state.usrnm)
       .then((res) => {
@@ -87,6 +112,7 @@ class Rec extends Component {
     var newUsers = [];
     let userList;
     var keystuff = Object.keys(filter);
+    var bool = false;
     if (users) {
       var shouldFilter = false;
       for (var i = 0; i < keystuff.length; i++) {
@@ -126,7 +152,7 @@ class Rec extends Component {
       }
       // console.log(this.state.user);
       userList = newUsers.map((user) => (
-        <Profile user={user} account={this.state.user} note="N/A" />
+        <Profile user={user} account={this.state.user} note="" putNote={bool} />
       ));
     }
 

@@ -2817,6 +2817,11 @@
   "resolved" "https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz"
   "version" "1.1.2"
 
+"Buffer@^0.0.0":
+  "integrity" "sha512-+zdncl8lI5TCkARStn9F1BwcuJYofYmD0oEHe5FNfCvGfeDJwf6+dSikCdQN6BMXXmHMhNNUagBN367WST1AIQ=="
+  "resolved" "https://registry.npmjs.org/Buffer/-/Buffer-0.0.0.tgz"
+  "version" "0.0.0"
+
 "builtin-modules@^3.1.0":
   "integrity" "sha512-lGzLKcioL90C7wMczpkY0n/oART3MbBa8R9OFGE1rJxoVI86u4WAGfEk8Wjv10eKSyTHVGkSo3bvBylCEtk7LA=="
   "resolved" "https://registry.npmjs.org/builtin-modules/-/builtin-modules-3.2.0.tgz"
@@ -4563,6 +4568,11 @@
   "integrity" "sha1-FQStJSMVjKpA20onh8sBQRmU6k8="
   "resolved" "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   "version" "1.0.0"
+
+"fsevents@^2.3.2", "fsevents@~2.3.2":
+  "integrity" "sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA=="
+  "resolved" "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
+  "version" "2.3.2"
 
 "function-bind@^1.1.1":
   "integrity" "sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A=="
@@ -7524,6 +7534,11 @@
   "integrity" "sha512-Fl7FuabXsJnV5Q1qIOQwx/sagGF18kogb4gpfcG4gjLBWO0WDiiz1ko/ExayuxE7InyQkBLkxRFG5oxY6Uu3Kg=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-18.1.0.tgz"
   "version" "18.1.0"
+
+"react-native-base64@^0.2.1":
+  "integrity" "sha512-eHgt/MA8y5ZF0aHfZ1aTPcIkDWxza9AaEk4GcpIX+ZYfZ04RcaNahO+527KR7J44/mD3efYfM23O2C1N44ByWA=="
+  "resolved" "https://registry.npmjs.org/react-native-base64/-/react-native-base64-0.2.1.tgz"
+  "version" "0.2.1"
 
 "react-native-web@^0.17.7":
   "integrity" "sha512-4OOU/QjyRySOXyHfTvljEMS4VXKn42Qs3y9uHDPMwaCUFjwg0oasR/j706OaVgan9kF4Ipa2vJ3F6Z/Xqy8KeQ=="

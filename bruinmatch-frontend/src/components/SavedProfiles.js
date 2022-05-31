@@ -47,11 +47,12 @@ class SavedProfiles extends Component {
     const user = this.state.user;
     const saved = user.savedProfiles;
     const notes = user.savedNotes;
+    var bool = true;
     var userList = [];
     if (user) {
       for (var i = 0; i < saved.length; i++) {
         userList.push(
-          <Profile user={saved[i]} account={this.state.user} note={notes[i]} />
+          <Profile user={saved[i]} account={this.state.user} note={notes[i]} putNote={bool} />
         );
       }
     }

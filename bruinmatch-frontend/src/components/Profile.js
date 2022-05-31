@@ -50,7 +50,7 @@ function addProfile(user,account,message) {
   }  
  }
 
-function ViewButton(username, gender1, major, phone, email, insta, fb, discord, pref1, pref2, pref3, pref4, pref5, picId, bio, notes){
+function ViewButton(username, gender1, major, phone, email, insta, fb, discord, pref1, pref2, pref3, pref4, pref5, picId, bio, notes, putNote){
   let x = "Gender: "+gender1+"\nMajor: "
  +major+"\nPhone: "+phone+"\nEmail: "+email+"\nInstagram: "+insta+
  "\nFacebook: "+fb+"\nDiscord: "+discord+"\n\nPreferences: ";
@@ -105,7 +105,11 @@ function ViewButton(username, gender1, major, phone, email, insta, fb, discord, 
 
  x = x + "\n\nBio:"  + bio;
 
+ if(putNote){
   x = x +"\n\nNotes: " + notes;
+ }
+
+  
   swal({
      title: username,
      text: x,
@@ -142,6 +146,7 @@ const UserProfile = (props) => {
   let pref4 = user.pets;
   let pref5 = user.nightowl;
   var notes = props.note;
+  var putNote = props.putNote;
   let gender2;
 
   if(account.savedProfiles != null){
@@ -181,7 +186,7 @@ const UserProfile = (props) => {
      </button>
 
     <button type="button" className="view1"  onClick={(e) => ViewButton(usersName, gender2, usersMajor, usersPhone,
-      usersEmail, userInstagram, userFacebook, userDiscord, pref1, pref2, pref3, pref4, pref5, picId, usersBio, notes)}>
+      usersEmail, userInstagram, userFacebook, userDiscord, pref1, pref2, pref3, pref4, pref5, picId, usersBio, notes, putNote)}>
      View
      </button>
    </div>
