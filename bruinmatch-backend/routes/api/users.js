@@ -36,7 +36,27 @@ router.post('/signup', upload.single("articleImage"), (req, res) => {
 router.put('/update/:usrnm', upload.single("articleImage"), async(req, res) => {
   console.log("coming here!")
   var info = req.body
-  info["articleImage"] = req.file.originalname;
+  try{
+  file1 = req.file.originalname
+  uploaded= true
+
+  }
+  catch
+  {
+    file1= []
+    uploaded = false
+  }
+  console.log(file1.size)
+  if(uploaded)
+  {
+    if(file1.size!=0)
+  {
+    console.log(typeof(originalname))
+    info["articleImage"] = req.file.originalname;
+  }
+  }
+  
+  
   var allUsers = await User.find()
     var me;
     for(var i = 0; i < allUsers.length; i++){
