@@ -142,9 +142,9 @@ const UserProfile = (props) => {
   let userFacebook = user.facebook;
   let pref1 = user.samegender;
   let pref2 = user.onthehill;
-  let pref3 = user.alchohol;
-  let pref4 = user.pets;
-  let pref5 = user.nightowl;
+  let pref3 = user.nightowl;
+  let pref4 = user.alchohol;
+  let pref5 = user.pets;
   var notes = props.note;
   var putNote = props.putNote;
   let gender2;
@@ -169,7 +169,6 @@ const UserProfile = (props) => {
  {
    gender2="Other";
  }
-//  console.log(notes)
  return (
    <div className="card-container">
     
