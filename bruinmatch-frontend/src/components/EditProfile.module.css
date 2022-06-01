@@ -356,7 +356,7 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 23px;
+  left: 85px;
   top: 155px;
 
   font-family: "Prompt";
@@ -364,7 +364,7 @@ color: rgba(39, 116, 174, 0.53);*/
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -376,15 +376,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 15px;
-  top: 684px;
+  left: 85px;
+  top: 690px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -396,15 +396,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 211px;
   height: 62px;
-  left: 43px;
-  top: 811px;
+  left: 85px;
+  top: 790px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -416,7 +416,7 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 15px;
+  left: 85px;
   top: 364px;
 
   font-family: "Prompt";
@@ -424,7 +424,7 @@ color: rgba(39, 116, 174, 0.53);*/
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -436,15 +436,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 15px;
-  top: 470px;
+  left: 85px;
+  top: 465px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -456,15 +456,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 24px;
-  top: 584px;
+  left: 85px;
+  top: 586px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -866,7 +866,7 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 24px;
+  left: 85px;
   top: 257px;
 
   font-family: "Prompt";
@@ -874,7 +874,7 @@ color: rgba(39, 116, 174, 0.53);*/
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;

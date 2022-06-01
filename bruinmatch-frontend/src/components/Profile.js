@@ -138,8 +138,8 @@ const UserProfile = (props) => {
   let usersEmail = user.email;
   let usersBio = user.bio;
   let userInstagram = user.instagram;
-  let userFacebook = user.facebook;
   let userDiscord = user.discord;
+  let userFacebook = user.facebook;
   let pref1 = user.samegender;
   let pref2 = user.onthehill;
   let pref3 = user.alchohol;
@@ -186,7 +186,7 @@ const UserProfile = (props) => {
      </button>
 
     <button type="button" className="view1"  onClick={(e) => ViewButton(usersName, gender2, usersMajor, usersPhone,
-      usersEmail, userInstagram, userFacebook, userDiscord, pref1, pref2, pref3, pref4, pref5, picId, usersBio, notes, putNote)}>
+      usersEmail, userInstagram, userDiscord, userFacebook, pref1, pref2, pref3, pref4, pref5, picId, usersBio, notes, putNote)}>
      View
      </button>
    </div>

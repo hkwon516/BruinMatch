@@ -111,11 +111,11 @@ class UserProfile extends Component {
       showonthehill = "No";
     }
 
-    var showalcohol = "";
-    if (this.state.alcohol) {
-      showalcohol = "Yes";
+    var showalchohol = "";
+    if (this.state.alchohol) {
+      showalchohol = "Yes";
     } else {
-      showalcohol = "No";
+      showalchohol = "No";
     }
 
     var showpets = "";
@@ -244,7 +244,7 @@ class UserProfile extends Component {
                   <div className={styles.showonthehill}>{showonthehill}</div>
 
                   <div className={styles.Option3}>Alcohol?</div>
-                  <div className={styles.showalcohol}>{showalcohol}</div>
+                  <div className={styles.showalchohol}>{showalchohol}</div>
 
                   <div className={styles.Option4}>Pets?</div>
                   <div className={styles.showpets}>{showpets}</div>
