@@ -186,7 +186,7 @@ class Rec extends Component {
         {/* <div> */}
         <div className="flex flex-row">
           <div className="w-2/12 top-0 bottom-0">
-            <div className="min-h-screen bg-filter">
+            <div className="h-screen bg-filter">
               <div className="font-navbar text-2xl text-center py-4 text-main text-extrabold tracking-wide">
                 Filter
               </div>
