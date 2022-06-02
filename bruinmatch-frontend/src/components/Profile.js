@@ -23,7 +23,7 @@ function addProfile(user,account,message) {
     currUser.savedProfiles = saved;
     currUser.savedNotes = notes;
     swal({
-      title: "Successfully unsaved Profile",
+      title: "Successfully Unsaved Profile",
       text: "Reload to see changes",
       button: "Close",
     })
