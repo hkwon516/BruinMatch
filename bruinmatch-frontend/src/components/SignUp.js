@@ -254,96 +254,90 @@ class SignUp extends Component {
       .get('http://localhost:8082/api/users/allUsers')
       .then(res => {
         tempUsers = res.data;
+        var found = false;
+        for (var i = 0; i < tempUsers.length; i++) {
+            if(tempUsers[i].username == data.username){
+              found = true;
+            }
+        }
+        if(found){
+          swal({
+            title: "Username already exists",
+            text: "Please choose a different username",
+            icon: "error",
+            button: "Try again",
+          });
+          //ADD CODE TO TELL USERNAME ALREADY EXISTS
+          console.log("username already exists");
+        }else if(validatePassword(this.state.password)){
+          console.log("invalid password");
+          swal({
+            title: "Invalid Password",
+            text: "Password must be minimum of 8 characters\n Must have at least one capital letter, lowercase letter, and digit",
+            icon: "error",
+            button: "Try again",
+          });
+        }else {
+          const formData = new FormData();
+          formData.append("username", this.state.username);
+          formData.append("password", this.state.password);
+          formData.append("name", this.state.name);
+          formData.append("gender", this.state.gender);
+          formData.append("major", this.state.major);
+          formData.append("year", this.state.year);
+          formData.append("phone", this.state.phone);
+          formData.append("email", this.state.email);
+          formData.append("bio", this.state.bio);
+          formData.append("instagram", this.state.instagram);
+          formData.append("discord", this.state.discord);
+          formData.append("facebook", this.state.facebook);
+          formData.append("samegender", this.state.samegender);
+          formData.append("onthehill", this.state.onthehill);
+          formData.append("alchohol", this.state.alchohol);
+          formData.append("pets", this.state.pets);
+          formData.append("nightowl", this.state.nightowl);
+          formData.append("articleImage", this.state.fileName);
+
+          axios
+            .post('http://localhost:8082/api/users/signup', formData)
+            .then(res => {
+              this.setState({
+                username: '',
+                password:'',
+                name:'',
+                gender:'',
+                major: '',
+                year: '',
+                phone: '',
+                email: '',
+                bio: '',
+                instagram: '',
+                discord: '',
+                facebook: '',
+                samegender: '',
+                onthehill: '',
+                alchohol: '',
+                pets: '',
+                nightowl:''
+              })
+              var radioButtons = document.querySelectorAll('input[type="radio"]');
+              for(var i=0;i<radioButtons.length;i++)
+                radioButtons[i].checked = false;
+
+
+              this.props.history.push(`/login`);
+              window.location.reload(false);
+            })
+        
+            .catch(err => {
+              console.log("Error in CreateUser!");
+            })
+          }
+
       })
       .catch(err =>{
         console.log('Error from Log In');
       })
-
-
-      var found = false;
-      var usrnm;
-      /*for (var i = 0; i < tempUsers.length; i++) {
-          if(tempUsers[i].username == data.username){
-            found = true;
-          }
-      }*/
-      if(found){
-        //ADD CODE TO TELL USERNAME ALREADY EXISTS
-        console.log("username already exists");
-      }else if(validatePassword(this.state.password))
-    {
-      console.log("invalid password");
-      swal({
-        title: "Invalid Password",
-        text: "Password must be minimum of 8 characters\n Must have at least one capital letter, lowercase letter, and digit",
-        icon: "error",
-        button: "Try again",
-      });
-    }
-
-    else {
-
-      const formData = new FormData();
-      formData.append("username", this.state.username);
-      formData.append("password", this.state.password);
-      formData.append("name", this.state.name);
-      formData.append("gender", this.state.gender);
-      formData.append("major", this.state.major);
-      formData.append("year", this.state.year);
-      formData.append("phone", this.state.phone);
-      formData.append("email", this.state.email);
-      formData.append("bio", this.state.bio);
-      formData.append("instagram", this.state.instagram);
-      formData.append("discord", this.state.discord);
-      formData.append("facebook", this.state.facebook);
-      formData.append("samegender", this.state.samegender);
-      formData.append("onthehill", this.state.onthehill);
-      formData.append("alchohol", this.state.alchohol);
-      formData.append("pets", this.state.pets);
-      formData.append("nightowl", this.state.nightowl);
-      formData.append("articleImage", this.state.fileName);
-
-    axios
-      .post('http://localhost:8082/api/users/signup', formData)
-      .then(res => {
-        this.setState({
-          username: '',
-          password:'',
-          name:'',
-          gender:'',
-          major: '',
-          year: '',
-          phone: '',
-          email: '',
-          bio: '',
-          instagram: '',
-          discord: '',
-          facebook: '',
-          samegender: '',
-          onthehill: '',
-          alchohol: '',
-          pets: '',
-          nightowl:''
-        })
-
-
-
-        //ADD CODE HERE TO CLEAR OUT RADIO BUTTONS
-
-        var radioButtons = document.querySelectorAll('input[type="radio"]');
-        for(var i=0;i<radioButtons.length;i++)
-          radioButtons[i].checked = false;
-
-
-        this.props.history.push(`/login`);
-        window.location.reload(false);
-      })
-    
-      .catch(err => {
-        console.log("Error in CreateUser!");
-      })
-    }
-    
   };
  
 
