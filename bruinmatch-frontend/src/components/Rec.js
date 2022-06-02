@@ -5,9 +5,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Profile from "./Profile";
 import swal from "sweetalert";
-import base64 from 'react-native-base64'
+import base64 from "react-native-base64";
 
-const url = 'https://opentdb.com/api.php?amount=20&type=boolean&encode=base64'
+const url = "https://opentdb.com/api.php?amount=20&type=boolean&encode=base64";
 
 class Rec extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class Rec extends Component {
     };
   }
 
-  async getTrivia () {
+  async getTrivia() {
     let response = await fetch(url);
     let data = await response.json();
     return data;
@@ -46,7 +46,6 @@ class Rec extends Component {
     window.location.reload(false);
   };
 
-
   onClickSaved = (e) => {
     this.props.history.push(`/saved/${this.state.usrnm}`);
     window.location.reload(false);
@@ -57,24 +56,24 @@ class Rec extends Component {
     window.location.reload(false);
   };
   componentDidMount() {
-    var question = '';
+    var question = "";
     this.getTrivia().then((data) => {
       // this.setState({
       //   questionToday: data.results[0]["question"],
       // });
-      console.log(data.results[0])
+      console.log(data.results[0]);
       // question = data.results[0]["question"]
       // console.log(this.state.questionToday);
       var question = data.results[0]["question"];
       var correctAnswer = data.results[0]["correct_answer"];
-      question = base64.decode(question)
-      correctAnswer = base64.decode(correctAnswer)
+      question = base64.decode(question);
+      correctAnswer = base64.decode(correctAnswer);
       swal({
         title: "Trivia!",
         text: correctAnswer + ": " + question,
         icon: "success",
         button: "Cool!",
-      })
+      });
       // this.setState({
       //   v: data,
       // });
@@ -82,7 +81,7 @@ class Rec extends Component {
       // var v = data.results[0]["question"],
     });
     console.log(this.state.questionToday);
-    
+
     axios
       .get("http://localhost:8082/api/users/rec/" + this.state.usrnm)
       .then((res) => {
@@ -157,7 +156,7 @@ class Rec extends Component {
     }
 
     return (
-      <div className="overflow-auto">
+      <div className="overflow-auto resize-none">
         <div className="w-full">
           <div className="h-16 bg-headingBox">
             <div className="px-8 ">
@@ -184,9 +183,10 @@ class Rec extends Component {
             </div>
           </div>
         </div>
-        <div className="flex flex-row static">
-          <div className=" w-2/12 sticky top-0">
-            <div className="min-h-full bg-filter">
+        {/* <div> */}
+        <div className="flex flex-row">
+          <div className="w-2/12 top-0 bottom-0">
+            <div className="min-h-screen bg-filter">
               <div className="font-navbar text-2xl text-center py-4 text-main text-extrabold tracking-wide">
                 Filter
               </div>
@@ -286,12 +286,12 @@ class Rec extends Component {
               </div>
             </div>
           </div>
-
-          <div className="ml-2">
+          <div className="ml- 2">
             <div className="list">{userList}</div>
           </div>
         </div>
       </div>
+      // </div>
     );
   }
 }
