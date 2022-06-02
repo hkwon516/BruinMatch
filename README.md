@@ -18,6 +18,8 @@ Our solution to the disorganized way that roommate searching is conducted is cal
 
 ## How to start the app
 
+Make sure Node.js is installed
+
 Clone the repository:
 ### `git clone https://github.com/SreyaMuppalla/BruinMatch.git`
 
@@ -44,6 +46,10 @@ Install Required Files for Backend
 Start the backend
 ### `npm start`
 
-Navigate to the login page
+Navigate to these Pages via these routes:
+
+Login page
 ### `http://localhost:3000/login`
 
+Signup page
+### `http://localhost:3000/signup`
