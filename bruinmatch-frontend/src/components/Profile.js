@@ -50,9 +50,8 @@ function addProfile(user,account,message) {
   }  
  }
 
-function ViewButton(username, gender1, major, phone, email, insta, fb, discord, pref1, pref2, pref3, pref4, pref5, picId, bio, notes, putNote){
-  let x = "Gender: "+gender1+"\nMajor: "
- +major+"\nPhone: "+phone+"\nEmail: "+email+"\nInstagram: "+insta+
+function ViewButton(username, gender1, major, phone, email, insta, fb, discord, pref1, pref2, pref3, pref4, pref5, picId, bio, notes, putNote, year1){
+  let x = "Gender: "+gender1+"\nMajor: "+major+"\nYear: "+year1+"\nPhone: "+phone+"\nEmail: "+email+"\nInstagram: "+insta+
  "\nFacebook: "+fb+"\nDiscord: "+discord+"\n\nPreferences: ";
 
 
@@ -103,7 +102,7 @@ function ViewButton(username, gender1, major, phone, email, insta, fb, discord, 
    x = x + "\nPets not allowed";
  }
 
- x = x + "\n\nBio:"  + bio;
+ x = x + "\n\nBio: "  + bio;
 
  if(putNote){
   x = x +"\n\nNotes: " + notes;
@@ -133,6 +132,7 @@ const UserProfile = (props) => {
   let picId = user.articleImage;
   let usersName = user.name;
   let usersGender = user.gender;
+  let usersYear = user.year
   let usersMajor = user.major;
   let usersPhone = user.phone;
   let usersEmail = user.email;
@@ -169,6 +169,12 @@ const UserProfile = (props) => {
  {
    gender2="Other";
  }
+
+ let year2= usersYear
+ if(usersYear == "5")
+ {
+  year2 = "Grad"
+ }
  return (
    <div className="card-container">
     
@@ -176,7 +182,7 @@ const UserProfile = (props) => {
      <div className="name1">{user.name}</div>
      <div className="gender1">Gender: {gender2}</div>
      <div className="major1">Major: {user.major}</div>
-     <div className="year1">Year: {user.year}</div>
+     <div className="year1">Year: {year2}</div>
      <div className="phone1">Phone: {user.phone}</div>
      <div className="email1">Email: {user.email}</div>
  
@@ -185,7 +191,7 @@ const UserProfile = (props) => {
      </button>
 
     <button type="button" className="view1"  onClick={(e) => ViewButton(usersName, gender2, usersMajor, usersPhone,
-      usersEmail, userInstagram, userDiscord, userFacebook, pref1, pref2, pref3, pref4, pref5, picId, usersBio, notes, putNote)}>
+      usersEmail, userInstagram, userDiscord, userFacebook, pref1, pref2, pref3, pref4, pref5, picId, usersBio, notes, putNote, year2)}>
      View
      </button>
    </div>

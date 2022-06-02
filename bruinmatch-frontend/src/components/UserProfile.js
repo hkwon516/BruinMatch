@@ -131,18 +131,40 @@ class UserProfile extends Component {
     } else {
       shownightowl = "No";
     }
+    var usersGender= this.state.gender
+    var gender2= ""
 
-    var showgender = "";
-    if (this.state.gender == 1) {
-      showgender = "Male";
-    } else if (this.state.gender == 2) {
-      showgender = "Female";
-    } else {showgender = "Not Defined";}
+  if(usersGender == "1")
+ {
+   gender2 = "Male";
+ }
+ else if(usersGender == "2")
+ {
+   gender2 = "Female";
+ }
+ else
+ {
+   gender2="Other";
+ }
+
+ var userYear = this.state.year
+ var user2 = ""
+ if(userYear == "5")
+ {
+  userYear = "Grad"
+ }
+
+  var showgender = "";
+  if (this.state.gender == 1) {
+    showgender = "Male";
+  } else if (this.state.gender == 2) {
+    showgender = "Female";
+  } else {showgender = "Not Defined";}
 
     const user = this.state.user;
     let picId = user.articleImage;
     return (
-      <div className="MyProfile">
+      <div className={styles.zoom}>
         <div className="container">
           <div className={styles.FullFrame}></div>
           <div className={styles.TopBanner}>
@@ -192,7 +214,7 @@ class UserProfile extends Component {
                     <div className={styles.Phone}>Phone</div>
                     <div className={styles.showPhone}>{this.state.phone}</div>
 
-                  <div className={"email"}>
+                  <div className="email">
                     <div className={styles.Email}>Email</div>
                     <div className={styles.showEmail}>{this.state.email}</div>
                   </div>
@@ -200,12 +222,12 @@ class UserProfile extends Component {
                   <div className={"instagram"}>
                     <div className={styles.Instagram}>Instagram</div>
                     <div className={styles.showInstagram}>{this.state.instagram}</div>
-                  </div>
-                    
+                  </div> 
+
                   <div className={"discord"}>
                     <div className={styles.Discord}>Discord</div>
                     <div className={styles.showDiscord}>{this.state.discord}</div>
-                  </div>
+                  </div> 
 
                   <div className={"facebook"}>
                     <div className={styles.Facebook}>Facebook</div>
