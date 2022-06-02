@@ -171,7 +171,7 @@ class Rec extends Component {
                 </a>
               </div>
               <div className="flex w-full items-center justify-end text-xl font-navbar text-white text-bold">
-                <div className="-mt-12 mx-6 hover:text-yellow">
+                <div className="-mt-12 mx-4 hover:text-yellow">
                   <a onClick={this.onClickSaved} style={{ cursor: "pointer" }}>
                     Saved
                   </a>
@@ -184,7 +184,7 @@ class Rec extends Component {
                     My Profile
                   </a>
                 </div>
-                <div className="-mt-12 mx-2 hover:text-yellow">
+                <div className="-mt-12  hover:text-yellow">
                   <a href="/login" style={{ cursor: "pointer" }}>
                     Logout
                   </a>
