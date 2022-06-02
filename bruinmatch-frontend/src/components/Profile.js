@@ -22,6 +22,11 @@ function addProfile(user,account,message) {
     notes.splice(index, 1);
     currUser.savedProfiles = saved;
     currUser.savedNotes = notes;
+    swal({
+      title: "Successfully unsaved Profile",
+      text: "Reload to see changes",
+      button: "Close",
+    })
     // saved = saved.filter(rmUser => rmUser.username != user.username);
     axios
     .put(`http://localhost:8082/api/users/saved/${account.username}`, currUser)
