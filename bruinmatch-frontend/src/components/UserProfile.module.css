@@ -13,7 +13,7 @@ html {
   min-height: 100vh;
 
   top: 0px;
-  height: 3000px;
+  height: 2900px;
 }
 
 .TopBanner {
@@ -51,7 +51,7 @@ html {
   width: 1303px;
   height: 1019px;
   left: 310px;
-  top: 1203px;
+  top: 750px;
   background-color: #ffffff;
   justify-content: right;
 }
@@ -270,7 +270,7 @@ html {
   color: #525252;
 }
 
-.Bio {
+.Instagram {
   position: absolute;
   left: 150px;
   top: 755px;
@@ -286,10 +286,106 @@ html {
   color: #525252;
 }
 
-.showBio {
+.showInstagram {
   position: absolute;
   left: 400px;
   top: 755px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Discord {
+  position: absolute;
+  left: 150px;
+  top: 855px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showDiscord {
+  position: absolute;
+  left: 400px;
+  top: 855px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Facebook {
+  position: absolute;
+  left: 150px;
+  top: 955px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showFacebook {
+  position: absolute;
+  left: 400px;
+  top: 955px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.Bio {
+  position: absolute;
+  left: 150px;
+  top: 1055px;
+
+  font-family: "Prompt";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 53px;
+  text-align: left;
+  letter-spacing: 0.05em;
+
+  color: #525252;
+}
+
+.showBio {
+  position: absolute;
+  left: 400px;
+  top: 1055px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -328,7 +424,7 @@ html {
   width: 1330px;
   height: 600px;
   left: 295px;
-  top: 2238px;
+  top: 2100px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -556,7 +652,7 @@ html {
   width: 250px;
   height: 70px;
   left: 1197px;
-  top: 1650px;
+  top: 1950px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 4px solid #7b7b7b;
@@ -570,7 +666,7 @@ html {
   width: 262.04px;
   height: 61.97px;
   left: 1195px;
-  top: 1650px;
+  top: 1950px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -600,7 +696,7 @@ html {
   top: 137px;
 }
 
-/*resize it later*/
+/*
 .Instagram {
   position: absolute;
   width: 245px;
@@ -615,7 +711,6 @@ html {
   height: 230px;
   left: 890px;
   top: 893px;
-  /* border-radius: 10%; */
 }
 
 .Facebook {
@@ -625,3 +720,4 @@ html {
   left: 1167px;
   top: 893px;
 }
+*/

@@ -132,6 +132,13 @@ class UserProfile extends Component {
       shownightowl = "No";
     }
 
+    var showgender = "";
+    if (this.state.gender == 1) {
+      showgender = "Male";
+    } else if (this.state.gender == 2) {
+      showgender = "Female";
+    } else {showgender = "Not Defined";}
+
     const user = this.state.user;
     let picId = user.articleImage;
     return (
@@ -154,47 +161,21 @@ class UserProfile extends Component {
               <form noValidate onSubmit={this.onSubmit}>
                 <div className="Profile section">
                   <img className={styles.ProfilePhoto} src={images[picId]} />
-                  <div className={styles.Instagram}>
-                    <a href={this.state.instagram}>
-                      {/* <a onClick={this.onClickInstagram}> */}
-                      {/* consol.log({this.state.instagram}); */}
-                      {/* <a href=`{this.state.instagram}`> */}
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
-                        alt=""
-                        style={{ width: "57%" }}
-                      />
-                    </a>
-                  </div>
-                  <div className={styles.Discord}>
-                    <a href={this.state.discord}>
-                      <img
-                        src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-icon-24.png"
-                        alt=""
-                        style={{ width: "55%" }}
-                      />
-                    </a>
-                  </div>
-                  <div className={styles.Facebook}>
-                    <a href={this.state.facebook}>
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/512/124/124010.png"
-                        alt=""
-                        style={{ width: "57%" }}
-                      />
-                    </a>
-                  </div>
                 </div>
 
                 <div className={styles.Frame2}>
+                  <div className={"MyProfile"}>
+                    <div className={styles.MyProfile}>My Profile</div>
+                  </div>
+
                   <div className={"name"}>
                     <div className={styles.Name}>Name</div>
                     <div className={styles.showName}>{this.state.name}</div>
                   </div>
 
-                  <div className={"email"}>
-                    <div className={styles.Email}>Email</div>
-                    <div className={styles.showEmail}>{this.state.email}</div>
+                  <div className="Gender">
+                    <div className={styles.Gender}>Gender</div>
+                      <div className={styles.showGender}>{showgender}</div>
                   </div>
 
                   <div className={"major"}>
@@ -202,30 +183,39 @@ class UserProfile extends Component {
                     <div className={styles.showMajor}>{this.state.major}</div>
                   </div>
 
-                  <div className={"MyProfile"}>
-                    <div className={styles.MyProfile}>My Profile</div>
+                  <div className="year">
+                    <div className={styles.Year}>Year</div>
+                    <div className={styles.showYear}>{this.state.year}</div>
                   </div>
 
                   <div className={"phone"}>
                     <div className={styles.Phone}>Phone</div>
                     <div className={styles.showPhone}>{this.state.phone}</div>
 
-                    <div className="year">
-                      <div className={styles.Year}>Year</div>
-                      <div className={styles.showYear}>{this.state.year}</div>
-                    </div>
+                  <div className={"email"}>
+                    <div className={styles.Email}>Email</div>
+                    <div className={styles.showEmail}>{this.state.email}</div>
+                  </div>
 
-                    <div className="Gender">
-                      <div className={styles.Gender}>Gender</div>
-                      <div className={styles.showGender}>
-                        {this.state.gender}
-                      </div>
-                    </div>
+                  <div className={"instagram"}>
+                    <div className={styles.Instagram}>Instagram</div>
+                    <div className={styles.showInstagram}>{this.state.instagram}</div>
+                  </div>
+                    
+                  <div className={"discord"}>
+                    <div className={styles.Discord}>Discord</div>
+                    <div className={styles.showDiscord}>{this.state.discord}</div>
+                  </div>
 
-                    <div className={"bio"}>
-                      <div className={styles.Bio}>Bio</div>
-                      <div className={styles.showBio}>{this.state.bio}</div>
-                    </div>
+                  <div className={"facebook"}>
+                    <div className={styles.Facebook}>Facebook</div>
+                    <div className={styles.showFacebook}>{this.state.facebook}</div>
+                  </div>
+
+                  <div className={"bio"}>
+                    <div className={styles.Bio}>Bio</div>
+                    <div className={styles.showBio}>{this.state.bio}</div>
+                  </div>
 
                     <div className={styles.EditButton} />
                     <a onClick={this.onClickEdit} style={{ cursor: "pointer" }}>
