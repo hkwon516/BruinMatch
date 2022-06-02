@@ -131,11 +131,33 @@ class UserProfile extends Component {
     } else {
       shownightowl = "No";
     }
+    var usersGender= this.state.gender
+    var gender2= ""
+
+  if(usersGender == "1")
+ {
+   gender2 = "Male";
+ }
+ else if(usersGender == "2")
+ {
+   gender2 = "Female";
+ }
+ else
+ {
+   gender2="Other";
+ }
+
+ var userYear = this.state.year
+ var user2 = ""
+ if(userYear == "5")
+ {
+  userYear = "Grad"
+ }
 
     const user = this.state.user;
     let picId = user.articleImage;
     return (
-      <div className="MyProfile">
+      <div className={styles.zoom}>
         <div className="container">
           <div className={styles.FullFrame}></div>
           <div className={styles.TopBanner}>
@@ -212,13 +234,13 @@ class UserProfile extends Component {
 
                     <div className="year">
                       <div className={styles.Year}>Year</div>
-                      <div className={styles.showYear}>{this.state.year}</div>
+                      <div className={styles.showYear}>{userYear}</div>
                     </div>
 
                     <div className="Gender">
                       <div className={styles.Gender}>Gender</div>
                       <div className={styles.showGender}>
-                        {this.state.gender}
+                        {gender2}
                       </div>
                     </div>
 
