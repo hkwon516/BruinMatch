@@ -246,15 +246,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 23px;
-  top: 1030px;
+  left: 85px;
+  top: 755px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -267,7 +267,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 949px;
   height: 63px;
   left: 299px;
-  top: 1030px;
+  top: 755px;
 
   color: black;
   font-size: 30px;
@@ -281,15 +281,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 23px;
-  top: 1144px;
+  left: 85px;
+  top: 855px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -302,7 +302,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 949px;
   height: 63px;
   left: 299px;
-  top: 1144px;
+  top: 855px;
   color: black;
   font-size: 30px;
 
@@ -315,15 +315,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 23px;
-  top: 1258px;
+  left: 85px;
+  top: 955px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -336,7 +336,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 949px;
   height: 63px;
   left: 299px;
-  top: 1258px;
+  top: 955px;
   color: black;
   font-size: 30px;
 
@@ -351,7 +351,7 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 23px;
+  left: 85px;
   top: 155px;
 
   font-family: "Prompt";
@@ -359,7 +359,7 @@ color: rgba(39, 116, 174, 0.53);*/
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -371,15 +371,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 15px;
-  top: 684px;
+  left: 85px;
+  top: 655px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -391,35 +391,34 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 211px;
   height: 62px;
-  left: 43px;
-  top: 811px;
+  left: 85px;
+  top: 1055px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
 }
-
 /* Major* */
 
 .Major {
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 15px;
-  top: 364px;
+  left: 85px;
+  top: 355px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -431,15 +430,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 15px;
-  top: 470px;
+  left: 85px;
+  top: 455px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -451,15 +450,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 24px;
-  top: 584px;
+  left: 85px;
+  top: 555px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -485,6 +484,7 @@ color: rgba(39, 116, 174, 0.53);*/
 }
 
 /* Rectangle 7 */
+/* Rectangle 7 */
 .NameInput {
   box-sizing: border-box;
 
@@ -509,7 +509,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 949px;
   height: 63px;
   left: 299px;
-  top: 356px;
+  top: 355px;
 
   color: black;
   font-size: 30px;
@@ -526,7 +526,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 949px;
   height: 63px;
   left: 299px;
-  top: 577px;
+  top: 555px;
   color: black;
   font-size: 30px;
   background: rgba(255, 255, 255, 0.75);
@@ -543,7 +543,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 949px;
   height: 63px;
   left: 299px;
-  top: 684px;
+  top: 655px;
   color: black;
   font-size: 30px;
   background: rgba(255, 255, 255, 0.75);
@@ -560,7 +560,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 949px;
   height: 203px;
   left: 299px;
-  top: 791px;
+  top: 1055px;
   color: black;
   font-size: 30px;
   background: rgba(255, 255, 255, 0.75);
@@ -577,7 +577,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 162px;
   height: 63px;
   left: 1086px;
-  top: 456px;
+  top: 455px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -613,7 +613,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 162px;
   height: 63px;
   left: 298px;
-  top: 456px;
+  top: 455px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -649,7 +649,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 162px;
   height: 63px;
   left: 495px;
-  top: 456px;
+  top: 455px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -685,7 +685,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 162px;
   height: 63px;
   left: 692px;
-  top: 456px;
+  top: 455px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -721,7 +721,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 162px;
   height: 63px;
   left: 889px;
-  top: 456px;
+  top: 455px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -861,15 +861,15 @@ color: rgba(39, 116, 174, 0.53);*/
   position: absolute;
   width: 284px;
   height: 84px;
-  left: 24px;
-  top: 257px;
+  left: 85px;
+  top: 255px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
   font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -882,7 +882,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 284px;
   height: 38px;
   left: 308px;
-  top: 258px;
+  top: 255px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -902,7 +902,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 284px;
   height: 38px;
   left: 632px;
-  top: 257px;
+  top: 255px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -999,7 +999,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 113px;
   height: 59px;
   left: 1110px;
-  top: 459px;
+  top: 455px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -1018,7 +1018,7 @@ color: rgba(39, 116, 174, 0.53);*/
   width: 284px;
   height: 38px;
   left: 955px;
-  top: 257px;
+  top: 255px;
 
   font-family: "Prompt";
   font-style: normal;
@@ -1036,19 +1036,17 @@ color: rgba(39, 116, 174, 0.53);*/
 .Frame3 {
   position: absolute;
   width: 1330px;
-  height: 817px;
+  height: 600px;
   left: 295px;
-  top: 2600px;
+  top: 2550px;
+  background-color: rgb(255, 255, 255);
 }
-
-/* Rectangle 29*/
 
 .Preferences {
   box-sizing: border-box;
-
   position: absolute;
-  width: 1294px;
-  height: 768px;
+  width: 1290px;
+  height: 550px;
   left: 22px;
   top: 20px;
 
@@ -1057,170 +1055,81 @@ color: rgba(39, 116, 174, 0.53);*/
   border-radius: 30px;
 }
 
-/* Rectangle 47 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 324px;
-height: 63px;
-left: 910px;
-top: 147px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Rectangle 48 
-
-box-sizing: border-box;
-
-position: absolute;
-width: 162px;
-height: 63px;
-left: 1072px;
-top: 147px;
-
-background: rgba(255, 255, 255, 0.75);
-border: 2px solid #989898;
-border-radius: 20px;
-
-
-/* Yes 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 939px;
-top: 154px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* No 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 1103px;
-top: 154px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* Budget */
-
 .Option1 {
   position: absolute;
-  width: 356px;
-  height: 46px;
-  left: 20px;
-
-  top: 140px;
+  left: 104px;
+  top: 144px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
 }
 
-/* uwu */
-
 .Option2 {
   position: absolute;
-  width: 356px;
-  height: 46px;
-  left: 20px;
+  left: 104px;
   top: 224px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
 }
-
-/* Pref2 */
 
 .Option3 {
   position: absolute;
-  width: 356px;
-  height: 46px;
-  left: 20px;
-  top: 314px;
+  left: 104px;
+  top: 304px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
 }
 
-/* Pref3 */
 .Option4 {
   position: absolute;
-  width: 356px;
-  height: 46px;
-  left: 20px;
-  top: 403px;
+  left: 104px;
+  top: 384px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
 }
 
-/* Pref4 */
 .Option5 {
   position: absolute;
-  width: 356px;
-  height: 46px;
-  left: 20px;
-  top: 493px;
+  left: 104px;
+  top: 464px;
 
   font-family: "Prompt";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 35px;
   line-height: 53px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.05em;
 
   color: #525252;
@@ -1379,55 +1288,23 @@ color: #525252;
   color: #2774ae;
 }
 
-/*Rectangle 31 */
-
 .Switch1 {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 455px;
-  top: 140px;
+  width: 55px;
+  height: 55px;
+  left: 462px;
+  top: 145px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
 }
-
-/* Rectangle 32 */
 
 .Switch1No {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 537px;
-  top: 140px;
-
-  background: rgba(255, 255, 255, 0.75);
-
-  /*border-radius: 20px;*/
-}
-
-/* Rectangle 33 */
-
-.Switch2 {
-  position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 455px;
-  top: 140px;
-
-  background: rgba(255, 255, 255, 0.75);
-  border: 2px solid #989898;
-}
-
-/* Rectangle 34 */
-.Switch2No {
-  box-sizing: border-box;
-
-  position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 537px;
-  top: 140px;
+  width: 55px;
+  height: 55px;
+  left: 547px;
+  top: 145px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
@@ -1436,145 +1313,56 @@ color: #525252;
 
 .Switch2 {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 455px;
-  top: 217px;
+  width: 55px;
+  height: 55px;
+  left: 462px;
+  top: 225px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
 }
 
-/* Rectangle 36 */
 .Switch2No {
-  box-sizing: border-box;
-
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 537px;
-  top: 217px;
+  width: 55px;
+  height: 55px;
+  left: 547px;
+  top: 225px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
   border-radius: 20px;
 }
-
-/* Yes 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 354px;
-top: 224px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* No 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 518px;
-top: 224px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* Rectangle 37 */
 
 .Switch3 {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 455px;
-  top: 304px;
+  width: 55px;
+  height: 55px;
+  left: 462px;
+  top: 305px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
 }
 
-/* Rectangle 38 */
-
 .Switch3No {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 537px;
-  top: 304px;
+  width: 55px;
+  height: 55px;
+  left: 547px;
+  top: 305px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
   border-radius: 20px;
 }
 
-/* Yes 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 353px;
-top: 311px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* No 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 517px;
-top: 311px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* Rectangle 39 */
-
 .Switch4 {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 455px;
-  top: 393px;
+  width: 55px;
+  height: 55px;
+  left: 462px;
+  top: 385px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
@@ -1584,77 +1372,33 @@ color: rgba(82, 82, 82, 0.62);
 
 .Switch4No {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 537px;
-  top: 393px;
+  width: 55px;
+  height: 55px;
+  left: 547px;
+  top: 385px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
   border-radius: 20px;
 }
 
-/* Yes 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 353px;
-top: 400px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* No 
-
-position: absolute;
-width: 113px;
-height: 59px;
-left: 517px;
-top: 400px;
-
-font-family: 'Prompt';
-font-style: normal;
-font-weight: 500;
-font-size: 35px;
-line-height: 53px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: rgba(82, 82, 82, 0.62);
-
-
-
-/* Rectangle 41 */
-
 .Switch5 {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 455px;
-  top: 489px;
+  width: 55px;
+  height: 55px;
+  left: 462px;
+  top: 465px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
 }
 
-/* Rectangle 42 */
-
 .Switch5No {
   position: absolute;
-  width: 63px;
-  height: 63px;
-  left: 537px;
-  top: 489px;
+  width: 55px;
+  height: 55px;
+  left: 547px;
+  top: 465px;
 
   background: rgba(255, 255, 255, 0.75);
   border: 2px solid #989898;
@@ -1788,7 +1532,7 @@ color: rgba(82, 82, 82, 0.62);
   width: 300px;
   height: 70px;
   left: 1010px;
-  top: 2200px;
+  top: 2000px;
 
   color: rgba(82, 82, 82, 0.62);
   font-family: "Prompt";
