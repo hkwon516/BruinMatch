@@ -89,6 +89,45 @@ class UserProfile extends Component {
           nightowl: this.state.user.nightowl,
           img: this.state.user.img,
         });
+
+        var pref1 = document.getElementById("sw1");
+    var pref1no = document.getElementById("sw1no");
+    var pref2 = document.getElementById("sw2");
+    var pref2no = document.getElementById("sw2no");
+    var pref3 = document.getElementById("sw3");
+    var pref3no = document.getElementById("sw3no");
+    var pref4 = document.getElementById("sw4");
+    var pref4no = document.getElementById("sw4no");
+    var pref5 = document.getElementById("sw5");
+    var pref5no = document.getElementById("sw5no");
+
+    if (this.state.user.samegender) {
+      pref1.checked = "true";
+    } else {
+      pref1no.checked = "true";
+    }
+if (this.state.user.onthehill) {
+  pref2.checked = "true";
+} else {
+  pref2no.checked = "true";
+}
+if (this.state.user.alchohol) {
+  pref3.checked = "true";
+} else {
+  pref3no.checked = "true";
+}
+
+if (this.state.user.pets) {
+  pref4.checked = "true";
+} else {
+  pref4no.checked = "true";
+}
+
+if (this.state.user.nightowl) {
+  pref5.checked = "true";
+} else {
+  pref5no.checked = "true";
+}
       })
       .catch((err) => {
         console.log("Error from ShowUserDetails");
@@ -97,6 +136,8 @@ class UserProfile extends Component {
 
   render() {
     // console.log(user)
+    
+    
     var showsamegender = "";
     if (this.state.samegender) {
       showsamegender = "Yes";
@@ -155,11 +196,46 @@ class UserProfile extends Component {
  }
 
   var showgender = "";
+  
   if (this.state.gender == 1) {
     showgender = "Male";
   } else if (this.state.gender == 2) {
     showgender = "Female";
   } else {showgender = "Not Defined";}
+  
+  /*if (this.state.samegender== true) {
+    pref1.checked = "true";
+  } else {
+    pref1no.checked = "true";
+  }
+
+  if (this.state.onthehill) {
+    pref2.checked = "true";
+  } else {
+    pref2no.checked = "true";
+  }
+  if (this.state.alchohol) {
+    pref3.checked = "true";
+  } else {
+    pref3no.checked = "true";
+  }
+
+  if (this.state.pets) {
+    pref4.checked = "true";
+  } else {
+    pref4no.checked = "true";
+  }
+
+  if (this.state.nightowl) {
+    pref5.checked = "true";
+  } else {
+    pref5no.checked = "true";
+  }
+*/
+console.log(this.state.samegender)
+
+
+
 
     const user = this.state.user;
     let picId = user.articleImage;
