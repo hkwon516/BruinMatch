@@ -51,6 +51,11 @@ class Rec extends Component {
     window.location.reload(false);
   };
 
+  // onClickSaved = (e) => {
+  //   this.props.history.push(`/login`);
+  //   window.location.reload(false);
+  // };
+
   onClickRec = (e) => {
     this.props.history.push(`/rec/${this.state.usrnm}`);
     window.location.reload(false);
@@ -171,12 +176,17 @@ class Rec extends Component {
                     Saved
                   </a>
                 </div>
-                <div className="-mt-12 hover:text-yellow">
+                <div className="-mt-12 mx-6 hover:text-yellow">
                   <a
                     onClick={this.onClickProfile}
                     style={{ cursor: "pointer" }}
                   >
                     My Profile
+                  </a>
+                </div>
+                <div className="-mt-12 mx-2 hover:text-yellow">
+                  <a href="/login" style={{ cursor: "pointer" }}>
+                    Logout
                   </a>
                 </div>
               </div>
