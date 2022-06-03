@@ -13,7 +13,7 @@ Our solution to the disorganized way that roommate searching is conducted is cal
 5. Users can view additional information about other users via a popup
 6. Users can use the filtration feature to find roommates that match specific aspects of their lifestyle 
 7. Users can edit and save changes to their profile even after account creation (such as profile picture, lifestyle preferences etc.)
-8. Users can learn new trivia facts in main page via API call
+8. Users can learn new trivia facts in main page via Open Trivia DB API call
 
 
 ## How to start the app
