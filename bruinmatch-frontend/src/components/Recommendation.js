@@ -9,7 +9,7 @@ import base64 from "react-native-base64";
 
 const url = "https://opentdb.com/api.php?amount=20&type=boolean&encode=base64";
 
-class Rec extends Component {
+class Recommendation extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -306,4 +306,4 @@ class Rec extends Component {
   }
 }
 
-export default Rec;
+export default Recommendation;
